@@ -1,14 +1,16 @@
 import React from "react";
-import {Card, Space, Typography} from 'antd';
-import { Col, Divider, Row } from 'antd';
+import {
+    Card,
+    Space,
+} from 'antd';
+import {
+    Col,
+    Divider,
+    Row
+} from 'antd';
 
 const style = {
     padding: '8px 0',
-};
-
-const page_header = {
-    textAlign: "center",
-
 };
 
 const CategoriesEKB = () => {
