@@ -8,6 +8,7 @@ import SearchEKB from "./search/SearchEKB";
 import CategoriesEKB from "./categories/CategoriesEKB";
 import logo from "../static/img/ekb_portal_logo.png"
 
+
 const { Header, Content, Footer } = Layout;
 
 const Main = () => {
@@ -55,9 +56,19 @@ const Main = () => {
             <Content
                 style={{
                     padding: '0 50px',
+                    textAlign: "center",
+                    marginTop: "20ch",
+                    height: "10vw",
+
                 }}
             >
                 <SearchEKB />
+            </Content>
+            <Content
+                style={{
+                    padding: '0 50px',
+                }}
+            >
                 <CategoriesEKB />
             </Content>
             <Footer

@@ -1,15 +1,27 @@
 import React from "react";
-import { Card, Space } from 'antd';
+import {Card, Space, Typography} from 'antd';
 import { Col, Divider, Row } from 'antd';
 
 const style = {
     padding: '8px 0',
 };
 
+const page_header = {
+    textAlign: "center",
+
+};
+
 const CategoriesEKB = () => {
     return (
         <>
-            <Divider orientation="left">Популярные категории</Divider>
+            <Row>
+                <Col span={12}>
+                    <Divider orientation="left">Популярные категории</Divider>
+                </Col>
+                <Col span={12}>
+                    <Divider orientation="right"><a href="#">все категории</a></Divider>
+                </Col>
+            </Row>
             <Row
                 gutter={{
                     xs: 8,
@@ -130,8 +142,8 @@ const CategoriesEKB = () => {
                         <Space direction="vertical" size={16}>
                             <Card
                                 size="small"
-                                title="Электромеханический"
-                                extra={<a href="#">155337</a>}
+                                title="Терморегулирование"
+                                extra={<a href="#">35015</a>}
                                 style={{
                                     width: 400,
                                     height: 150,
@@ -139,8 +151,8 @@ const CategoriesEKB = () => {
                             >
                                 <Col span={18}>
                                     <h5>Инженеры рекомендуют:</h5>
-                                    <a href="#">SK42D07G5NS</a>
-                                    <p>Ползунковые переключатели Miniature Slide Switch</p>
+                                    <a href="#">P-TCO-U450/12-2</a>
+                                    <p>Термические защитные выключатели 50A 12V</p>
                                 </Col>
                             </Card>
                         </Space>
@@ -151,8 +163,8 @@ const CategoriesEKB = () => {
                         <Space direction="vertical" size={16}>
                             <Card
                                 size="small"
-                                title="Электромеханический"
-                                extra={<a href="#">155337</a>}
+                                title="Соединители"
+                                extra={<a href="#">678681</a>}
                                 style={{
                                     width: 400,
                                     height: 150,
@@ -160,8 +172,8 @@ const CategoriesEKB = () => {
                             >
                                 <Col span={18}>
                                     <h5>Инженеры рекомендуют:</h5>
-                                    <a href="#">SK42D07G5NS</a>
-                                    <p>Ползунковые переключатели Miniature Slide Switch</p>
+                                    <a href="#">PT05P-16-26S(021)</a>
+                                    <p>Круговой мил / технические характеристики соединителя</p>
                                 </Col>
                             </Card>
                         </Space>
@@ -172,7 +184,49 @@ const CategoriesEKB = () => {
                         <Space direction="vertical" size={16}>
                             <Card
                                 size="small"
-                                title="Электромеханический"
+                                title="РЧ и беспроводная связь"
+                                extra={<a href="#">37579</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">HMC432E</a>
+                                    <p>Prescaler InGaP HBT Divide-by-2 SMT, DC - 8 GHz</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Питание"
+                                extra={<a href="#">174537</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">BQ51025YFPT</a>
+                                    <p>ИС беспроводного зарядного устройства 10W Sgl Chip Wire le ...</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Кожухи"
                                 extra={<a href="#">155337</a>}
                                 style={{
                                     width: 400,
@@ -181,8 +235,134 @@ const CategoriesEKB = () => {
                             >
                                 <Col span={18}>
                                     <h5>Инженеры рекомендуют:</h5>
-                                    <a href="#">SK42D07G5NS</a>
-                                    <p>Ползунковые переключатели Miniature Slide Switch</p>
+                                    <a href="#">AU-1040-MG</a>
+                                    <p>Enclosures, Boxes & Cases Utility Cabinet Gray (9 X 6 X 5 In)</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Провода и кабели"
+                                extra={<a href="#">193386</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">TGFSB</a>
+                                    <p>Wire Ducting & Raceways TG FIB Spool Bracket</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Источники питания"
+                                extra={<a href="#">81589</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">0900-0017-01B</a>
+                                    <p>Стоечные блоки питания POWER SUPPLY BACKPLANE,SINGLE P47,REV B</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Инвертирующие усилители мощности"
+                                extra={<a href="#">419</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">NTS-400P-248</a>
+                                    <p>Power Inverters 400W 230VAC 48V 10A DC-AC Power Inverter</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Преобразователи постоянного тока в постоянный"
+                                extra={<a href="#">66601</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">1/2A12-N4-F-M</a>
+                                    <p>Преобразователи постоянного тока в постоянный без изоляции A-Series ...</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Зарядные устройства для аккумуляторов"
+                                extra={<a href="#">622</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">NPB-1700-12</a>
+                                    <p>Зарядные устройства для аккумуляторов 1428W 90- ...</p>
+                                </Col>
+                            </Card>
+                        </Space>
+                    </div>
+                </Col>
+                <Col className="gutter-row" span={4.8}>
+                    <div style={style}>
+                        <Space direction="vertical" size={16}>
+                            <Card
+                                size="small"
+                                title="Соединители питания для постоянного тока"
+                                extra={<a href="#">890</a>}
+                                style={{
+                                    width: 400,
+                                    height: 150,
+                                }}
+                            >
+                                <Col span={18}>
+                                    <h5>Инженеры рекомендуют:</h5>
+                                    <a href="#">PJ-067B</a>
+                                    <p>Соединители питания для постоянного тока power jack, 2.5 x ...</p>
                                 </Col>
                             </Card>
                         </Space>
