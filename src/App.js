@@ -1,12 +1,10 @@
 import './App.css';
-import NavbarEKB from "./main/navbar/NavbarEKB";
-import CategoriesEKB from "./main/categories/CategoriesEKB";
+import Main from "./main/Main";
 
 function App() {
   return (
       <>
-        <NavbarEKB />
-        <CategoriesEKB />
+        <Main />
       </>
   );
 }
