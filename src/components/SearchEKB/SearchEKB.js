@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Col, Input, Row, Space, Button } from 'antd';
 import { FileAddOutlined } from '@ant-design/icons';
 import lines from '../../assets/img/line.png';
@@ -7,7 +7,7 @@ const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
 const SearchEKB = () => {
-  const [size, setSize] = useState('large');
+  const [size, setSize] = React.useState('large');
   return (
     <div
       style={{
