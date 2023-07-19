@@ -55,11 +55,7 @@ const Main = () => {
             </Header>
             <Content
                 style={{
-                    padding: '0 50px',
                     textAlign: "center",
-                    marginTop: "20ch",
-                    height: "10vw",
-
                 }}
             >
                 <SearchEKB />

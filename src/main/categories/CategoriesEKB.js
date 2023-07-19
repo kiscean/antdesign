@@ -8,6 +8,7 @@ import {
     Divider,
     Row
 } from 'antd';
+import lines from "../../static/img/line.png";
 
 const style = {
     padding: '8px 0',
@@ -43,9 +44,16 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
+
                                 }}
+
                             >
-                                <Col span={18}>
+                                <Col span={16}>
                                     <h5>Инженеры рекомендуют:</h5>
                                     <a href="#">MIKROE-4943</a>
                                     <p>Optical Sensors - Development Tools Ambient 18 Click</p>
@@ -64,6 +72,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -85,6 +98,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -106,6 +124,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -128,6 +151,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -149,6 +177,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -170,6 +203,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -191,6 +229,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -212,6 +255,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -233,6 +281,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -254,6 +307,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -275,6 +333,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -296,6 +359,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -317,6 +385,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -338,6 +411,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
@@ -359,6 +437,11 @@ const CategoriesEKB = () => {
                                 style={{
                                     width: 400,
                                     height: 150,
+                                    backgroundImage: `url(${lines})`,
+                                    position: "relative",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "0% -130%",
                                 }}
                             >
                                 <Col span={18}>
