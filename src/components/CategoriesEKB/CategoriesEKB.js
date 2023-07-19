@@ -29,8 +29,8 @@ const CategoriesEKB = () => {
           lg: 32,
         }}
         align={'middle'}>
-        {popularCards.map((card) => (
-          <Col className="gutter-row" span={4.8}>
+        {popularCards.map((card, i) => (
+          <Col key={i} className="gutter-row" span={4.8}>
             <div style={style}>
               <Space direction="vertical" size={16}>
                 <Card

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Input, Row, Space, Button } from 'antd';
 import { FileAddOutlined } from '@ant-design/icons';
-import lines from '../../assets/img/line.png';
+import './SearchEKB.css';
 
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
@@ -9,16 +9,7 @@ const onSearch = (value) => console.log(value);
 const SearchEKB = () => {
   const [size, setSize] = React.useState('large');
   return (
-    <div
-      style={{
-        backgroundImage: `url(${lines})`,
-        position: 'relative',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: '60% 40%',
-        height: '60vh',
-        width: '100vw',
-      }}>
+    <div className={'bgSearch'}>
       <Space direction="vertical">
         <Row
           style={{
