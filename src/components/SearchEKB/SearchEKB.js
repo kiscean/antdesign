@@ -36,6 +36,17 @@ const SearchEKB = () => {
           <a href="#">HPZR-C56X</a>, или частичный поиск, например{' '}
           <a href="#">1N4148W</a>.
         </p>
+        <Row>
+          <Col span={6}>
+
+          </Col>
+          <Col span={6}>
+
+          </Col>
+          <Col span={6}>
+
+          </Col>
+        </Row>
       </Space>
     </div>
   );

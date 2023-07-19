@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Space, Col, Layout, Menu, Row, theme } from 'antd';
+import { Dropdown, Space, Col, Layout, Menu, Row, Avatar } from 'antd';
 import logo from '../../assets/img/ekb_portal_logo.png';
 import { DownOutlined } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
@@ -10,10 +10,6 @@ import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
 const { Header, Content, Footer } = Layout;
 
 const Main = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
   return (
     <>
       <Layout className="layout">
@@ -21,12 +17,14 @@ const Main = () => {
           style={{
             display: 'flex',
             alignItems: 'center',
+            position: "fixed",
+            zIndex: '100',
+            width: '100vw',
           }}>
           <Row
-            justify="center"
             style={{
               height: '13ch',
-              width: '100vw',
+              width: '300ch',
               alignItems: 'center',
             }}>
             <Col span={8}>
@@ -54,14 +52,28 @@ const Main = () => {
                 })}
               />
             </Col>
-            <Col span={8}>
+            <Col span={8}
+                 style={{
+                     textAlign: "end"
+                 }}
+            >
+               <Avatar
+                   style={{
+                       backgroundColor: '#7fcdea',
+                       color: '#05112c',
+                       marginRight: '1.5ch',
+                       marginTop: '-0.5ch',
+                   }}
+               >
+                   ZA
+               </Avatar>
               <Dropdown
                 menu={{
                   items,
                 }}>
-                <span style={{ color: 'blue', cursor: 'pointer' }}>
+                <span style={{ color: 'white', cursor: 'pointer' }}>
                   <Space>
-                    Hover me
+                    АО ЗАСЛОН
                     <DownOutlined />
                   </Space>
                 </span>
