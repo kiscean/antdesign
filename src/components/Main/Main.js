@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Space, Col, Layout, Menu, Row, Avatar } from 'antd';
+import { Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider } from 'antd';
 import logo from '../../assets/img/ekb_portal_logo.png';
 import { DownOutlined } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
@@ -91,7 +91,24 @@ const Main = () => {
         </Content>
 
         <Footer style={{ textAlign: 'center' }}>
-          Маркетплейс ЭКБ &copy; 2023 Проект АО ЗАСЛОН
+            <Row gutter={1}>
+                <Col span={24}>
+                    Маркетплейс ЭКБ &copy; 2023 Проект АО ЗАСЛОН
+                </Col>
+                <Col span={24}
+                    style={{
+                        marginTop: '2ch',
+                    }}
+                >
+                    <a href="#">О проекте</a>
+                    <Divider type="vertical" />
+                    <a href="#">Карьера</a>
+                    <Divider type="vertical" />
+                    <a href="#">Сертификаты</a>
+                    <Divider type="vertical" />
+                    <a href="#">Тех поддержка</a>
+                </Col>
+            </Row>
         </Footer>
       </Layout>
     </>

@@ -1,4 +1,4 @@
-import { SmileOutlined } from '@ant-design/icons';
+import {AuditOutlined, ExportOutlined, HeartOutlined} from '@ant-design/icons';
 
 export const items = [
   {
@@ -13,25 +13,26 @@ export const items = [
     key: '2',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="#">
-        Настройки партнера
+        Избранное
       </a>
     ),
-    icon: <SmileOutlined />,
+    icon: <HeartOutlined />,
     disabled: true,
   },
   {
     key: '3',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="#">
-        История заказов
+        Кабинет клиента
       </a>
     ),
-    disabled: true,
+    icon: <AuditOutlined />,
   },
   {
     key: '4',
     danger: true,
     label: 'Выйти',
+    icon: <ExportOutlined />,
   },
 ];
 

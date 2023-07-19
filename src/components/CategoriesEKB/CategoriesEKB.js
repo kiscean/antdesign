@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Space } from 'antd';
 import { Col, Divider, Row } from 'antd';
 import lines from '../../assets/img/line.png';
+import condunctors from '../../assets/img/conductors.png';
 import { popularCards } from '../../assets/popularCardsArray';
 
 const style = {
@@ -45,11 +46,11 @@ const CategoriesEKB = () => {
                   style={{
                     width: 400,
                     height: 150,
-                    backgroundImage: `url(${lines})`,
+                    backgroundImage: `url(${condunctors})`,
                     position: 'relative',
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    backgroundPosition: '0% -130%',
+                    backgroundSize: "contain",
+                    backgroundPosition: '110% 50%',
                   }}>
                   <Col span={18}>
                     <h5>Инженеры рекомендуют:</h5>
