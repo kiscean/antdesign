@@ -91,7 +91,7 @@ const Main = () => {
             <ArticlesEKB />
         </Content>
 
-        <Content style={{ padding: '0 50px' }}>
+        <Content style={{ textAlign: "center" }}>
           <CategoriesEKB />
         </Content>
 
