@@ -6,6 +6,7 @@ import { items, menuItems } from '../../assets/constants';
 
 import SearchEKB from '../SearchEKB/SearchEKB';
 import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
+import ArticlesEKB from "../ArticlesEKB/ArticlesEKB";
 
 const { Header, Content, Footer } = Layout;
 
@@ -84,6 +85,10 @@ const Main = () => {
 
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />
+        </Content>
+
+        <Content style={{ textAlign: 'center' }}>
+            <ArticlesEKB />
         </Content>
 
         <Content style={{ padding: '0 50px' }}>
