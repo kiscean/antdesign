@@ -1,8 +1,7 @@
 import React from "react";
-import {Col, Divider, Row, Avatar, Card, Space} from "antd";
+import {Col, Divider, Row, Avatar, Card, Space, Image} from "antd";
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-
-const { Meta } = Card;
+import popprod1 from '../../assets/img/prod/pop_prod_1.jpg'
 
 const PopProducts = () => {
     return (
@@ -25,63 +24,102 @@ const PopProducts = () => {
 
                 </Col>
                 <Space direction="horizontal" size={80}>
-                <Col span={8}>
-                    <Card
-                        style={{
-                            width: 300,
-                        }}
-                        actions={[
-                            <SettingOutlined key="setting" />,
-                            <EditOutlined key="edit" />,
-                            <EllipsisOutlined key="ellipsis" />,
-                        ]}
-                    >
-                        <Meta
-                            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />}
-                            title="Card title"
-                            description="This is the description"
-                        />
-                    </Card>
-                </Col>
-                <Col span={8}>
-                    <Card
-                        style={{
-                            width: 300,
-                        }}
-                        actions={[
-                            <SettingOutlined key="setting" />,
-                            <EditOutlined key="edit" />,
-                            <EllipsisOutlined key="ellipsis" />,
-                        ]}
-                    >
-                        <Meta
-                            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />}
-                            title="Card title"
-                            description="This is the description"
-                        />
-                    </Card>
-                </Col>
-                <Col span={8}>
-                    <Card
-                        style={{
-                            width: 300,
-                        }}
-                        actions={[
-                            <SettingOutlined key="setting" />,
-                            <EditOutlined key="edit" />,
-                            <EllipsisOutlined key="ellipsis" />,
-                        ]}
-                    >
-                        <Meta
-                            avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />}
-                            title="Card title"
-                            description="This is the description"
-                        />
-                    </Card>
-                </Col>
-                <Col>
+                        <Col span={8}>
+                            <Card
+                                style={{
+                                    width: 300,
+                                }}
+                            >
+                                <Row align={"middle"} gutter={20}>
+                                    <Col span={6}>
+                                        <Image src={(popprod1)} width={'7ch'} height={'7ch'}/>
+                                    </Col>
+                                    <Col span={18}>
+                                        <h3 align={'start'}><a>TGFSB</a></h3>
+                                        <p align={'start'}>Wire Ducting & Raceways TG FIB Spool Bracket</p>
+                                    </Col>
+                                    <Col span={24}>
+                                        <Row align={'bottom'}
 
-                </Col>
+                                        >
+                                            <Col span={24}><Divider /></Col>
+                                            <Col span={10}
+                                                style={{
+                                                    color: "darkgrey",
+                                                }}
+                                            ><p>5442 шт</p></Col>
+                                            <Col span={4}><Divider type="vertical" /></Col>
+                                            <Col span={10}><h4>120.00 руб</h4></Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </Col>
+                        <Col span={8}>
+                            <Card
+                                style={{
+                                    width: 300,
+                                }}
+                            >
+                                <Row align={"middle"} gutter={20}>
+                                    <Col span={6}>
+                                        <Image src={(popprod1)} width={'7ch'} height={'7ch'}/>
+                                    </Col>
+                                    <Col span={18}>
+                                        <h3 align={'start'}><a>TGFSB</a></h3>
+                                        <p align={'start'}>Wire Ducting & Raceways TG FIB Spool Bracket</p>
+                                    </Col>
+                                    <Col span={24}>
+                                        <Row align={'bottom'}
+
+                                        >
+                                            <Col span={24}><Divider /></Col>
+                                            <Col span={10}
+                                                 style={{
+                                                     color: "darkgrey",
+                                                 }}
+                                            ><p>5442 шт</p></Col>
+                                            <Col span={4}><Divider type="vertical" /></Col>
+                                            <Col span={10}><h4>120.00 руб</h4></Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </Col>
+                        <Col span={8}>
+                            <Card
+                                style={{
+                                    width: 300,
+                                }}
+                            >
+                                <Row align={"middle"} gutter={20}>
+                                    <Col span={6}>
+                                        <Image src={(popprod1)} width={'7ch'} height={'7ch'}/>
+                                    </Col>
+                                    <Col span={18}>
+                                        <h3 align={'start'}><a>TGFSB</a></h3>
+                                        <p align={'start'}>Wire Ducting & Raceways TG FIB Spool Bracket</p>
+                                    </Col>
+                                    <Col span={24}>
+                                        <Row align={'bottom'}
+
+                                        >
+                                            <Col span={24}><Divider /></Col>
+                                            <Col span={10}
+                                                 style={{
+                                                     color: "darkgrey",
+                                                 }}
+                                            ><p>5442 шт</p></Col>
+                                            <Col span={4}><Divider type="vertical" /></Col>
+                                            <Col span={10}><h4>120.00 руб</h4></Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </Col>
+                    <Col>
+
+                    </Col>
                 </Space>
             </Row>
         </>
