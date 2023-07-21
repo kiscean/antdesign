@@ -4,11 +4,6 @@ import { Col, Divider, Row } from 'antd';
 import { popularCards } from '../../assets/popularCardsArray';
 import './CategoriesEKB.css';
 
-const style = {
-  padding: '2ch 0',
-  textAlign: 'start',
-};
-
 const CategoriesEKB = () => {
   return (
     <>
@@ -22,22 +17,17 @@ const CategoriesEKB = () => {
           </Divider>
         </Col>
       </Row>
-          <Row gutter={30} align={"middle"}
-            style={{
-                marginLeft: '5ch',
-                marginRight: '5ch',
-                display: "flex",
-            }}
-          >
+          <Row align={"stretch"}
+               className={"row_card_padding_categories"}>
               {popularCards.map((card, i) => (
                   <Col key={i}
-                       className="gutter-row"
                        xs={24}
                        sm={12}
-                       md={8}
-                       lg={6}
+                       md={12}
+                       lg={8}
+                       xl={6}
                        >
-                      <div style={style}>
+                      <div className={"card_pbotton"}>
                           <Space direction="horizontal" size={18}>
                               <Card
                                   key={card.title}

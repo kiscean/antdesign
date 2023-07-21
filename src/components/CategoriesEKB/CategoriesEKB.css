@@ -16,7 +16,7 @@
 /* iPads (вертикальная) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .card_bg {
-        height: 20ch;
+        height: 15ch;
     }
 }
 
@@ -41,6 +41,15 @@
         height: 28ch;
         width: 55ch;
     }
+
+    .card_pbotton {
+        padding: 2ch 0;
+    }
+
+    .row_card_padding_categories {
+        padding-left: 5ch;
+        padding-right: 5ch;
+    }
 }
 
 .card_bg {
@@ -48,5 +57,10 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: contain;
+    text-align: start;
     background-position: 110% 50%;
 }
+
+
+
+
