@@ -6,7 +6,7 @@ import { items, menuItems } from '../../assets/constants';
 
 import SearchEKB from '../SearchEKB/SearchEKB';
 import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
-import ArticlesEKB from "../ArticlesEKB/ArticlesEKB";
+import PopProducts from "../PopProducts/PopProducts";
 
 const { Header, Content, Footer } = Layout;
 
@@ -88,7 +88,7 @@ const Main = () => {
         </Content>
 
         <Content style={{ textAlign: 'center' }}>
-            <ArticlesEKB />
+            <PopProducts />
         </Content>
 
         <Content style={{ textAlign: "center" }}>
