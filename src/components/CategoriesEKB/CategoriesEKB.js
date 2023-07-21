@@ -17,18 +17,12 @@ const CategoriesEKB = () => {
           </Divider>
         </Col>
       </Row>
-          <Row align={"stretch"}
+          <Row justify={"center"} gutter={30}
                className={"row_card_padding_categories"}>
               {popularCards.map((card, i) => (
-                  <Col key={i}
-                       xs={24}
-                       sm={12}
-                       md={12}
-                       lg={8}
-                       xl={6}
-                       >
+                  <Col key={i}>
                       <div className={"card_pbotton"}>
-                          <Space direction="horizontal" size={18}>
+                          <Space direction="vertical" size={110}>
                               <Card
                                   key={card.title}
                                   size="large"

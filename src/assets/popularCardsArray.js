@@ -10,21 +10,21 @@ export const popularCards = [
     sum: 302619,
     name: 'TPS92665QPHPRQ1',
     description:
-      'Драйверы систем светодиодного освещения 16-channel low noise LED ...',
+      'Драйверы систем светодиодного освещения 16- ...',
   },
   {
     title: 'Пассивные компоненты',
     sum: 469154,
     name: 'MXO45HST-2I-15M367000',
     description:
-      'Стандартные тактовые генераторы 0015.367000 MHZ Hybrid Circuit',
+      'Стандартные тактовые генераторы 0015.367000 M ...',
   },
   {
     title: 'Встроенные решения',
     sum: 321,
     name: 'BH1790GLC-EVK-001',
     description:
-      'Инструменты разработки оптического датчика Evaluation Kit ...',
+      'Инструменты разработки оптического датчика Evaluati ...',
   },
   {
     title: 'Электромеханический',
@@ -55,7 +55,7 @@ export const popularCards = [
     sum: 174537,
     name: 'BQ51025YFPT',
     description:
-      'ИС беспроводного зарядного устройства 10W Sgl Chip Wire le ...',
+      'ИС беспроводного зарядного устройства 10W Sgl Chip Wi ...',
   },
   {
     title: 'Кожухи',
@@ -75,7 +75,7 @@ export const popularCards = [
     sum: 2312,
     name: '0900-0017-01B',
     description:
-      'Стоечные блоки питания POWER SUPPLY BACKPLANE,SINGLE P47,REV B',
+      'Стоечные блоки питания POWER SUPPLY BACKPLANE,SINGL ...',
   },
   {
     title: 'Инвертирующие усилители мощности',
@@ -88,7 +88,7 @@ export const popularCards = [
     sum: 6756,
     name: 'MIKROE-4943',
     description:
-      'Преобразователи постоянного тока в постоянный без изоляции A-Series ...',
+      'Преобразователи постоянного тока в постоянный без изо ...',
   },
   {
     title: 'Зарядные устройства для аккумуляторов',
@@ -101,6 +101,6 @@ export const popularCards = [
     sum: 65431,
     name: 'PJ-067B',
     description:
-      'Соединители питания для постоянного тока power jack, 2.5 x ...',
+      'Соединители питания для постоянного тока power jac ...',
   },
 ];
