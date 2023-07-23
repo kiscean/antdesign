@@ -1,9 +1,10 @@
 .header {
     display: flex;
-    align-items: center;
     position: fixed;
+    align-items: center;
     z-index: 100;
     width: 100vw;
+    padding-inline: 2.5ch;
 }
 
 .logo {
@@ -25,7 +26,7 @@
 }
 
 .logo__slogan {
-    color: white;
+    color: darkgrey;
     text-transform: uppercase;
     font-size: 1.5ch;
     display: flex;
@@ -33,5 +34,16 @@
     justify-content: start;
     line-height: 2ch;
     width: 20ch;
+    margin: 0.7ch 2ch 0 2ch;
 
+}
+
+.header__basket {
+    color: darkgrey;
+    font-size: 20px;
+    margin: 2.4ch 1.5ch 0 1.5ch;
+}
+
+.header__basket:hover {
+    color: white;
 }

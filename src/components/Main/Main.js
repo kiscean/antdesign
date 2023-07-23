@@ -1,6 +1,6 @@
-import React from 'react';
-import { Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import React, {useState} from 'react';
+import {Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider, theme} from 'antd';
+import {DownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 import './Main.css';
 
@@ -11,10 +11,15 @@ import PopProducts from "../PopProducts/PopProducts";
 const { Header, Content, Footer } = Layout;
 
 const Main = () => {
+  const {
+      token: { colorBgContainer },
+  } = theme.useToken();
+
+    const [openMenu, setOpenMenu] = useState(false)
+
   return (
     <>
       <Layout className="layout">
-
         <Header
             className={'header'}
         >
@@ -34,57 +39,46 @@ const Main = () => {
                 >
                     <p>маркетплейс <br /> для инженеров</p>
                 </div>
-                <Row
-                    style={{
-                        height: '13ch',
-                        width: '300ch',
-                        alignItems: 'center',
-                    }}>
-                <Col span={8}>
-                  <Menu
+            </Space>
+                <Menu
                     theme="dark"
                     mode="horizontal"
                     defaultSelectedKeys={['4']}
-                    items={menuItems.map((item) => {
-                      const key = item.name;
-                      return {
-                        key,
-                        label: `${key}`,
-                      };
+                    items={
+                        menuItems.map((item) => {
+                            const key = item.name;
+                            return {
+                                key,
+                                label: `${key}`,
+                        };
                     })}
-                  />
-                </Col>
-                <Col span={8}
-                     style={{
-                         textAlign: "end"
-                     }}
+                />
+            <Space direction={"horizontal"}>
+                <ShoppingCartOutlined className={'header__basket'}/>
+                <Avatar
+                    style={{
+                        backgroundColor: '#7fcdea',
+                        color: '#05112c',
+                        marginRight: '1.5ch',
+                        marginTop: '-0.5ch',
+                    }}
                 >
-                   <Avatar
-                       style={{
-                           backgroundColor: '#7fcdea',
-                           color: '#05112c',
-                           marginRight: '1.5ch',
-                           marginTop: '-0.5ch',
-                       }}
-                   >
-                       ZA
-                   </Avatar>
-                  <Dropdown
+                    ZA
+                </Avatar>
+                <Dropdown
                     menu={{
-                      items,
-                    }}>
-                    <span style={{ color: 'white', cursor: 'pointer' }}>
-                      <Space>
-                        АО ЗАСЛОН
-                        <DownOutlined />
-                      </Space>
-                    </span>
-                  </Dropdown>
-                </Col>
-              </Row>
+                        items,
+                    }}
+                >
+                    <div style={{ color: 'white', cursor: 'pointer' }}>
+                        <Space>
+                            АО ЗАСЛОН
+                            <DownOutlined />
+                        </Space>
+                    </div>
+                </Dropdown>
             </Space>
         </Header>
-
 
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />

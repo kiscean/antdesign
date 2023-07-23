@@ -8,52 +8,36 @@ const onSearch = (value) => console.log(value);
 const { Option } = Select;
 const selectBefore = (
     <Select
-        defaultValue="add"
+        defaultValue="параметрическтй поиск"
         style={{
-          width: 200,
+          fontSize: "15px",
         }}
     >
-      <Option value="add">Параметрическтй поиск</Option>
-      <Option value="minus">Поиск по компоненту</Option>
+      <Option value="add">параметрический поиск</Option>
+      <Option value="minus">поиск по компоненту</Option>
     </Select>
 );
 
 const SearchEKB = () => {
   const [size, setSize] = React.useState('large');
   return (
-    <div className={'bgSearch'}>
-      <Space direction="vertical">
-        <Row
-          style={{
-            marginTop: '30ch',
-          }}>
-          <Col span={4}>
-            <Button type="primary" icon={<FileAddOutlined />} size={size}>
-              BOM запрос
-            </Button>
+    <div className={'main-search__background'}>
+      <Space direction="vertical" align={"center"} className={'main-search'}>
+          <Col span={24}>
+              <Space direction={"horizontal"}>
+                  <Button type="primary" icon={<FileAddOutlined />} size={size} className={'main-search__item__bom'}></Button>
+                  <h3>BOM запрос</h3>
+              </Space>
+              <Search addonBefore={selectBefore} placeholder="введите текст для поиска" allowClear enterButton="ИСКАТЬ" size="large" onSearch={onSearch} />
           </Col>
-          <Col span={18}>
-            <Space direction="vertical">
-              <Search addonBefore={selectBefore} placeholder="введите текст для поиска" allowClear enterButton="Искать" size="large" onSearch={onSearch} />
-            </Space>
+          <Col span={24}>
+              <p>
+                  Попробуйте поиск с точным соответствием, например{' '}
+                  <a href="#">HPZR-C56X</a>, или частичный поиск, например{' '}
+                  <a href="#">1N4148W</a>.
+              </p>
           </Col>
-        </Row>
-        <p>
-          Попробуйте поиск с точным соответствием, например{' '}
-          <a href="#">HPZR-C56X</a>, или частичный поиск, например{' '}
-          <a href="#">1N4148W</a>.
-        </p>
-        <Row>
-          <Col span={6}>
 
-          </Col>
-          <Col span={6}>
-
-          </Col>
-          <Col span={6}>
-
-          </Col>
-        </Row>
       </Space>
     </div>
   );
