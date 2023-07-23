@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+}
+
+.logo {
+    cursor: pointer;
+    font-size: larger;
+    margin-bottom: 3ch;
+}
+
+.logo__a {
+    color: white;
+}
+
+.logo__a:hover {
+    color: white;
+}
+
+.logo__divider {
+    color: white;
+}
+
+.logo__slogan {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5ch;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    line-height: 2ch;
+    width: 20ch;
+
+}

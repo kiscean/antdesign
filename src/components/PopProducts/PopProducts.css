@@ -1,0 +1,32 @@
+.pop-products {
+
+}
+
+.pop-products__card {
+
+}
+
+.card-switch-button {
+    cursor: pointer;
+    color: darkgrey;
+    font-size: 30px;
+}
+
+.card-switch-button:hover{
+    color: #1676FEFF;
+}
+
+.card-switch-lines {
+    margin: 4ch 0;
+    color: darkgrey;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.card-switch-lines__item {
+    margin: 0 1.5ch 0 1.5ch;
+}
+
+.card-switch-lines__active {
+    color: #1676fe;
+}
