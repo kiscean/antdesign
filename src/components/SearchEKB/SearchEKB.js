@@ -1,10 +1,22 @@
 import React from 'react';
-import { Col, Input, Row, Space, Button } from 'antd';
+import {Col, Input, Row, Space, Button, Select} from 'antd';
 import { FileAddOutlined } from '@ant-design/icons';
 import './SearchEKB.css';
 
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
+const { Option } = Select;
+const selectBefore = (
+    <Select
+        defaultValue="add"
+        style={{
+          width: 200,
+        }}
+    >
+      <Option value="add">Параметрическтй поиск</Option>
+      <Option value="minus">Поиск по компоненту</Option>
+    </Select>
+);
 
 const SearchEKB = () => {
   const [size, setSize] = React.useState('large');
@@ -21,14 +33,9 @@ const SearchEKB = () => {
             </Button>
           </Col>
           <Col span={18}>
-            <Search
-              placeholder="введите текст для поиска"
-              allowClear
-              enterButton="Искать"
-              size="large"
-              onSearch={onSearch}
-              style={{ width: 800 }}
-            />
+            <Space direction="vertical">
+              <Search addonBefore={selectBefore} placeholder="введите текст для поиска" allowClear enterButton="Искать" size="large" onSearch={onSearch} />
+            </Space>
           </Col>
         </Row>
         <p>

@@ -28,7 +28,7 @@ const Main = () => {
                         </a>
                     </h1>
                 </div>
-                <Divider type="vertical" className={'logo__divider'}/>
+
                 <div
                     className={'logo__slogan'}
                 >
