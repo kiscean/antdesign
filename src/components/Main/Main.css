@@ -1,16 +1,24 @@
-.header {
-    display: flex;
-    position: center;
-    align-items: center;
+.navbar {
+    position: fixed;
     z-index: 100;
     width: 100vw;
+    height: 50px;
+    line-height: 50px;
     padding-inline: 2.5ch;
+}
+
+.navbar .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     cursor: pointer;
-    font-size: large;
-
+    font-size: 3.3ch;
+    width: auto;
+    height: 90px;
 }
 
 .logo__a {
@@ -19,36 +27,31 @@
 
 .logo__a:hover {
     color: white;
-}
-
-.logo__divider {
-    color: white;
+    font-size: 1.9ch;
 }
 
 .logo__slogan {
-    color: darkgrey;
-    text-transform: uppercase;
-    font-size: 1.5ch;
+    color: whitesmoke;
+    font-size: 2ch;
     display: flex;
     align-items: start;
     justify-content: start;
     line-height: 2ch;
     width: 20ch;
-    margin: 0.7ch 2ch 0 2ch;
-
+    margin: 0 2ch 0 1ch;
 }
 
-.header__basket {
+.navbar-basket {
     color: darkgrey;
     font-size: 20px;
-    margin: 2.4ch 1.5ch 0 1.5ch;
+    margin: 1.7ch 1.5ch 0 1.5ch;
 }
 
-.header__basket:hover {
+.navbar-basket:hover {
     color: white;
 }
 
-.header__user {
+.navbar-user {
     line-height: 2ch;
     color: white;
     cursor: pointer;
@@ -56,8 +59,8 @@
     width: 20ch;
 }
 
-.header__user-icon {
+.navbar-user__icon {
     background-color: #78de80;
     color: #05112c;
-    margin-top: -0.5ch;
+    margin-bottom: 0.5ch;
 }

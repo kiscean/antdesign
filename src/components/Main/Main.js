@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider, theme} from 'antd';
+import {Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider} from 'antd';
 import {DownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 import './Main.css';
@@ -11,9 +11,6 @@ import PopProducts from "../PopProducts/PopProducts";
 const { Header, Content, Footer } = Layout;
 
 const Main = () => {
-  const {
-      token: { colorBgContainer },
-  } = theme.useToken();
 
     const [openMenu, setOpenMenu] = useState(false)
 
@@ -21,55 +18,59 @@ const Main = () => {
     <>
       <Layout className="layout">
         <Header
-            className={'header'}
+            className={'navbar'}
         >
-            <Space direction="horizontal" className={'header'}>
-                <div
-                    className={'logo'}
-                >
-                    <h1>
-                        <a href={'#'} className={'logo__a'}>
-                            ЭКБ
-                        </a>
-                    </h1>
-                </div>
+            <Space direction={"horizontal"} className={'container'}>
+                <Space direction="horizontal">
+                    <div
+                        className={'logo'}
+                    >
+                        <h1>
+                            <a href={'#'} className={'logo__a'}>
+                                ЭКБ
+                            </a>
+                        </h1>
+                    </div>
 
-                <div
-                    className={'logo__slogan'}
-                >
-                    <p>маркетплейс <br /> для инженеров</p>
-                </div>
-            </Space>
+                    <div
+                        className={'logo__slogan'}
+                    >
+                        <p>Маркетплейс <br /> для инженеров</p>
+                    </div>
+                </Space>
                 <Menu
                     theme="dark"
                     mode="horizontal"
                     defaultSelectedKeys={['4']}
                     items={
                         menuItems.map((item) => {
-                            const key = item.name;
-                            return {
-                                key,
-                                label: `${key}`,
-                        };
-                    })}
+                                const key = item.name;
+                                return {
+                                    key,
+                                    label: `${key}`,
+                                };
+                            })}
                 />
-            <Space direction={"horizontal"}>
-                <ShoppingCartOutlined className={'header__basket'}/>
-                <Avatar
-                    className={'header__user-icon'}
-                >
-                    ZA
-                </Avatar>
-                <Dropdown
-                    menu={{
-                        items,
-                    }}
-                >
-                    <Space className={'header__user'}>
-                        АО ЗАСЛОН
-                        <DownOutlined />
+                <div className={'header-user'}>
+                    <Space direction={"horizontal"}>
+                        <ShoppingCartOutlined className={'navbar-basket'}/>
+                        <Avatar
+                            className={'navbar-user__icon'}
+                        >
+                            ZA
+                        </Avatar>
+                        <Dropdown
+                            menu={{
+                                items,
+                            }}
+                        >
+                            <Space className={'navbar-user'}>
+                                АО ЗАСЛОН
+                                <DownOutlined />
+                            </Space>
+                        </Dropdown>
                     </Space>
-                </Dropdown>
+                </div>
             </Space>
         </Header>
 
