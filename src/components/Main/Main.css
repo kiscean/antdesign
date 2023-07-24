@@ -43,6 +43,7 @@
 
 .navbar-basket {
     color: darkgrey;
+    cursor: pointer;
     font-size: 20px;
     margin: 1.7ch 1.5ch 0 1.5ch;
 }

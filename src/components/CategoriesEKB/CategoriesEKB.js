@@ -18,10 +18,10 @@ const CategoriesEKB = () => {
         </Col>
       </Row>
           <Row justify={"center"} gutter={30}
-               className={"row_card_padding_categories"}>
+               className={"card__row-padding"}>
               {popularCards.map((card, i) => (
-                  <Col key={i}>
-                      <div className={"card_pbotton"}>
+                  <Col key={i} className={'card__wrap'}>
+                      <div className={"card__padding"}>
                           <Space direction="vertical" size={110}>
                               <Card
                                   key={card.title}
@@ -32,7 +32,7 @@ const CategoriesEKB = () => {
                                           {card.sum}
                                       </a>
                                   }
-                                  className={'card_bg'}
+                                  className={'card__bg'}
                                   >
                                   <Col span={16} >
                                       <h5>Инженеры рекомендуют:</h5>

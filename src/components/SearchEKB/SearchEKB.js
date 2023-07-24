@@ -23,21 +23,13 @@ const SearchEKB = () => {
   return (
     <div className={'main-search__background'}>
       <Space direction="vertical" align={"center"} className={'main-search'}>
-          <Col span={24}>
-              <Space direction={"horizontal"}>
-                  <Button type="primary" icon={<FileAddOutlined />} size={size} className={'main-search__item__bom'}></Button>
-                  <h3>BOM запрос</h3>
-              </Space>
-              <Search addonBefore={selectBefore} placeholder="введите текст для поиска" allowClear enterButton="ИСКАТЬ" size="large" onSearch={onSearch} />
-          </Col>
-          <Col span={24}>
-              <p>
-                  Попробуйте поиск с точным соответствием, например{' '}
-                  <a href="#">HPZR-C56X</a>, или частичный поиск, например{' '}
-                  <a href="#">1N4148W</a>.
-              </p>
-          </Col>
-
+          <Button type="primary" icon={<FileAddOutlined />} size={size}>BOM запрос</Button>
+          <Search addonBefore={selectBefore} placeholder="введите текст для поиска" allowClear enterButton="ИСКАТЬ" size="large" onSearch={onSearch} />
+          <p>
+              Попробуйте поиск с точным соответствием, например{' '}
+              <a href="#">HPZR-C56X</a>, или частичный поиск, например{' '}
+              <a href="#">1N4148W</a>.
+          </p>
       </Space>
     </div>
   );
