@@ -23,7 +23,7 @@ const Main = () => {
         <Header
             className={'header'}
         >
-            <Space direction="horizontal">
+            <Space direction="horizontal" className={'header'}>
                 <div
                     className={'logo'}
                 >
@@ -56,12 +56,7 @@ const Main = () => {
             <Space direction={"horizontal"}>
                 <ShoppingCartOutlined className={'header__basket'}/>
                 <Avatar
-                    style={{
-                        backgroundColor: '#7fcdea',
-                        color: '#05112c',
-                        marginRight: '1.5ch',
-                        marginTop: '-0.5ch',
-                    }}
+                    className={'header__user-icon'}
                 >
                     ZA
                 </Avatar>
@@ -70,12 +65,10 @@ const Main = () => {
                         items,
                     }}
                 >
-                    <div style={{ color: 'white', cursor: 'pointer' }}>
-                        <Space>
-                            АО ЗАСЛОН
-                            <DownOutlined />
-                        </Space>
-                    </div>
+                    <Space className={'header__user'}>
+                        АО ЗАСЛОН
+                        <DownOutlined />
+                    </Space>
                 </Dropdown>
             </Space>
         </Header>

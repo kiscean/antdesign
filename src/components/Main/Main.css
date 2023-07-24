@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    position: fixed;
+    position: center;
     align-items: center;
     z-index: 100;
     width: 100vw;
@@ -46,4 +46,18 @@
 
 .header__basket:hover {
     color: white;
+}
+
+.header__user {
+    line-height: 2ch;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    width: 20ch;
+}
+
+.header__user-icon {
+    background-color: #78de80;
+    color: #05112c;
+    margin-top: -0.5ch;
 }
