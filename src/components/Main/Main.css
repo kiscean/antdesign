@@ -1,30 +1,3 @@
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .logo {
-        font-size: 1ch;
-        height: 60px;
-    }
-
-    .logo__a:hover {
-        font-size: 1ch;
-    }
-
-    .navbar-user {
-        display: none;
-    }
-
-    .logo__slogan {
-        display: none;
-    }
-
-    .navbar__menu {
-        display: none;
-    }
-
-    .navbar-user {
-        display: none;
-    }
-}
-
 .navbar {
     position: fixed;
     z-index: 100;
@@ -39,6 +12,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.burger {
+    display: flex;
+    color: white;
+    margin-left: 0.5ch;
+    margin-right: 1ch;
+    font-size: 25px;
 }
 
 .logo {
@@ -98,7 +79,17 @@
     margin-bottom: 0.5ch;
 }
 
-@media screen and (max-width: 1200px) {
+.navbar__leftmenuicon {
+    background-color: #78de80;
+    color: #05112c;
+    margin-left: -1ch;
+}
+
+.navbar__leftmenuname {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1050px) {
 
     .navbar {
         padding-inline: 1ch;
@@ -125,7 +116,24 @@
         display: none;
     }
 
+    .navbar-basket {
+        font-size: 30px;
+        color: white;
+        margin: 0.9ch 1ch 0 1.5ch;
+    }
+
     .navbar-user {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+
+    .burger {
+        display: none;
+    }
+
+    .navbar__leftmenu {
         display: none;
     }
 }

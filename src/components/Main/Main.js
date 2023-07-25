@@ -7,7 +7,7 @@ import {
     IssuesCloseOutlined,
     SmileOutlined,
     HeartOutlined,
-    ImportOutlined,
+    ImportOutlined, MenuOutlined,
 } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 import './Main.css';
@@ -26,15 +26,16 @@ function getItem(label, key, icon, children) {
 }
 
 const rightmenuItems = [
-    getItem('ОчумелыеРучки', '6', <SmileOutlined />, [
-        getItem('Профиль', '7'),
-        getItem('Кабинет клиента', '8'),
+    getItem(<div className='navbar__leftmenuname'>ОчумелыеРучки</div>, 'sub1',
+        <Avatar className='navbar__leftmenuicon'>OR</Avatar>, [
+        getItem('Профиль', '6'),
+        getItem('Кабинет клиента', '7'),
     ]),
-    getItem('Избранное', '9', <HeartOutlined />),
-    getItem('Меню сайта', '10', <AppstoreOutlined />, [
-        getItem('Опыт инжинеров', '11'),
-        getItem('Популярное', '12'),
-        getItem('Категории', '13'),
+    getItem('Избранное', '8', <HeartOutlined />),
+    getItem('Меню сайта', 'sub2', <AppstoreOutlined />, [
+        getItem('Опыт инжинеров', '9'),
+        getItem('Популярное', '10'),
+        getItem('Категории', '11'),
     ]),
     getItem(
         <a href="https://avatars.mds.yandex.net/i?id=89987775783b0069dbf4acf35505bec60780ce40-8497233-images-thumbs&n=13" target="_blank" rel="noopener noreferrer">
@@ -43,7 +44,7 @@ const rightmenuItems = [
         'link',
         <IssuesCloseOutlined />,
     ),
-    getItem('Выйти', '14', <ImportOutlined />),
+    getItem('Выйти', '12', <ImportOutlined />),
 ];
 
 const { Header, Content, Footer } = Layout;
@@ -59,7 +60,9 @@ const Main = () => {
             className={'navbar'}
         >
             <Space direction={"horizontal"} className={'container'}>
+
                 <Space direction="horizontal">
+                    <MenuOutlined className='burger' onClick={() => setOpenMenu(!openMenu)}/>
                     <div
                         className={'logo'}
                     >
@@ -113,29 +116,23 @@ const Main = () => {
                 </div>
             </Space>
         </Header>
-        <Space direction={"horizontal"}
-            style={{
-                alignContent: "right",
-                alignItems: "right",
-
-            }}
-        >
-              <Menu
-                  style={{
-                      width: 256,
-                      position: 'absolute',
-                      zIndex: 99,
-                      height: '100%',
-                      paddingTop: '8ch',
-                  }}
-                  defaultSelectedKeys={['1']}
-                  defaultOpenKeys={['sub1']}
-                  mode={'inline'}
-                  theme={"light"}
-                  items={rightmenuItems}
-              />
-        </Space>
-
+        <div className='navbar__leftmenu'>
+            <Menu
+                style={{
+                    width: 256,
+                    position: 'absolute',
+                    zIndex: 99,
+                    height: '100%',
+                    paddingTop: '8ch',
+                }}
+                defaultOpenKeys={['sub1']}
+                mode={'inline'}
+                theme={"light"}
+                items={rightmenuItems}
+                open={openMenu}
+                onClose={() => setOpenMenu(!openMenu)}
+            />
+        </div>
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />
         </Content>
