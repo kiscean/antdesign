@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Input, Row, Space, Button, Select} from 'antd';
+import {Input, Space, Button, Select} from 'antd';
 import { FileAddOutlined } from '@ant-design/icons';
 import './SearchEKB.css';
 

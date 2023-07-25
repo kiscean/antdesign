@@ -34,11 +34,11 @@ const CategoriesEKB = () => {
                                   }
                                   className={'card__bg'}
                                   >
-                                  <Col span={16} >
-                                      <h5>Инженеры рекомендуют:</h5>
-                                      <a href="#">{card.name}</a>
-                                      <p>{card.description}</p>
-                                  </Col>
+                                  <Space direction={"vertical"}>
+                                      <a href="#">{card.name1}</a>
+                                      <a href="#">{card.name2}</a>
+                                      <a href="#">{card.name3}</a>
+                                  </Space>
                               </Card>
                           </Space>
                       </div>

@@ -1,17 +1,14 @@
 .card__bg {
-    background-image:
-            linear-gradient(to bottom, rgb(126, 135, 159, 0.2), rgb(255, 255, 255, 100)),
-            url(../../assets/img/conductors.jpg);
+    background: linear-gradient(160deg, #ffffff 85%, rgb(219, 232, 248) 50%);
     position: relative;
-    background-repeat: no-repeat;
     background-size: cover;
     text-align: start;
-    background-position: 10% 7.3ch;
-    width: 55ch;
+    width: 40ch;
+    height: 25ch;
 }
 
 .card__wrap:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     box-sizing: border-box;
     z-index: 1;
     transition: all 0.45s ease;
