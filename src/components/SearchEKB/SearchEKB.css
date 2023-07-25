@@ -1,29 +1,29 @@
 .main-search {
-    margin-top: 28vh;
+  background-color: whitesmoke;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 21, 41, 0.5),
+      rgba(245, 245, 245, 100)
+    ),
+    url(../../assets/img/search_bg.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: -50% 70%;
+  background-size: cover;
+  height: 60vh;
+  width: 100vw;
+  color: #ffffff;
 }
 
-.main-search__item {
+.main-search__container {
+  margin-top: 28vh;
+}
 
+/* .main-search__item {
 }
 
 .main-search__wrap {
-
 }
 
 .bom__wrap {
-
-}
-
-.main-search__background {
-    background-color: whitesmoke;
-    background-image:
-            linear-gradient(to bottom, rgba(5, 21, 41, 0.5), rgba(245, 245, 245, 100)),
-            url(../../assets/img/search_bg.jpg);
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: -50% 70%;
-    background-size: cover;
-    height: 60vh;
-    width: 100vw;
-    color: #ffffff;
-}
+} */
