@@ -1,3 +1,30 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .logo {
+        font-size: 1ch;
+        height: 60px;
+    }
+
+    .logo__a:hover {
+        font-size: 1ch;
+    }
+
+    .navbar-user {
+        display: none;
+    }
+
+    .logo__slogan {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: none;
+    }
+
+    .navbar-user {
+        display: none;
+    }
+}
+
 .navbar {
     position: fixed;
     z-index: 100;
@@ -41,6 +68,10 @@
     margin: 0 2ch 0 1ch;
 }
 
+.navbar__menu {
+    display: flex;
+}
+
 .navbar-basket {
     color: darkgrey;
     cursor: pointer;
@@ -65,4 +96,36 @@
     background-color: #78de80;
     color: #05112c;
     margin-bottom: 0.5ch;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .navbar {
+        padding-inline: 1ch;
+    }
+
+    .logo {
+        font-size: 2ch;
+        height: 73px;
+    }
+
+    .logo__a:hover {
+        font-size: 2.05ch;
+    }
+
+    .navbar-user {
+        display: none;
+    }
+
+    .logo__slogan {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: none;
+    }
+
+    .navbar-user {
+        display: none;
+    }
 }

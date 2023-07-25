@@ -1,12 +1,50 @@
 import React, {useState} from 'react';
 import {Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider} from 'antd';
-import {DownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
+import {
+    AppstoreOutlined,
+    DownOutlined,
+    ShoppingCartOutlined,
+    IssuesCloseOutlined,
+    SmileOutlined,
+    HeartOutlined,
+    ImportOutlined,
+} from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 import './Main.css';
 
 import SearchEKB from '../SearchEKB/SearchEKB';
 import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
 import PopProducts from "../PopProducts/PopProducts";
+
+function getItem(label, key, icon, children) {
+    return {
+        key,
+        icon,
+        children,
+        label,
+    };
+}
+
+const rightmenuItems = [
+    getItem('ОчумелыеРучки', '6', <SmileOutlined />, [
+        getItem('Профиль', '7'),
+        getItem('Кабинет клиента', '8'),
+    ]),
+    getItem('Избранное', '9', <HeartOutlined />),
+    getItem('Меню сайта', '10', <AppstoreOutlined />, [
+        getItem('Опыт инжинеров', '11'),
+        getItem('Популярное', '12'),
+        getItem('Категории', '13'),
+    ]),
+    getItem(
+        <a href="https://avatars.mds.yandex.net/i?id=89987775783b0069dbf4acf35505bec60780ce40-8497233-images-thumbs&n=13" target="_blank" rel="noopener noreferrer">
+            Тех поддержка
+        </a>,
+        'link',
+        <IssuesCloseOutlined />,
+    ),
+    getItem('Выйти', '14', <ImportOutlined />),
+];
 
 const { Header, Content, Footer } = Layout;
 
@@ -38,19 +76,21 @@ const Main = () => {
                         <p>Маркетплейс <br /> для инженеров</p>
                     </div>
                 </Space>
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                    defaultSelectedKeys={['4']}
-                    items={
-                        menuItems.map((item) => {
-                                const key = item.name;
-                                return {
-                                    key,
-                                    label: `${key}`,
-                                };
-                            })}
-                />
+                <Col span={24} className='navbar__menu'>
+                    <Menu
+                        theme="dark"
+                        mode="horizontal"
+                        defaultSelectedKeys={['4']}
+                        items={
+                            menuItems.map((item) => {
+                                    const key = item.name;
+                                    return {
+                                        key,
+                                        label: `${key}`,
+                                    };
+                                })}
+                    />
+                </Col>
                 <div className={'header-user'}>
                     <Space direction={"horizontal"}>
                         <ShoppingCartOutlined className={'navbar-basket'}/>
@@ -65,7 +105,7 @@ const Main = () => {
                             }}
                         >
                             <Space className={'navbar-user'}>
-                                ООО ОчумелыеРучки
+                                ОчумелыеРучки
                                 <DownOutlined />
                             </Space>
                         </Dropdown>
@@ -73,6 +113,28 @@ const Main = () => {
                 </div>
             </Space>
         </Header>
+        <Space direction={"horizontal"}
+            style={{
+                alignContent: "right",
+                alignItems: "right",
+
+            }}
+        >
+              <Menu
+                  style={{
+                      width: 256,
+                      position: 'absolute',
+                      zIndex: 99,
+                      height: '100%',
+                      paddingTop: '8ch',
+                  }}
+                  defaultSelectedKeys={['1']}
+                  defaultOpenKeys={['sub1']}
+                  mode={'inline'}
+                  theme={"light"}
+                  items={rightmenuItems}
+              />
+        </Space>
 
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />
