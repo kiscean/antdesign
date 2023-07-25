@@ -57,7 +57,7 @@ const Main = () => {
                         <Avatar
                             className={'navbar-user__icon'}
                         >
-                            ZA
+                            OR
                         </Avatar>
                         <Dropdown
                             menu={{
@@ -65,7 +65,7 @@ const Main = () => {
                             }}
                         >
                             <Space className={'navbar-user'}>
-                                АО ЗАСЛОН
+                                ООО ОчумелыеРучки
                                 <DownOutlined />
                             </Space>
                         </Dropdown>
@@ -89,7 +89,7 @@ const Main = () => {
         <Footer style={{ textAlign: 'center' }}>
             <Row gutter={1}>
                 <Col span={24}>
-                    Маркетплейс ЭКБ &copy; 2023 Проект АО ЗАСЛОН
+                    Маркетплейс ЭКБ &copy; 2023 ООО Банда
                 </Col>
                 <Col span={24}
                     style={{

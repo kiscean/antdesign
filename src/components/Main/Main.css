@@ -57,7 +57,8 @@
     color: white;
     cursor: pointer;
     display: flex;
-    width: 20ch;
+    width: auto;
+    margin-right: 5ch;
 }
 
 .navbar-user__icon {
