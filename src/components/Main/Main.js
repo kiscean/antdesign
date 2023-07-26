@@ -5,9 +5,8 @@ import {
     DownOutlined,
     ShoppingCartOutlined,
     IssuesCloseOutlined,
-    SmileOutlined,
     HeartOutlined,
-    ImportOutlined, MenuOutlined,
+    ImportOutlined,
 } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 import './Main.css';
@@ -26,8 +25,8 @@ function getItem(label, key, icon, children) {
 }
 
 const rightmenuItems = [
-    getItem(<div className='navbar__leftmenuname'>ОчумелыеРучки</div>, 'sub1',
-        <Avatar className='navbar__leftmenuicon'>OR</Avatar>, [
+    getItem(<div className='navbar__rightmenuname'>ОчумелыеРучки</div>, 'sub1',
+        <Avatar className='navbar__rightmenuicon'>OR</Avatar>, [
         getItem('Профиль', '6'),
         getItem('Кабинет клиента', '7'),
     ]),
@@ -60,9 +59,7 @@ const Main = () => {
             className={'navbar'}
         >
             <Space direction={"horizontal"} className={'container'}>
-
                 <Space direction="horizontal">
-                    <MenuOutlined className='burger' onClick={() => setOpenMenu(!openMenu)}/>
                     <div
                         className={'logo'}
                     >
@@ -98,10 +95,11 @@ const Main = () => {
                     <Space direction={"horizontal"}>
                         <ShoppingCartOutlined className={'navbar-basket'}/>
                         <Avatar
-                            className={'navbar-user__icon'}
+                            className='navbar-user__icon'
                         >
                             OR
                         </Avatar>
+                        <DownOutlined className='navbar-user__rightmenu'/>
                         <Dropdown
                             menu={{
                                 items,
@@ -116,15 +114,8 @@ const Main = () => {
                 </div>
             </Space>
         </Header>
-        <div className='navbar__leftmenu'>
             <Menu
-                style={{
-                    width: 256,
-                    position: 'absolute',
-                    zIndex: 99,
-                    height: '100%',
-                    paddingTop: '8ch',
-                }}
+                className='navbar__rightmenu'
                 defaultOpenKeys={['sub1']}
                 mode={'inline'}
                 theme={"light"}
@@ -132,7 +123,7 @@ const Main = () => {
                 open={openMenu}
                 onClose={() => setOpenMenu(!openMenu)}
             />
-        </div>
+
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />
         </Content>

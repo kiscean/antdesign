@@ -1,5 +1,5 @@
 .navbar {
-
+    position: fixed;
     z-index: 100;
     width: 100%;
     height: 50px;
@@ -81,20 +81,34 @@
     margin-bottom: 0.5ch;
 }
 
-.navbar__leftmenuicon {
+.navbar-user__rightmenu {
+    color: white;
+    cursor: pointer;
+}
+
+.navbar__rightmenu {
+    width: 256px;
+    position: fixed;
+    z-index: 99;
+    height: 100vh;
+    right: 0;
+    top: 50px;
+}
+
+.navbar__rightmenuicon {
     background-color: #78de80;
     color: #05112c;
     margin-left: -1ch;
 }
 
-.navbar__leftmenuname {
+.navbar__rightmenuname {
     font-weight: bold;
 }
 
 @media screen and (max-width: 1050px) {
 
     .navbar {
-        padding-inline: 1ch;
+        padding-inline: 1.5ch;
     }
 
     .logo {
@@ -104,6 +118,10 @@
 
     .logo__a:hover {
         font-size: 2.05ch;
+    }
+
+    .navbar-user__icon {
+        cursor: pointer;
     }
 
     .navbar-user {
@@ -119,23 +137,25 @@
     }
 
     .navbar-basket {
-        font-size: 30px;
+        font-size: 25px;
         color: white;
-        margin: 0.9ch 1ch 0 1.5ch;
+        margin: 1.2ch 2ch 0 1.5ch;
     }
 
     .navbar-user {
         display: none;
     }
+
 }
 
 @media screen and (min-width: 1050px) {
 
-    .burger {
+    .navbar__rightmenu {
         display: none;
     }
 
-    .navbar__leftmenu {
+    .navbar-user__rightmenu {
         display: none;
     }
+
 }
