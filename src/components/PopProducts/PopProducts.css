@@ -1,5 +1,11 @@
 .pop-products {
+    min-width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
 
+.pop-products::-webkit-scrollbar {
+    display: none;
 }
 
 .pop-products__card {
@@ -32,11 +38,7 @@
 }
 
 .pop-products__scroll {
-    overflow-x: auto;
-}
-
-.pop-products__scroll::-webkit-scrollbar {
-    display: none;
+    overflow: auto;
 }
 
 @media screen and (max-width: 1050px) {

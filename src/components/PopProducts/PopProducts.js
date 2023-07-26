@@ -25,7 +25,7 @@ const PopProducts = () => {
           </Divider>
         </Col>
       </Row>
-      <Row justify={"center"}>
+      <Row justify={"center"} className='pop-products'>
         <Space size={40}>
           <Col>
             <LeftOutlined className={'card-switch-button'} />
@@ -38,126 +38,125 @@ const PopProducts = () => {
             <Space direction="horizontal" size={40} className='pop-products__scroll'>
 
                 <Col span={8} className='pop-products__wrap'>
-                  <Card
-                      style={{
-                        width: 300,
-                      }}>
-                    <Row align={'middle'} gutter={20}>
-                      <Col span={6}>
-                        <Image src={popprod1} width={'7ch'} height={'7ch'} />
-                      </Col>
-                      <Col span={18}>
-                        <h3 align={'start'}>
-                          <a>TGFSB</a>
-                        </h3>
-                        <p align={'start'}>
-                          Wire Ducting & Raceways TG FIB Spool Bracket
-                        </p>
-                      </Col>
-                      <Col span={24}>
-                        <Row align={'bottom'}>
-                          <Col span={24}>
-                            <Divider />
-                          </Col>
-                          <Col
-                              span={10}
-                              style={{
-                                color: 'darkgrey',
-                              }}>
-                            <p>5442 шт</p>
-                          </Col>
-                          <Col span={4}>
-                            <Divider type="vertical" />
-                          </Col>
-                          <Col span={10}>
-                            <h4>120.00 руб</h4>
-                          </Col>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Card>
-                </Col>
+                <Card
+                    style={{
+                      width: 300,
+                    }}>
+                  <Row align={'middle'} gutter={20}>
+                    <Col span={6}>
+                      <Image src={popprod1} width={'7ch'} height={'7ch'} />
+                    </Col>
+                    <Col span={18}>
+                      <h3 align={'start'}>
+                        <a>TGFSB</a>
+                      </h3>
+                      <p align={'start'}>
+                        Wire Ducting & Raceways TG FIB Spool Bracket
+                      </p>
+                    </Col>
+                    <Col span={24}>
+                      <Row align={'bottom'}>
+                        <Col span={24}>
+                          <Divider />
+                        </Col>
+                        <Col
+                            span={10}
+                            style={{
+                              color: 'darkgrey',
+                            }}>
+                          <p>5442 шт</p>
+                        </Col>
+                        <Col span={4}>
+                          <Divider type="vertical" />
+                        </Col>
+                        <Col span={10}>
+                          <h4>120.00 руб</h4>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card>
+              </Col>
                 <Col span={8} className='pop-products__wrap'>
-                  <Card
-                      style={{
-                        width: 300,
-                      }}>
-                    <Row align={'middle'} gutter={20}>
-                      <Col span={6}>
-                        <Image src={popprod2} width={'7ch'} height={'7ch'} />
-                      </Col>
-                      <Col span={18}>
-                        <h3 align={'start'}>
-                          <a>HMC432E</a>
-                        </h3>
-                        <p align={'start'}>
-                          Prescaler InGaP HBT Divide-by-2 SMT, DC - 8 GHz
-                        </p>
-                      </Col>
-                      <Col span={24}>
-                        <Row align={'bottom'}>
-                          <Col span={24}>
-                            <Divider />
-                          </Col>
-                          <Col
-                              span={10}
-                              style={{
-                                color: 'darkgrey',
-                              }}>
-                            <p>10552 шт</p>
-                          </Col>
-                          <Col span={4}>
-                            <Divider type="vertical" />
-                          </Col>
-                          <Col span={10}>
-                            <h4>17.00 руб</h4>
-                          </Col>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Card>
-                </Col>
+                <Card
+                    style={{
+                      width: 300,
+                    }}>
+                  <Row align={'middle'} gutter={20}>
+                    <Col span={6}>
+                      <Image src={popprod2} width={'7ch'} height={'7ch'} />
+                    </Col>
+                    <Col span={18}>
+                      <h3 align={'start'}>
+                        <a>HMC432E</a>
+                      </h3>
+                      <p align={'start'}>
+                        Prescaler InGaP HBT Divide-by-2 SMT, DC - 8 GHz
+                      </p>
+                    </Col>
+                    <Col span={24}>
+                      <Row align={'bottom'}>
+                        <Col span={24}>
+                          <Divider />
+                        </Col>
+                        <Col
+                            span={10}
+                            style={{
+                              color: 'darkgrey',
+                            }}>
+                          <p>10552 шт</p>
+                        </Col>
+                        <Col span={4}>
+                          <Divider type="vertical" />
+                        </Col>
+                        <Col span={10}>
+                          <h4>17.00 руб</h4>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card>
+              </Col>
                 <Col span={8} className='pop-products__wrap'>
-                  <Card
-                      style={{
-                        width: 300,
-                      }}>
-                    <Row align={'middle'} gutter={20}>
-                      <Col span={6}>
-                        <Image src={popprod3} width={'7ch'} height={'7ch'} />
-                      </Col>
-                      <Col span={18}>
-                        <h3 align={'start'}>
-                          <a>P-TCO-U450/12-2</a>
-                        </h3>
-                        <p align={'start'}>
-                          Термические защитные выключатели 50A 12V
-                        </p>
-                      </Col>
-                      <Col span={24}>
-                        <Row align={'bottom'}>
-                          <Col span={24}>
-                            <Divider />
-                          </Col>
-                          <Col
-                              span={10}
-                              style={{
-                                color: 'darkgrey',
-                              }}>
-                            <p>871 шт</p>
-                          </Col>
-                          <Col span={4}>
-                            <Divider type="vertical" />
-                          </Col>
-                          <Col span={10}>
-                            <h4>4800.00 руб</h4>
-                          </Col>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Card>
-                </Col>
-
+                <Card
+                    style={{
+                      width: 300,
+                    }}>
+                  <Row align={'middle'} gutter={20}>
+                    <Col span={6}>
+                      <Image src={popprod3} width={'7ch'} height={'7ch'} />
+                    </Col>
+                    <Col span={18}>
+                      <h3 align={'start'}>
+                        <a>P-TCO-U450/12-2</a>
+                      </h3>
+                      <p align={'start'}>
+                        Термические защитные выключатели 50A 12V
+                      </p>
+                    </Col>
+                    <Col span={24}>
+                      <Row align={'bottom'}>
+                        <Col span={24}>
+                          <Divider />
+                        </Col>
+                        <Col
+                            span={10}
+                            style={{
+                              color: 'darkgrey',
+                            }}>
+                          <p>871 шт</p>
+                        </Col>
+                        <Col span={4}>
+                          <Divider type="vertical" />
+                        </Col>
+                        <Col span={10}>
+                          <h4>4800.00 руб</h4>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card>
+              </Col>
 
                 <Col span={8}>
                   <Card
@@ -280,7 +279,6 @@ const PopProducts = () => {
                   </Card>
                 </Col>
 
-
                 <Col span={8} className='pop-products__wrap'>
                   <Card
                       style={{
@@ -401,6 +399,7 @@ const PopProducts = () => {
                     </Row>
                   </Card>
                 </Col>
+
 
             </Space>
           </Row>
