@@ -48,9 +48,9 @@ const rightmenuItems = [
 
 const { Header, Content, Footer } = Layout;
 
-const Main = () => {
+const Main = (active, setActive) => {
 
-    const [openMenu, setOpenMenu] = useState(false)
+    const [menuActive, setMenuActive] = useState(false)
 
   return (
     <>
@@ -91,38 +91,49 @@ const Main = () => {
                                 })}
                     />
                 </Col>
-                <div className={'header-user'}>
-                    <Space direction={"horizontal"}>
-                        <ShoppingCartOutlined className={'navbar-basket'}/>
+                <Space direction={"horizontal"} size={20}>
+                    <ShoppingCartOutlined className={'navbar-basket'}/>
+
+                    <Space className='navbar-user__full'>
                         <Avatar
                             className='navbar-user__icon'
                         >
                             OR
                         </Avatar>
-                        <DownOutlined className='navbar-user__rightmenu'/>
                         <Dropdown
                             menu={{
                                 items,
                             }}
                         >
-                            <Space className={'navbar-user'}>
+                            <Space className={'navbar-user__name'}>
                                 ОчумелыеРучки
                                 <DownOutlined />
                             </Space>
                         </Dropdown>
                     </Space>
-                </div>
+
+                    <div className='navbar-user__rightmenu' onClick={() => setMenuActive(!menuActive)}>
+                        <Avatar
+                            className='navbar-user__icon'
+                        >
+                            OR
+                        </Avatar>
+                        <DownOutlined className='navbar-user__rightmenuicon'/>
+                    </div>
+
+                </Space>
             </Space>
         </Header>
+        <div active={menuActive} setActive={setMenuActive}>
             <Menu
                 className='navbar__rightmenu'
                 defaultOpenKeys={['sub1']}
                 mode={'inline'}
                 theme={"light"}
                 items={rightmenuItems}
-                open={openMenu}
-                onClose={() => setOpenMenu(!openMenu)}
             />
+            <div className='navbar__rightmenublur'></div>
+        </div>
 
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />
