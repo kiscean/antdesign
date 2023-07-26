@@ -30,3 +30,29 @@
 .card-switch-lines__active {
     color: #1676fe;
 }
+
+.pop-products__scroll {
+    overflow-x: auto;
+}
+
+.pop-products__scroll::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .card-switch-button {
+        display: none;
+    }
+
+    .card-switch-lines__item {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+
+    .pop-products__wrap {
+        display: none;
+    }
+}

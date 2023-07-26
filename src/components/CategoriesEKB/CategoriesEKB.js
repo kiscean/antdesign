@@ -17,34 +17,28 @@ const CategoriesEKB = () => {
           </Divider>
         </Col>
       </Row>
-          <Row justify={"center"} gutter={30}
-               className={"card__row-padding"}>
+        <Space size={[30, 30]} wrap className='card__box'>
               {popularCards.map((card, i) => (
-                  <Col key={i} className={'card__wrap'}>
-                      <div className={"card__padding"}>
-                          <Space direction="vertical" size={110}>
-                              <Card
-                                  key={card.title}
-                                  size="large"
-                                  title={card.title}
-                                  extra={
-                                      <a href="#" target="_blank">
-                                          {card.sum}
-                                      </a>
-                                  }
-                                  className={'card__bg'}
-                                  >
-                                  <Space direction={"vertical"}>
-                                      <a href="#">{card.name1}</a>
-                                      <a href="#">{card.name2}</a>
-                                      <a href="#">{card.name3}</a>
-                                  </Space>
-                              </Card>
-                          </Space>
-                      </div>
-                  </Col>
+                  <div key={i} className={'card__wrap'}>
+                    <Card
+                        key={card.title}
+                        size="large"
+                        title={card.title}
+                        extra={
+                          <a href="#" target="_blank">
+                            {card.sum}
+                          </a>
+                        }
+                        className={'card__bg'}
+                    >
+                      <Space direction={"vertical"}>
+                        <a href="#">{card.name1}</a>
+                        <a href="#">{card.name2}</a>
+                      </Space>
+                    </Card>
+                  </div>
               ))}
-          </Row>
+        </Space>
     </>
   );
 };

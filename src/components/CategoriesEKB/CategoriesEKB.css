@@ -1,25 +1,20 @@
+.card__box {
+    width: 90%;
+}
+
 .card__bg {
-    background: linear-gradient(160deg, #ffffff 85%, rgb(219, 232, 248) 50%);
     position: relative;
     background-size: cover;
     text-align: start;
     width: 40ch;
-    height: 25ch;
+    height: 24ch;
 }
 
 .card__wrap:hover {
-    opacity: 0.9;
+    opacity: 0.85;
     box-sizing: border-box;
     z-index: 1;
     transition: all 0.45s ease;
-}
-
-.card__row-padding {
-    text-align: start;
-}
-
-.card__padding {
-    padding: 2ch 0;
 }
 
 
