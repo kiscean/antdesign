@@ -63,12 +63,11 @@ const Main = () => {
                 </Dropdown>
               </Space>
 
-              {/*  */}
               <div
-                className="navbar-user__rightmenu"
+                className="header__burger-menu"
                 onClick={() => setMenuActive(!menuActive)}>
-                <Avatar className="navbar-user__icon">OR</Avatar>
-                <DownOutlined className="navbar-user__rightmenuicon" />
+                <Avatar className="header__user-icon">OR</Avatar>
+                <DownOutlined className="header__down-arrow" />
               </div>
             </Space>
           </Space>

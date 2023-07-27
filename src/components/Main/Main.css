@@ -33,11 +33,11 @@
 
 .header__logo-link {
   color: white;
+  text-decoration: none;
 }
 
 .header__logo-link:hover {
   color: white;
-  font-size: 1.9ch;
 }
 
 .header__logo-description {
@@ -81,9 +81,15 @@
   margin-bottom: 0.5ch;
 }
 
-/* ТУТ ВСТАВЛЕНЫ СТИЛИ ИЗ ДРУГОГО ФАЙЛА ВОРНИНГ  */
+.header__burger-menu {
+  color: white;
+  cursor: pointer;
+}
 
-/* --------------------------------------------- */
+.header__down-arrow {
+  margin-right: 2ch;
+  margin-left: 1ch;
+}
 
 @media screen and (max-width: 1050px) {
   .header {
@@ -93,10 +99,6 @@
   .header__logo {
     font-size: 2.4ch;
     height: 78px;
-  }
-
-  .header__logo-link:hover {
-    font-size: 2.05ch;
   }
 
   .header__user-icon {
@@ -118,6 +120,12 @@
   }
 
   .header__user-info {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .header__burger-menu {
     display: none;
   }
 }
