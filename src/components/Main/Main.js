@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
 import {Dropdown, Space, Col, Layout, Menu, Row, Avatar, Divider} from 'antd';
 import {
-    AppstoreOutlined,
     DownOutlined,
     ShoppingCartOutlined,
-    IssuesCloseOutlined,
-    HeartOutlined,
-    ImportOutlined,
 } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 import './Main.css';
@@ -14,41 +10,11 @@ import './Main.css';
 import SearchEKB from '../SearchEKB/SearchEKB';
 import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
 import PopProducts from "../PopProducts/PopProducts";
-
-function getItem(label, key, icon, children) {
-    return {
-        key,
-        icon,
-        children,
-        label,
-    };
-}
-
-const rightmenuItems = [
-    getItem(<div className='navbar__rightmenuname'>ОчумелыеРучки</div>, 'sub1',
-        <Avatar className='navbar__rightmenuicon'>OR</Avatar>, [
-        getItem('Профиль', '6'),
-        getItem('Кабинет клиента', '7'),
-    ]),
-    getItem('Избранное', '8', <HeartOutlined />),
-    getItem('Меню сайта', 'sub2', <AppstoreOutlined />, [
-        getItem('Опыт инжинеров', '9'),
-        getItem('Популярное', '10'),
-        getItem('Категории', '11'),
-    ]),
-    getItem(
-        <a href="https://avatars.mds.yandex.net/i?id=89987775783b0069dbf4acf35505bec60780ce40-8497233-images-thumbs&n=13" target="_blank" rel="noopener noreferrer">
-            Тех поддержка
-        </a>,
-        'link',
-        <IssuesCloseOutlined />,
-    ),
-    getItem('Выйти', '12', <ImportOutlined />),
-];
+import RightMenu from "../RightMenu/RightMenu";
 
 const { Header, Content, Footer } = Layout;
 
-const Main = (active, setActive) => {
+const Main = () => {
 
     const [menuActive, setMenuActive] = useState(false)
 
@@ -124,16 +90,7 @@ const Main = (active, setActive) => {
                 </Space>
             </Space>
         </Header>
-        <div active={menuActive} setActive={setMenuActive}>
-            <Menu
-                className='navbar__rightmenu'
-                defaultOpenKeys={['sub1']}
-                mode={'inline'}
-                theme={"light"}
-                items={rightmenuItems}
-            />
-            <div className='navbar__rightmenublur'></div>
-        </div>
+        <RightMenu active={menuActive} setActive={setMenuActive}/>
 
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />

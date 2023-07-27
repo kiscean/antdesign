@@ -4,9 +4,11 @@
     overflow-x: auto;
 }
 
+/*
 .pop-products::-webkit-scrollbar {
     display: none;
 }
+ */
 
 .pop-products__card {
 
