@@ -40,14 +40,16 @@ const RightMenu = ({active, setActive}) => {
 
     return (
 
-        <div>
-            <Menu
-                className={active ? 'navbar__rightmenu active' : 'navbar__rightmenu'}
-                defaultOpenKeys={['sub1']}
-                mode={'inline'}
-                theme={"light"}
-                items={rightmenuItems}
-            />
+        <div onClick={() => setActive(true)}>
+            <div onClick={e => e.stopPropagation()}>
+                <Menu
+                    className={active ? 'navbar__rightmenu active' : 'navbar__rightmenu'}
+                    defaultOpenKeys={['sub1']}
+                    mode={'inline'}
+                    theme={"light"}
+                    items={rightmenuItems}
+                />
+            </div>
             <div className={active ? 'navbar__rightmenublur active' : 'navbar__rightmenublur'}></div>
         </div>
 
