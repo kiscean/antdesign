@@ -72,7 +72,7 @@ const Main = () => {
                             }}
                         >
                             <Space className={'navbar-user__name'}>
-                                ОчумелыеРучки
+                                МояКомпания
                                 <DownOutlined />
                             </Space>
                         </Dropdown>
@@ -107,7 +107,7 @@ const Main = () => {
         <Footer style={{ textAlign: 'center' }}>
             <Row gutter={1}>
                 <Col span={24}>
-                    Маркетплейс ЭКБ &copy; 2023 ООО Банда
+                    Маркетплейс ЭКБ &copy; 2023 ООО Компания
                 </Col>
                 <Col span={24}
                     style={{

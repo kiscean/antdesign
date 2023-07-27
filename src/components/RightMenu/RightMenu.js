@@ -13,19 +13,19 @@ function getItem(label, key, icon, children) {
 }
 
 const rightmenuItems = [
-    getItem(<div className='navbar__rightmenuname'>ОчумелыеРучки</div>, 'sub1',
+    getItem(<div className='navbar__rightmenuname'>Моя компания</div>, 'sub1',
         <Avatar className='navbar__rightmenuicon'>OR</Avatar>, [
             getItem('Профиль', '6'),
             getItem('Кабинет клиента', '7'),
         ]),
     getItem('Избранное', '8', <HeartOutlined />),
     getItem('Меню сайта', 'sub2', <AppstoreOutlined />, [
-        getItem('Опыт инжинеров', '9'),
+        getItem('Опыт инженеров', '9'),
         getItem('Популярное', '10'),
         getItem('Категории', '11'),
     ]),
     getItem(
-        <a href="https://avatars.mds.yandex.net/i?id=89987775783b0069dbf4acf35505bec60780ce40-8497233-images-thumbs&n=13" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
             Тех поддержка
         </a>,
         'link',
