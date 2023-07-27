@@ -8,7 +8,7 @@
     url(../../assets/img/search_bg.jpg);
   position: relative;
   background-repeat: no-repeat;
-  background-position: -50% 70%;
+  background-position: 100% 70%;
   background-size: cover;
   height: 60vh;
   width: 100%;
