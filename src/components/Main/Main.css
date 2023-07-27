@@ -1,123 +1,123 @@
-.navbar {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    padding-inline: 2.5ch;
-    left: 0;
-    top: 0;
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding-inline: 2.5ch;
+  left: 0;
+  top: 0;
 }
 
-.navbar .container {
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header .header__container {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .burger {
-    display: flex;
-    color: white;
-    margin-left: 0.5ch;
-    margin-right: 1ch;
-    font-size: 25px;
+  display: flex;
+  color: white;
+  margin-left: 0.5ch;
+  margin-right: 1ch;
+  font-size: 25px;
 }
 
-.logo {
-    cursor: pointer;
-    font-size: 3.3ch;
-    width: auto;
-    height: 90px;
+.header__logo {
+  cursor: pointer;
+  font-size: 3.3ch;
+  width: auto;
+  height: 90px;
 }
 
-.logo__a {
-    color: white;
+.header__logo-link {
+  color: white;
 }
 
-.logo__a:hover {
-    color: white;
-    font-size: 1.9ch;
+.header__logo-link:hover {
+  color: white;
+  font-size: 1.9ch;
 }
 
-.logo__slogan {
-    color: whitesmoke;
-    font-size: 2ch;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    line-height: 2ch;
-    width: 20ch;
-    margin: 0 2ch 0 1ch;
+.header__logo-description {
+  color: whitesmoke;
+  font-size: 2ch;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  line-height: 2ch;
+  width: 20ch;
+  margin: 0 2ch 0 1ch;
 }
 
-.navbar__menu {
-    display: flex;
+.header__menu {
+  display: flex;
 }
 
-.navbar-basket {
-    color: darkgrey;
-    cursor: pointer;
-    font-size: 20px;
-    margin: 1.7ch 1.5ch 0 1.5ch;
+.header__basket-logo {
+  color: darkgrey;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 1.7ch 1.5ch 0 1.5ch;
 }
 
-.navbar-basket:hover {
-    color: white;
+.header__basket-logo:hover {
+  color: white;
 }
 
-.navbar-user__name {
-    line-height: 2ch;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    width: auto;
-    margin-right: 5ch;
+.header__user-name {
+  line-height: 2ch;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  width: auto;
+  margin-right: 5ch;
 }
 
-.navbar-user__icon {
-    background-color: #78de80;
-    color: #05112c;
-    margin-bottom: 0.5ch;
+.header__user-icon {
+  background-color: #78de80;
+  color: #05112c;
+  margin-bottom: 0.5ch;
 }
 
+/* ТУТ ВСТАВЛЕНЫ СТИЛИ ИЗ ДРУГОГО ФАЙЛА ВОРНИНГ  */
 
+/* --------------------------------------------- */
 
 @media screen and (max-width: 1050px) {
+  .header {
+    padding-inline: 1.5ch;
+  }
 
-    .navbar {
-        padding-inline: 1.5ch;
-    }
+  .header__logo {
+    font-size: 2.4ch;
+    height: 78px;
+  }
 
-    .logo {
-        font-size: 2.4ch;
-        height: 78px;
-    }
+  .header__logo-link:hover {
+    font-size: 2.05ch;
+  }
 
-    .logo__a:hover {
-        font-size: 2.05ch;
-    }
+  .header__user-icon {
+    cursor: pointer;
+  }
 
-    .navbar-user__icon {
-        cursor: pointer;
-    }
+  .header__logo-description {
+    display: none;
+  }
 
-    .logo__slogan {
-        display: none;
-    }
+  .header__menu {
+    display: none;
+  }
 
-    .navbar__menu {
-        display: none;
-    }
+  .header__basket-logo {
+    font-size: 25px;
+    color: white;
+    margin: 1.2ch -1ch 0 1.5ch;
+  }
 
-    .navbar-basket {
-        font-size: 25px;
-        color: white;
-        margin: 1.2ch -1ch 0 1.5ch;
-    }
-
-    .navbar-user__full {
-        display: none;
-    }
-
+  .header__user-info {
+    display: none;
+  }
 }
