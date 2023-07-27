@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Space, Button, Select } from 'antd';
+import { Input, Space, Button, Select, Radio } from 'antd';
 import { FileAddOutlined } from '@ant-design/icons';
 import './SearchEKB.css';
 
@@ -20,7 +20,8 @@ const selectBefore = (
 const SearchEKB = () => {
   const [size, setSize] = React.useState('large');
   return (
-    <div className="main-search">
+    <div className="main-search__bg">
+
       <Space
         direction="vertical"
         align={'center'}
@@ -28,21 +29,54 @@ const SearchEKB = () => {
         <Button type="primary" icon={<FileAddOutlined />} size={size}>
           BOM запрос
         </Button>
-        <Search
-          addonBefore={selectBefore}
-          placeholder="введите текст для поиска"
-          allowClear
-          enterButton="ИСКАТЬ"
-          size="large"
-          onSearch={onSearch}
-        />
+        <div className='main-search__full'>
+            <Search
+                addonBefore={selectBefore}
+                placeholder="введите текст для поиска"
+                allowClear
+                enterButton
+                size="large"
+                onSearch={onSearch}
+                //loading
+            />
+        </div>
+        <div className='main-search__mobile'>
+            <Search
+                placeholder="введите текст для поиска"
+                allowClear
+                enterButton
+                size="large"
+                onSearch={onSearch}
+                //loading
+            />
+            <Radio.Group
+                defaultValue="a"
+                style={{
+                    marginTop: 16,
+                }}
+            >
+                <Radio.Button value="a">параметрический поиск</Radio.Button>
+                <Radio.Button value="b">поиск по компоненту</Radio.Button>
+            </Radio.Group>
+            <Radio.Group
+                defaultValue="a"
+                size="small"
+                style={{
+                    marginTop: 16,
+                }}
+            />
+        </div>
         <p>
           Попробуйте поиск с точным соответствием, например{' '}
-          <a href="#">HPZR-C56X</a>, или частичный поиск, например{' '}
+          <a href="#">HPZR-C56X</a>,
+            <br />
+            или частичный поиск, например{' '}
           <a href="#">1N4148W</a>.
         </p>
       </Space>
+
     </div>
+
   );
 };
 

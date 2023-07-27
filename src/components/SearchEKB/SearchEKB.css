@@ -1,4 +1,8 @@
 .main-search {
+  width: auto;
+}
+
+.main-search__bg {
   background-color: whitesmoke;
   background-image: linear-gradient(
       to bottom,
@@ -19,6 +23,11 @@
   margin-top: 28vh;
 }
 
+.main-search__mobile {
+  width: auto;
+  padding: 0 3ch;
+}
+
 /* .main-search__item {
 }
 
@@ -27,3 +36,23 @@
 
 .bom__wrap {
 } */
+
+@media screen and (min-width: 1050px) {
+
+  .main-search__mobile {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+
+  .main-search__full {
+    display: none;
+  }
+
+  .main-search__container {
+    margin-top: 25vh;
+  }
+
+}
