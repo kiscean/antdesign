@@ -13,7 +13,7 @@ function getItem(label, key, icon, children) {
 }
 
 const rightmenuItems = [
-    getItem(<div className='navbar__rightmenuname'>Моя компания</div>, 'sub1',
+    getItem(<div className='navbar__rightmenuname'>МояКомпания</div>, 'sub1',
         <Avatar className='navbar__rightmenuicon'>OR</Avatar>, [
             getItem('Профиль', '6'),
             getItem('Кабинет клиента', '7'),
