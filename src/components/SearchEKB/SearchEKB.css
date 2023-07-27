@@ -20,12 +20,22 @@
 }
 
 .main-search__container {
-  margin-top: 28vh;
+  margin-top: 25vh;
+  width: 50%;
 }
 
 .main-search__mobile {
   width: auto;
   padding: 0 3ch;
+}
+
+.main-search__full {
+  width: auto;
+  padding: 0 3ch;
+}
+
+.main-search__divider {
+  background-color: white;
 }
 
 /* .main-search__item {
@@ -52,7 +62,12 @@
   }
 
   .main-search__container {
-    margin-top: 25vh;
+    margin-top: 15vh;
+    width: auto;
+  }
+
+  .main-search__bom {
+    margin-bottom: 1ch;
   }
 
 }
