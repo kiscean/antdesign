@@ -1,20 +1,24 @@
-.card__box {
-    width: 90%;
+.cards {
+  text-align: center;
+  margin: 0 auto;
 }
 
-.card__bg {
-    position: relative;
-    background-size: cover;
-    text-align: start;
-    width: 40ch;
-    height: 24ch;
+.cards__box {
+  display: flex;
+  justify-content: center;
 }
 
-.card__wrap:hover {
-    opacity: 0.85;
-    box-sizing: border-box;
-    z-index: 1;
-    transition: all 0.45s ease;
+.cards__card-container:hover {
+  opacity: 0.85;
+  box-sizing: border-box;
+  z-index: 1;
+  transition: all 0.45s ease;
 }
 
-
+.cards__card {
+  position: relative;
+  background-size: cover;
+  text-align: start;
+  width: 40ch;
+  height: 24ch;
+}

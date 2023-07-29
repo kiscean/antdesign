@@ -6,7 +6,7 @@ import './CategoriesEKB.css';
 
 const CategoriesEKB = () => {
   return (
-    <>
+    <section className="cards">
       <Row>
         <Col span={12}>
           <Divider orientation="left">Популярные категории</Divider>
@@ -17,29 +17,29 @@ const CategoriesEKB = () => {
           </Divider>
         </Col>
       </Row>
-        <Space size={[30, 30]} wrap className='card__box'>
-              {popularCards.map((card, i) => (
-                  <div key={i} className={'card__wrap'}>
-                    <Card
-                        key={card.title}
-                        size="large"
-                        title={card.title}
-                        extra={
-                          <a href="#" target="_blank">
-                            {card.sum}
-                          </a>
-                        }
-                        className={'card__bg'}
-                    >
-                      <Space direction={"vertical"}>
-                        <a href="#">{card.name1}</a>
-                        <a href="#">{card.name2}</a>
-                      </Space>
-                    </Card>
-                  </div>
-              ))}
-        </Space>
-    </>
+
+      <Space size={[30, 30]} wrap className="cards__box">
+        {popularCards.map((card, i) => (
+          <div key={i} className="cards__card-container">
+            <Card
+              key={card.title}
+              size="large"
+              title={card.title}
+              extra={
+                <a href="#" target="_blank">
+                  {card.sum}
+                </a>
+              }
+              className={'cards__card'}>
+              <Space direction={'vertical'}>
+                <a href="#">{card.name1}</a>
+                <a href="#">{card.name2}</a>
+              </Space>
+            </Card>
+          </div>
+        ))}
+      </Space>
+    </section>
   );
 };
 

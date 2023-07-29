@@ -49,7 +49,7 @@ const SearchEKB = () => {
           onSearch={onSearch}
         />
 
-        <div>
+        <div className="main-search__btns-container">
           <Radio.Group
             defaultValue="a"
             style={{

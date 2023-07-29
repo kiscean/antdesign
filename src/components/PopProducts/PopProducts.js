@@ -19,10 +19,10 @@ const PopProducts = () => {
           </Divider>
         </Col>
       </Row>
-      <Row justify={'center'} className="pop-products">
+      <Row justify="center" className="slider__container">
         <Space size={40}>
           <Col>
-            <LeftOutlined className={'card-switch-button'} />
+            <LeftOutlined className="slider__next-btn" />
           </Col>
           <Row
             justify={'center'}
@@ -398,7 +398,7 @@ const PopProducts = () => {
             </Space>
           </Row>
           <Col>
-            <RightOutlined className={'card-switch-button'} />
+            <RightOutlined className="slider__next-btn" />
           </Col>
         </Space>
       </Row>

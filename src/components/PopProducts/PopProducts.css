@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.pop-products {
+.slider__container {
   min-width: 100%;
   display: flex;
   overflow-x: auto;
@@ -17,13 +17,13 @@
 .pop-products__card {
 }
 
-.card-switch-button {
+.slider__next-btn {
   cursor: pointer;
   color: darkgrey;
   font-size: 30px;
 }
 
-.card-switch-button:hover {
+.slider__next-btn:hover {
   color: #1676feff;
 }
 
@@ -47,7 +47,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .card-switch-button {
+  .slider__next-btn {
     display: none;
   }
 

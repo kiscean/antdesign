@@ -74,16 +74,11 @@ const Main = () => {
             </Space>
           </Space>
         </Header>
-
         <RightMenu active={menuActive} />
-
         <SearchEKB />
-
         <PopProducts />
 
-        <Content style={{ textAlign: 'center' }}>
-          <CategoriesEKB />
-        </Content>
+        <CategoriesEKB />
 
         <Footer style={{ textAlign: 'center' }}>
           <Row gutter={1}>
