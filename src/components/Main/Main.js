@@ -14,6 +14,10 @@ const { Header, Content, Footer } = Layout;
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
 
+  const onClickBurger = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
     <>
       <Layout className="layout">
@@ -63,16 +67,15 @@ const Main = () => {
                 </Dropdown>
               </Space>
 
-              <div
-                className="header__burger-menu"
-                onClick={() => setMenuActive(!menuActive)}>
-                <Avatar className="header__user-icon">OR</Avatar>
+              <div className="header__burger-menu" onClick={onClickBurger}>
+                <Avatar className="header__user-icon">MC</Avatar>
                 <DownOutlined className="header__down-arrow" />
               </div>
             </Space>
           </Space>
         </Header>
-        <RightMenu active={menuActive} setActive={setMenuActive} />
+
+        <RightMenu active={menuActive} />
 
         <Content style={{ textAlign: 'center' }}>
           <SearchEKB />

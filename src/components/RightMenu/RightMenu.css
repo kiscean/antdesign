@@ -1,66 +1,42 @@
-.navbar__rightmenublur {
-    height: 100vh;
-    width: 100vw;
-    backdrop-filter: blur(2px);
-    position: absolute;
-    z-index: 10;
-    transition: all 1.2s;
-}
-
-.navbar__rightmenublur.active {
-    display: none;
-}
-
-.navbar-user__rightmenu {
-    color: white;
-    cursor: pointer;
-}
-
 .navbar__rightmenu {
-    background-color: #96b2bd;
-    border-left: 1px solid whitesmoke;
-    opacity: 95%;
-    width: 256px;
-    position: fixed;
-    z-index: 99;
-    height: 100vh;
-    right: 0;
-    top: 50px;
-    transform: translateX(0);
-    transition: all 1s;
+  background-color: #96b2bd;
+  border-left: 1px solid whitesmoke;
+  opacity: 95%;
+  width: 256px;
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  right: 0;
+  top: 50px;
+  transform: translateX(0);
+  transition: all 1s linear;
 }
 
 .navbar__rightmenu.active {
-    transform: translateX(100%);
+  transform: translateX(100%);
 }
 
-.navbar__rightmenuicon {
-    background-color: #78de80;
-    color: #05112c;
-    margin-left: -1ch;
+.navbar__rightmenublur {
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(2px);
+  position: absolute;
+  z-index: 10;
+  transition: all 1.2s ease-in;
 }
 
-.navbar__rightmenuname {
-    font-weight: bold;
+.navbar__rightmenublur.active {
+  display: none;
 }
 
-.navbar-user__rightmenuicon {
-    margin-right: 2ch;
-    margin-left: 1ch;
-}
+/*до перегруза*/
 
 @media screen and (min-width: 1050px) {
+  .navbar__rightmenu {
+    display: none;
+  }
 
-    .navbar__rightmenu {
-        display: none;
-    }
-
-    .navbar-user__rightmenu {
-        display: none;
-    }
-
-    .navbar__rightmenublur {
-        display: none;
-    }
-
+  .navbar__rightmenublur {
+    display: none;
+  }
 }
