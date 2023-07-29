@@ -79,9 +79,7 @@ const Main = () => {
 
         <SearchEKB />
 
-        <Content style={{ textAlign: 'center' }}>
-          <PopProducts />
-        </Content>
+        <PopProducts />
 
         <Content style={{ textAlign: 'center' }}>
           <CategoriesEKB />

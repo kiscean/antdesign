@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Space, Button, Select, Radio, Divider, Layout } from 'antd';
+import { Input, Space, Button, Select, Radio, Divider } from 'antd';
 import { FileAddFilled } from '@ant-design/icons';
 import './SearchEKB.css';
 import useResize from '../../hooks/useResize';
@@ -7,7 +7,7 @@ import useResize from '../../hooks/useResize';
 const SearchEKB = () => {
   const { Search } = Input;
   const { Option } = Select;
-  const { Content } = Layout;
+
   const selectBefore = (
     <Select
       defaultValue="параметрический поиск"
@@ -27,7 +27,7 @@ const SearchEKB = () => {
   };
 
   return (
-    <Content className="main-search">
+    <section className="main-search">
       <Space direction="vertical" className="main-search__container">
         <Button
           className="main-search__bom"
@@ -49,14 +49,18 @@ const SearchEKB = () => {
           onSearch={onSearch}
         />
 
-        <div className="main-search__btns-container">
+        <div>
           <Radio.Group
             defaultValue="a"
             style={{
               marginTop: 16,
             }}>
-            <Radio.Button value="a">параметрический поиск</Radio.Button>
-            <Radio.Button value="b">поиск по компоненту</Radio.Button>
+            <Radio.Button value="a" className="main-search__button">
+              параметрический поиск
+            </Radio.Button>
+            <Radio.Button value="b" className="main-search__button">
+              поиск по компоненту
+            </Radio.Button>
           </Radio.Group>
           <Radio.Group
             defaultValue="a"
@@ -74,7 +78,7 @@ const SearchEKB = () => {
           или частичный поиск, например <a href="#">1N4148W</a>.
         </p>
       </Space>
-    </Content>
+    </section>
   );
 };
 

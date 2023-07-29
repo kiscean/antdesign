@@ -8,7 +8,7 @@ import popprod3 from '../../assets/img/pop_prod_3.jpg';
 
 const PopProducts = () => {
   return (
-    <>
+    <section className="slider">
       <Row>
         <Col span={12}>
           <Divider orientation="left">Чаще всего ищут</Divider>
@@ -409,7 +409,7 @@ const PopProducts = () => {
         <DashOutlined className={'card-switch-lines__item'} />
         <DashOutlined className={'card-switch-lines__item'} />
       </Space>
-    </>
+    </section>
   );
 };
 

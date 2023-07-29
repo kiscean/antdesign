@@ -29,11 +29,17 @@
   padding: 0 3ch;
 }
 
-@media screen and (max-width: 1050px) {
+.main-search__select:hover {
+  border: none;
+}
+
+@media screen and (min-width: 1050px) {
   .main-search__btns-container {
     display: none;
   }
+}
 
+@media screen and (max-width: 1050px) {
   .main-search__container {
     margin-top: 15vh;
     width: auto;
@@ -41,5 +47,11 @@
 
   .main-search__bom {
     margin-bottom: 1ch;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-search__button {
+    font-size: 12px;
   }
 }
