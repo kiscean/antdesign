@@ -13,6 +13,7 @@ const { Header, Content, Footer } = Layout;
 
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
+  console.log('in main', menuActive);
 
   const onClickBurger = () => {
     setMenuActive(!menuActive);

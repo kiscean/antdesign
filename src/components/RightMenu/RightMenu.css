@@ -1,4 +1,4 @@
-.navbar__rightmenu {
+.drawer {
   background-color: #96b2bd;
   border-left: 1px solid whitesmoke;
   opacity: 95%;
@@ -12,11 +12,11 @@
   transition: all 1s linear;
 }
 
-.navbar__rightmenu.active {
+.drawer_active {
   transform: translateX(100%);
 }
 
-.navbar__rightmenublur {
+.drawer__background {
   height: 100vh;
   width: 100vw;
   backdrop-filter: blur(2px);
@@ -25,18 +25,6 @@
   transition: all 1.2s ease-in;
 }
 
-.navbar__rightmenublur.active {
+.drawer__background_active {
   display: none;
-}
-
-/*до перегруза*/
-
-@media screen and (min-width: 1050px) {
-  .navbar__rightmenu {
-    display: none;
-  }
-
-  .navbar__rightmenublur {
-    display: none;
-  }
 }

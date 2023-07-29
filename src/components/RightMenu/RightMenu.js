@@ -9,6 +9,8 @@ import {
 import './RightMenu.css';
 
 const RightMenu = ({ active }) => {
+  console.log('in burger', active);
+
   function getItem(label, key, icon, children) {
     return {
       key,
@@ -22,7 +24,7 @@ const RightMenu = ({ active }) => {
     getItem(
       <div className="navbar__rightmenuname">МояКомпания</div>,
       'sub1',
-      <Avatar className="navbar__rightmenuicon">OR</Avatar>,
+      <Avatar className="navbar__rightmenuicon">MC</Avatar>,
       [getItem('Профиль', '6'), getItem('Кабинет клиента', '7')],
     ),
     getItem('Избранное', '8', <HeartOutlined />),
@@ -44,16 +46,16 @@ const RightMenu = ({ active }) => {
   return (
     <>
       <Menu
-        className={active ? 'navbar__rightmenu active' : 'navbar__rightmenu'}
+        className={`drawer ${active ? '' : 'drawer_active'}`}
         defaultOpenKeys={['sub1']}
         mode={'inline'}
         theme={'light'}
         items={rightmenuItems}
       />
       <div
-        className={
-          active ? 'navbar__rightmenublur active' : 'navbar__rightmenublur'
-        }></div>
+        className={`drawer__background ${
+          active ? '' : 'drawer__background_active'
+        }`}></div>
     </>
   );
 };
