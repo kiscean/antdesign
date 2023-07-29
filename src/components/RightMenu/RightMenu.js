@@ -9,8 +9,6 @@ import {
 import './RightMenu.css';
 
 const RightMenu = ({ active }) => {
-  console.log('in burger', active);
-
   function getItem(label, key, icon, children) {
     return {
       key,

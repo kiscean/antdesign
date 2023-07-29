@@ -13,7 +13,6 @@ const { Header, Content, Footer } = Layout;
 
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
-  console.log('in main', menuActive);
 
   const onClickBurger = () => {
     setMenuActive(!menuActive);
@@ -78,9 +77,7 @@ const Main = () => {
 
         <RightMenu active={menuActive} />
 
-        <Content style={{ textAlign: 'center' }}>
-          <SearchEKB />
-        </Content>
+        <SearchEKB />
 
         <Content style={{ textAlign: 'center' }}>
           <PopProducts />
