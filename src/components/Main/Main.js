@@ -9,6 +9,7 @@ import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
 import PopProducts from '../PopProducts/PopProducts';
 import RightMenu from '../RightMenu/RightMenu';
 import Footer from '../Footer/Footer';
+import StartPage from "../StartPage/StartPage";
 
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
@@ -19,12 +20,13 @@ const Main = () => {
 
   return (
     <Layout className="layout">
-      <Header onClickBurger={onClickBurger} />
+      <StartPage />
+      {/* <Header onClickBurger={onClickBurger} />
       <RightMenu active={menuActive} />
       <SearchEKB />
       <PopProducts />
       <CategoriesEKB />
-      <Footer />
+      <Footer /> */}
     </Layout>
   );
 };

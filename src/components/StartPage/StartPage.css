@@ -1,0 +1,21 @@
+.container {
+    margin-top: 100px;
+    height: 78vh;
+}
+
+.form-selector {
+    margin-bottom: 7ch;
+    margin-left: 10ch;
+    max-width: 80%;
+    background-color: #1676fe;
+    color: #ffffff;
+}
+
+.slider-content__wrap {
+    margin: 0 5ch;
+    height: 70ch;
+    line-height: 70ch;
+    color: #fff;
+    text-align: center;
+    background: #364d79;
+}
