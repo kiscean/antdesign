@@ -11,6 +11,18 @@
     color: #ffffff;
 }
 
+.form-enter {
+    max-width: 80%;
+    margin-left: 10ch;
+    display: block;
+}
+
+.form-registration {
+    max-width: 80%;
+    margin-left: 10ch;
+    display: block;
+}
+
 .slider-content__wrap {
     margin: 0 5ch;
     height: 70ch;
