@@ -25,36 +25,6 @@ import {Header} from "antd/lib/layout/layout";
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
-const formItemLayout = {
-    labelCol: {
-        xs: {
-            span: 24,
-        },
-        sm: {
-            span: 8,
-        },
-    },
-    wrapperCol: {
-        xs: {
-            span: 24,
-        },
-        sm: {
-            span: 16,
-        },
-    },
-};
-const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-            span: 24,
-            offset: 0,
-        },
-        sm: {
-            span: 16,
-            offset: 8,
-        },
-    },
-};
 const onFinish = (values) => {
     console.log('Received values of form: ', values);
 };
@@ -87,24 +57,12 @@ const StartPage = () => {
             </Select>
         </Form.Item>
     );
-    const suffixSelector = (
-        <Form.Item name="suffix" noStyle>
-            <Select
-                style={{
-                    width: 70,
-                }}
-            >
-                <Option value="USD">$</Option>
-                <Option value="CNY">¥</Option>
-            </Select>
-        </Form.Item>
-    );
     const [autoCompleteResult, setAutoCompleteResult] = useState([]);
     const onWebsiteChange = (value) => {
         if (!value) {
             setAutoCompleteResult([]);
         } else {
-            setAutoCompleteResult(['.com', '.org', '.net'].map((domain) => `${value}${domain}`));
+            setAutoCompleteResult(['.ru', '.рф', '.com', '.org', '.net'].map((domain) => `${value}${domain}`));
         }
     };
     const websiteOptions = autoCompleteResult.map((website) => ({
@@ -136,7 +94,7 @@ const StartPage = () => {
                 <Content className='container'>
                     <Row align={"top"}>
 
-                        <Col span={8}>
+                        <Col span={6}>
                             <Segmented block options={["Вход", "Регистрация"]} className='form-selector' />
                             <div className='form-enter'>
                                 <Form
@@ -196,7 +154,8 @@ const StartPage = () => {
                             </div>
                             <div className='form-registration'>
                                 <Form
-                                    {...formItemLayout}
+
+                                    layout="vertical"
                                     form={form}
                                     name="register"
                                     onFinish={onFinish}
@@ -288,7 +247,6 @@ const StartPage = () => {
                                         rules={[
                                             {
                                                 required: false,
-                                                message: 'Телефон для связи',
                                             },
                                         ]}
                                     >
@@ -310,7 +268,11 @@ const StartPage = () => {
                                             },
                                         ]}
                                     >
-                                        <Select placeholder="выберете пол">
+                                        <Select placeholder="выберете пол"
+                                                style={{
+                                                    width: '40%',
+                                                }}
+                                        >
                                             <Option value="male">Муж</Option>
                                             <Option value="female">Жен</Option>
                                         </Select>
@@ -342,23 +304,20 @@ const StartPage = () => {
                                                     value ? Promise.resolve() : Promise.reject(new Error('Вы не согласны с условиями пользовательского соглашения?')),
                                             },
                                         ]}
-                                        {...tailFormItemLayout}
                                     >
                                         <Checkbox>
                                             Я согласен с условиями <a href="">пользовательского соглашения</a>
                                         </Checkbox>
                                     </Form.Item>
-                                    <Form.Item {...tailFormItemLayout}>
+                                    <Form.Item>
                                         <Button type="primary" htmlType="submit">
-                                            Register
+                                            Регистрация
                                         </Button>
                                     </Form.Item>
                                 </Form>
-
                             </div>
-
                         </Col>
-                        <Col span={16}>
+                        <Col span={18}>
                             <Carousel effect="fade">
                                 <div>
                                     <h3 className='slider-content__wrap'>1</h3>
