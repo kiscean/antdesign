@@ -73,11 +73,17 @@ const StartPage = () => {
         <Form.Item name="prefix" noStyle>
             <Select
                 style={{
-                    width: 70,
+                    width: 75,
                 }}
             >
-                <Option value="86">+86</Option>
-                <Option value="87">+87</Option>
+                <Option value="russia">+7</Option>
+                <Option value="375">+375</Option>
+                <Option value="994">+994</Option>
+                <Option value="374">+374</Option>
+                <Option value="996">+996</Option>
+                <Option value="992">+992</Option>
+                <Option value="993">+993</Option>
+                <Option value="998">+998</Option>
             </Select>
         </Form.Item>
     );
@@ -195,8 +201,7 @@ const StartPage = () => {
                                     name="register"
                                     onFinish={onFinish}
                                     initialValues={{
-                                        residence: ['zhejiang', 'hangzhou', 'xihu'],
-                                        prefix: '86',
+                                        prefix: 'russia',
                                     }}
                                     style={{
                                         maxWidth: 600,
@@ -212,11 +217,26 @@ const StartPage = () => {
                                         rules={[
                                             {
                                                 type: 'email',
-                                                message: 'The input is not valid E-mail!',
+                                                message: 'Не соответствует формату электронной почты',
                                             },
                                             {
                                                 required: true,
-                                                message: 'Please input your E-mail!',
+                                                message: 'Введите свою эл.почту',
+                                            },
+                                        ]}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+
+                                    <Form.Item
+                                        name="nickname"
+                                        label="Имя пользователя"
+                                        tooltip="Имя пользователя должно быть уникальным!"
+                                        rules={[
+                                            {
+                                                required: true,
+                                                message: 'Придумайте имя пользователя',
+                                                whitespace: true,
                                             },
                                         ]}
                                     >
@@ -225,11 +245,11 @@ const StartPage = () => {
 
                                     <Form.Item
                                         name="password"
-                                        label="Password"
+                                        label="Пароль"
                                         rules={[
                                             {
                                                 required: true,
-                                                message: 'Please input your password!',
+                                                message: 'Создайте пароль',
                                             },
                                         ]}
                                         hasFeedback
@@ -239,49 +259,36 @@ const StartPage = () => {
 
                                     <Form.Item
                                         name="confirm"
-                                        label="Confirm Password"
+                                        label="Подтверждение"
                                         dependencies={['password']}
                                         hasFeedback
                                         rules={[
                                             {
                                                 required: true,
-                                                message: 'Please confirm your password!',
+                                                message: 'Введите пароль еще раз',
                                             },
                                             ({ getFieldValue }) => ({
                                                 validator(_, value) {
                                                     if (!value || getFieldValue('password') === value) {
                                                         return Promise.resolve();
                                                     }
-                                                    return Promise.reject(new Error('The new password that you entered do not match!'));
+                                                    return Promise.reject(new Error('Пароли не совпадают'));
                                                 },
                                             }),
                                         ]}
                                     >
                                         <Input.Password />
                                     </Form.Item>
+
                                     <Divider plain>Личные данные</Divider>
-                                    <Form.Item
-                                        name="nickname"
-                                        label="Nickname"
-                                        tooltip="What do you want others to call you?"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Please input your nickname!',
-                                                whitespace: true,
-                                            },
-                                        ]}
-                                    >
-                                        <Input />
-                                    </Form.Item>
 
                                     <Form.Item
                                         name="phone"
-                                        label="Phone Number"
+                                        label="Телефон"
                                         rules={[
                                             {
-                                                required: true,
-                                                message: 'Please input your phone number!',
+                                                required: false,
+                                                message: 'Телефон для связи',
                                             },
                                         ]}
                                     >
@@ -294,70 +301,36 @@ const StartPage = () => {
                                     </Form.Item>
 
                                     <Form.Item
-                                        name="website"
-                                        label="Website"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Please input website!',
-                                            },
-                                        ]}
-                                    >
-                                        <AutoComplete options={websiteOptions} onChange={onWebsiteChange} placeholder="website">
-                                            <Input />
-                                        </AutoComplete>
-                                    </Form.Item>
-
-                                    <Form.Item
-                                        name="intro"
-                                        label="Intro"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Please input Intro',
-                                            },
-                                        ]}
-                                    >
-                                        <Input.TextArea showCount maxLength={100} />
-                                    </Form.Item>
-
-                                    <Form.Item
                                         name="gender"
-                                        label="Gender"
+                                        label="Пол"
                                         rules={[
                                             {
-                                                required: true,
-                                                message: 'Please select gender!',
+                                                required: false,
+                                                message: 'Выберете пол',
                                             },
                                         ]}
                                     >
-                                        <Select placeholder="select your gender">
-                                            <Option value="male">Male</Option>
-                                            <Option value="female">Female</Option>
-                                            <Option value="other">Other</Option>
+                                        <Select placeholder="выберете пол">
+                                            <Option value="male">Муж</Option>
+                                            <Option value="female">Жен</Option>
                                         </Select>
                                     </Form.Item>
 
-                                    <Form.Item label="Captcha" extra="We must make sure that your are a human.">
-                                        <Row gutter={8}>
-                                            <Col span={12}>
-                                                <Form.Item
-                                                    name="captcha"
-                                                    noStyle
-                                                    rules={[
-                                                        {
-                                                            required: true,
-                                                            message: 'Please input the captcha you got!',
-                                                        },
-                                                    ]}
-                                                >
-                                                    <Input />
-                                                </Form.Item>
-                                            </Col>
-                                            <Col span={12}>
-                                                <Button>Get captcha</Button>
-                                            </Col>
-                                        </Row>
+                                    <Divider plain>Корпоративные данные</Divider>
+
+                                    <Form.Item
+                                        name="website"
+                                        label="Сайт"
+                                        rules={[
+                                            {
+                                                required: false,
+                                                message: 'сайт компании',
+                                            },
+                                        ]}
+                                    >
+                                        <AutoComplete options={websiteOptions} onChange={onWebsiteChange} placeholder="сайт компании">
+                                            <Input />
+                                        </AutoComplete>
                                     </Form.Item>
 
                                     <Form.Item
@@ -366,13 +339,13 @@ const StartPage = () => {
                                         rules={[
                                             {
                                                 validator: (_, value) =>
-                                                    value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
+                                                    value ? Promise.resolve() : Promise.reject(new Error('Вы не согласны с условиями пользовательского соглашения?')),
                                             },
                                         ]}
                                         {...tailFormItemLayout}
                                     >
                                         <Checkbox>
-                                            I have read the <a href="">agreement</a>
+                                            Я согласен с условиями <a href="">пользовательского соглашения</a>
                                         </Checkbox>
                                     </Form.Item>
                                     <Form.Item {...tailFormItemLayout}>
