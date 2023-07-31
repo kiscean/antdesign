@@ -3,7 +3,23 @@ import React, { useState } from 'react';
 import './StartPage.css';
 
 import Footer from "../Footer/Footer";
-import {Layout, Space, Button, Checkbox, InputNumber, Select, Form, Input, AutoComplete, Row, Col, Cascader, Segmented, Carousel} from "antd";
+import {
+    Layout,
+    Space,
+    Button,
+    Checkbox,
+    InputNumber,
+    Select,
+    Form,
+    Input,
+    AutoComplete,
+    Row,
+    Col,
+    Cascader,
+    Segmented,
+    Carousel,
+    Divider
+} from "antd";
 import {Content} from "antd/es/layout/layout";
 import {Header} from "antd/lib/layout/layout";
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
@@ -243,7 +259,7 @@ const StartPage = () => {
                                     >
                                         <Input.Password />
                                     </Form.Item>
-
+                                    <Divider plain>Личные данные</Divider>
                                     <Form.Item
                                         name="nickname"
                                         label="Nickname"
