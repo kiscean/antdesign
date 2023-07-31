@@ -14,22 +14,22 @@
 .form-enter {
     max-width: 80%;
     margin-left: 10ch;
-    display: none;
+    display: block;
 }
 
 .form-registration {
     max-width: 80%;
     max-height: 70vh;
     margin-left: 10ch;
-    display: block;
+    display: none;
     overflow-y: auto;
 }
 
 .slider-content__wrap {
     margin: 0 5ch;
+    max-width: 92%;
     height: 79vh;
     line-height: 79vh;
-    color: #fff;
-    text-align: center;
-    background: #364d79;
+    color: #000000;
+    background: rgba(66, 92, 126, 0.2);
 }

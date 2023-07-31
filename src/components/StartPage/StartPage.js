@@ -370,17 +370,14 @@ const StartPage = () => {
                         </Col>
                         <Col span={18}>
                             <Carousel effect="fade">
-                                <div>
-                                    <h3 className='slider-content__wrap'>1</h3>
+                                <div className='slider-content__wrap'>
+                                    <img src={'https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?t=st=1690812245~exp=1690815845~hmac=904747ac672614fd8a211c0c05d35696283391fa34852a848a84ad33df8b7bd7&w=1380'} />
                                 </div>
-                                <div>
-                                    <h3 className='slider-content__wrap'>2</h3>
+                                <div className='slider-content__wrap'>
+                                    <img src={'https://img.freepik.com/free-photo/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france_181624-33408.jpg?w=1380&t=st=1690812750~exp=1690813350~hmac=43e7a69daeabb881f1044f82919936c2569bcd8b03da0333cf9a1b89a01bb8c7'} />
                                 </div>
-                                <div>
-                                    <h3 className='slider-content__wrap'>3</h3>
-                                </div>
-                                <div>
-                                    <h3 className='slider-content__wrap'>4</h3>
+                                <div className='slider-content__wrap'>
+                                    <img src={'https://img.freepik.com/free-photo/beautiful-shot-snowy-mountain-sunset_181624-37878.jpg?w=1380&t=st=1690812559~exp=1690813159~hmac=42e931792c7ca05b6694e4a41a97eb79d3b63106185dc7efb41af6daa871a32b'} />
                                 </div>
                             </Carousel>
                         </Col>
