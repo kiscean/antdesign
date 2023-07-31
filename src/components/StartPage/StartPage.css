@@ -25,11 +25,12 @@
     overflow-y: auto;
 }
 
-.slider-content__wrap {
-    margin: 0 5ch;
+.slider {
     max-width: 92%;
+    margin: 0 5ch;
+}
+
+.slider-content__wrap {
     height: 79vh;
     line-height: 79vh;
-    color: #000000;
-    background: rgba(66, 92, 126, 0.2);
 }

@@ -369,7 +369,7 @@ const StartPage = () => {
                             </div>
                         </Col>
                         <Col span={18}>
-                            <Carousel effect="fade">
+                            <Carousel effect="fade" className='slider'>
                                 <div className='slider-content__wrap'>
                                     <img src={'https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?t=st=1690812245~exp=1690815845~hmac=904747ac672614fd8a211c0c05d35696283391fa34852a848a84ad33df8b7bd7&w=1380'} />
                                 </div>
