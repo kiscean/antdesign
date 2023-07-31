@@ -18,7 +18,7 @@ import {
     Cascader,
     Segmented,
     Carousel,
-    Divider
+    Divider, DatePicker
 } from "antd";
 import {Content} from "antd/es/layout/layout";
 import {Header} from "antd/lib/layout/layout";
@@ -239,7 +239,45 @@ const StartPage = () => {
                                         <Input.Password />
                                     </Form.Item>
 
-                                    <Divider plain>Личные данные</Divider>
+                                    <Divider plain>Контактные данные</Divider>
+
+                                    <Form.Item
+                                        name="firstname"
+                                        label="Имя"
+                                        tooltip="Имя является обязательным для заполнения"
+                                        rules={[
+                                            {
+                                                required: true,
+                                                message: 'ваше имя',
+                                            },
+                                        ]}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+
+                                    <Form.Item
+                                        name="middlename"
+                                        label="Отчество"
+                                        rules={[
+                                            {
+                                                required: false,
+                                            },
+                                        ]}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+
+                                    <Form.Item
+                                        name="lastname"
+                                        label="Фамилия"
+                                        rules={[
+                                            {
+                                                required: false,
+                                            },
+                                        ]}
+                                    >
+                                        <Input />
+                                    </Form.Item>
 
                                     <Form.Item
                                         name="phone"
@@ -257,7 +295,9 @@ const StartPage = () => {
                                             }}
                                         />
                                     </Form.Item>
-
+                                    <Form.Item label="Дата рождения">
+                                        <DatePicker />
+                                    </Form.Item>
                                     <Form.Item
                                         name="gender"
                                         label="Пол"
@@ -270,7 +310,7 @@ const StartPage = () => {
                                     >
                                         <Select placeholder="выберете пол"
                                                 style={{
-                                                    width: '40%',
+                                                    width: '41%',
                                                 }}
                                         >
                                             <Option value="male">Муж</Option>
@@ -280,6 +320,17 @@ const StartPage = () => {
 
                                     <Divider plain>Корпоративные данные</Divider>
 
+                                    <Form.Item
+                                        name="unicnumber"
+                                        label="ИНН"
+                                        rules={[
+                                            {
+                                                required: false,
+                                            },
+                                        ]}
+                                    >
+                                        <Input />
+                                    </Form.Item>
                                     <Form.Item
                                         name="website"
                                         label="Сайт"
