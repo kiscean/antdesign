@@ -4,33 +4,67 @@
 }
 
 .form-selector {
-    margin-bottom: 7ch;
-    margin-left: 10ch;
-    max-width: 80%;
+    margin: 0 5ch;
+    max-width: 100%;
     background-color: #1676fe;
     color: #ffffff;
 }
 
 .form-enter {
     max-width: 80%;
-    margin-left: 10ch;
+    margin: 5ch 7ch 0 7ch;
+    display: none;
+}
+.form-enter_active {
     display: block;
 }
 
 .form-registration {
-    max-width: 80%;
-    max-height: 70vh;
-    margin-left: 10ch;
+    max-width: 90%;
+    max-height: 72vh;
+    margin: 5ch 7ch 0 7ch;
     display: block;
     overflow-y: auto;
+}
+.form-registration_active {
+    display: none;
 }
 
 .slider {
     max-width: 92%;
-    margin: 0 5ch;
+    margin: 0 5ch 0 0;
 }
 
 .slider-content__wrap {
     height: 79vh;
     line-height: 79vh;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-container {
+        display: none;
+    }
+
+    .form-selector {
+        margin: 0 5ch;
+    }
+
+    .form-enter {
+        justify-content: center;
+        display: none;
+        margin: 5ch 5ch;
+    }
+    .form-enter_active {
+        display: flex;
+    }
+
+    .form-registration {
+        justify-content: center;
+        display: flex;
+        margin: 5ch 5ch;
+        overflow: visible;
+    }
+    .form-registration_active {
+        display: none;
+    }
 }

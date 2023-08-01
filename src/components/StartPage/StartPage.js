@@ -8,33 +8,25 @@ import {
     Space,
     Button,
     Checkbox,
-    InputNumber,
     Select,
     Form,
     Input,
     AutoComplete,
     Row,
     Col,
-    Cascader,
     Segmented,
     Carousel,
     Divider, DatePicker
 } from "antd";
 import {Content} from "antd/es/layout/layout";
 import {Header} from "antd/lib/layout/layout";
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import {BarsOutlined, ImportOutlined, LockOutlined, UserAddOutlined, UserOutlined} from '@ant-design/icons';
 
 const { Option } = Select;
-const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-};
-
 const StartPage = () => {
 
-    const [placement, SetPlacement] = useState('topLeft');
-    const placementChange = (e) => {
-        SetPlacement(e.target.value);
-    };
+    const [triggerForms, setTriggerAction] = React.useState(false);
+
     const [form] = Form.useForm();
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
@@ -69,9 +61,6 @@ const StartPage = () => {
         label: website,
         value: website,
     }));
-    const onChange = (currentSlide) => {
-        console.log(currentSlide);
-    };
 
     return (
         <Layout className="layout">
@@ -92,17 +81,31 @@ const StartPage = () => {
                 </Space>
             </Header>
                 <Content className='container'>
-                    <Row align={"top"}>
-
+                    <Row justify={"center"}>
                         <Col
-                            xs={20}
+                            xs={24}
                             sm={24}
-                            md={10}
-                            lg={8}
+                            md={12}
+                            lg={10}
                             xl={6}
                         >
-                            <Segmented block options={["Вход", "Регистрация"]} className='form-selector' />
-                            <div className='form-enter'>
+                            <Segmented block
+                                       options={[
+                                           {
+                                               label: 'Вход',
+                                               value: 'Enter',
+                                               icon: <ImportOutlined />,
+                                           },
+                                           {
+                                               label: 'Регистрация',
+                                               value: 'Registration',
+                                               icon: <UserAddOutlined />,
+                                           },
+                                       ]}
+                                       onChange={() => setTriggerAction(!triggerForms)}
+                                       className='form-selector'
+                            />
+                            <Space className={`form-enter ${triggerForms ? '' : 'form-enter_active'}`}>
                                 <Form
                                     size="large"
                                     name="normal_login"
@@ -111,6 +114,9 @@ const StartPage = () => {
                                         remember: true,
                                     }}
                                     onFinish={onFinish}
+                                    style={{
+                                        maxWidth: 400,
+                                    }}
                                 >
                                     <Form.Item>
                                         <h3>Вход в аккаунт</h3>
@@ -157,10 +163,9 @@ const StartPage = () => {
                                         </Button>
                                     </Form.Item>
                                 </Form>
-                            </div>
-                            <div className='form-registration'>
+                            </Space>
+                            <div className={`form-registration ${triggerForms ? '' : 'form-registration_active'}`}>
                                 <Form
-
                                     layout="vertical"
                                     form={form}
                                     name="register"
@@ -169,7 +174,7 @@ const StartPage = () => {
                                         prefix: 'russia',
                                     }}
                                     style={{
-                                        maxWidth: 600,
+                                        maxWidth: 400,
                                     }}
                                     scrollToFirstError
                                 >
@@ -374,11 +379,11 @@ const StartPage = () => {
                                 </Form>
                             </div>
                         </Col>
-                        <Col
+                        <Col className='slider-container'
                              xs={24}
                              sm={24}
-                             md={14}
-                             lg={16}
+                             md={12}
+                             lg={14}
                              xl={18}
                         >
                             <Carousel effect="fade" className='slider'>
