@@ -21,7 +21,7 @@
     max-width: 80%;
     max-height: 70vh;
     margin-left: 10ch;
-    display: none;
+    display: block;
     overflow-y: auto;
 }
 
