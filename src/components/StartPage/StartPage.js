@@ -410,6 +410,35 @@ const StartPage = () => {
                                                 </Row>
                                             </div>
                                         </div>
+                                        <div className='content'>
+                                            <div className='content-center'>
+                                                <Content className='container-content'>
+                                                    <Row justify={"center"}>
+                                                        <Col
+                                                            md={24}
+                                                            lg={8}
+                                                            xl={8}
+                                                        >
+                                                            <h3>
+                                                                Безграничный охват предложений!
+                                                            </h3>
+                                                            <p>
+                                                                Для инженеров со всех уголков страны мы предлагаем комплектующие от производителей со всего мира - с инновационным и быстрым поиском.
+                                                                <br/> Професстональная консультация, помощь в подборе комплектующих, исходя из ваших задач.
+                                                                <br/> Создавайте будущее - не огрпничивайте свой выбор.
+                                                            </p>
+                                                        </Col>
+                                                        <Col
+                                                            md={24}
+                                                            lg={16}
+                                                            xl={16}
+                                                        >
+
+                                                        </Col>
+                                                    </Row>
+                                                </Content>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='slider-content__wrap'>
