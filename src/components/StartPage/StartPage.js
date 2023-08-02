@@ -388,7 +388,20 @@ const StartPage = () => {
                         >
                             <Carousel effect="fade" className='slider'>
                                 <div className='slider-content__wrap'>
-                                    <img src={'https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?t=st=1690812245~exp=1690815845~hmac=904747ac672614fd8a211c0c05d35696283391fa34852a848a84ad33df8b7bd7&w=1380'} />
+                                    <div className='card-header'>
+                                        <div className='top-line'>
+                                            <div className='container-fluid'>
+                                                <Row>
+                                                    <Col span={12}>
+                                                        <a href={'#'} className='logo'>uCard <span className='span-neo'>neo</span></a>
+                                                    </Col>
+                                                    <Col span={12} className='text-right'>
+                                                        <a href={'#'} className='button'>Регистрация</a>
+                                                    </Col>
+                                                </Row>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className='slider-content__wrap'>
                                     <img src={'https://img.freepik.com/free-photo/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france_181624-33408.jpg?w=1380&t=st=1690812750~exp=1690813350~hmac=43e7a69daeabb881f1044f82919936c2569bcd8b03da0333cf9a1b89a01bb8c7'} />

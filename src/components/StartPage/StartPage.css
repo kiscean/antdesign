@@ -36,9 +36,66 @@
 }
 
 .slider-content__wrap {
+    perspective: 1000px;
     height: 79vh;
     line-height: 79vh;
 }
+
+/* Start Box Effect */
+
+.top-line {
+    position: absolute;
+    width: 100%;
+    padding: 60px 0;
+    z-index: 100;
+    text-align: start;
+}
+
+.container-fluid {
+    max-width: 1600px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.logo {
+    font-size: 26px;
+    color: rgb(3, 15, 31);
+    font-weight: bold;
+    padding: 10px;
+    white-space: nowrap;
+}
+.logo:hover {
+    text-decoration: none;
+    color: #030f1f;
+}
+.span-neo {
+    font-weight: 300;
+    transition: color 1s ease;
+    color: #5072ff;
+}
+.span-neo:hover{
+    text-decoration: none;
+    color: #425ECBFF;
+ }
+
+.button {
+    background-color: #5072ff;
+    color: white;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+.button:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #425ecb;
+}
+
+/* End Box Effect */
+
 
 @media screen and (max-width: 768px) {
     .slider-container {
