@@ -392,11 +392,20 @@ const StartPage = () => {
                                         <div className='top-line'>
                                             <div className='container-fluid'>
                                                 <Row>
-                                                    <Col span={12}>
-                                                        <a href={'#'} className='logo'>uCard <span className='span-neo'>neo</span></a>
+                                                    <Col
+                                                        md={24}
+                                                        lg={12}
+                                                        xl={12}
+                                                    >
+                                                        <h2 className='logo'>ЭКБ <span className='span-mark'>маркетплейс</span></h2>
                                                     </Col>
-                                                    <Col span={12} className='text-right'>
-                                                        <a href={'#'} className='button'>Регистрация</a>
+                                                    <Col
+                                                        md={24}
+                                                        lg={12}
+                                                        xl={12}
+                                                        className='text-right'
+                                                    >
+                                                        <h3 className='slogan'>Со всего мира - инженерам нашей страны.</h3>
                                                     </Col>
                                                 </Row>
                                             </div>
