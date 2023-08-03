@@ -36,9 +36,204 @@
 }
 
 .slider-content__wrap {
+    perspective: 1000px;
     height: 79vh;
-    line-height: 79vh;
+    background-color: #2c436e;
 }
+
+/* Start Box Effect */
+
+.top-line {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    text-align: start;
+    padding: 2ch 0;
+}
+
+.container-fluid {
+    max-width: 1600px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.logo {
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-left: 2ch;
+    white-space: nowrap;
+    transition: color 1s ease;
+}
+/*.logo:hover {
+    text-decoration: none;
+    color: #beccec;
+}*/
+.span-mark {
+    font-weight: 300;
+    transition: color 1s ease;
+    color: #ec386e;
+}
+/*.span-mark:hover{
+    text-decoration: none;
+    color: #425ECBFF;
+}*/
+
+.slogan {
+   /* background-color: #5072ff; */
+    margin-right: 2ch;
+    display: inline-flex;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 20px;
+    transition: background-color .25s ease;
+}
+/*.slogan:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #3e60ee;
+}*/
+
+.card-header {
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.card-header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 77%;
+    width: 100%;
+    background-image: url("../../assets/img/svg/russia.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05;
+}
+
+.content {
+    height: 100%;
+    color: white;
+    padding: 15% 10%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-text__wrapper {
+    text-align: left;
+}
+
+.content-title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 2ch;
+}
+
+.content-logo {
+    color: #ec386e;
+    font-weight: bolder;
+}
+
+.content-text {
+ margin-bottom: 20px;
+}
+
+.trylink {
+    color: #ec386e;
+    font-weight: bold;
+    margin-top: 2ch;
+    display: inline-block;
+    font-size: 16px;
+}
+.trylink:hover {
+    color: #ee5884;
+}
+
+.trylink-bird {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: #ec386e;
+    text-align: center;
+    border-radius: 100%;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+.content-down {
+    color: #6279a6;
+    height: 20vh;
+}
+
+.squads {
+    position: relative;
+    rotate: 70deg;
+    top: 15ch;
+    left: 30ch;
+}
+
+.squad_1 {
+    position: absolute;
+    display: flex;
+    width: 450px;
+    height: 450px;
+    rotate: 10deg;
+    opacity: 95%;
+}
+
+.squad_2 {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    rotate: 60deg;
+    opacity: 70%;
+}
+
+.squad_3 {
+    position: absolute;
+    display: flex;
+    width: 370px;
+    height: 370px;
+    rotate: 82deg;
+    opacity: 50%;
+}
+
+.squads-content {
+    position: absolute;
+    rotate: -10deg;
+    top: 4.5ch;
+    left: 18ch;
+    width: 38ch;
+}
+
+.squads-content__wrap {
+    color: #102959;
+    margin-bottom: 3ch;
+    text-align: left;
+    display: flex;
+    line-height: 15px;
+}
+
+.squads_icon {
+    font-size: 30px;
+    margin-right: 2ch;
+    color: #ec386e;
+}
+
+/* End Box Effect */
+
 
 @media screen and (max-width: 768px) {
     .slider-container {
