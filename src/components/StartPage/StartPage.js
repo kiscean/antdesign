@@ -459,7 +459,7 @@ const StartPage = () => {
                                                                             <FundOutlined className='squads_icon'/>
                                                                         </Col>
                                                                         <Col span={20}>
-                                                                            <h4>Удобный и фыункциональный кабинет клиента.</h4>
+                                                                            <h4>Удобный и функциональный кабинет клиента.</h4>
                                                                         </Col>
                                                                     </Row>
                                                                 </Col>
@@ -489,7 +489,7 @@ const StartPage = () => {
                                                                             <CommentOutlined className='squads_icon'/>
                                                                         </Col>
                                                                         <Col span={20}>
-                                                                            <h4>Консультируют специалисты - cмогут ответить на любые вопросы.</h4>
+                                                                            <h4>Консультируют специалисты - ответят на любые вопросы.</h4>
                                                                         </Col>
                                                                     </Row>
                                                                 </Col>
