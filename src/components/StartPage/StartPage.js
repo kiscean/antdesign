@@ -489,7 +489,7 @@ const StartPage = () => {
                                                                             <CommentOutlined className='squads_icon'/>
                                                                         </Col>
                                                                         <Col span={20}>
-                                                                            <h4>Консультируют специалисты.</h4>
+                                                                            <h4>Консультируют специалисты - cмогут ответить на любые вопросы.</h4>
                                                                         </Col>
                                                                     </Row>
                                                                 </Col>
