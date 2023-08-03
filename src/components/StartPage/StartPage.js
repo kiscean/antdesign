@@ -414,27 +414,31 @@ const StartPage = () => {
                                             <div className='content-center'>
                                                 <Content className='container-content'>
                                                     <Row justify={"center"}>
-                                                        <Col
+                                                        <Col className='container-text__wrapper'
                                                             md={24}
-                                                            lg={8}
-                                                            xl={8}
+                                                            lg={10}
+                                                            xl={10}
                                                         >
-                                                            <h3>
-                                                                Безграничный охват предложений!
-                                                            </h3>
-                                                            <p>
+                                                            <h2 className='content-title'>
+                                                                Безграничный охват предложений в <span className='content-logo'>ЭКБ</span>!
+                                                            </h2>
+                                                            <p className='content-text'>
                                                                 Для инженеров со всех уголков страны мы предлагаем комплектующие от производителей со всего мира - с инновационным и быстрым поиском.
                                                                 <br/> Професстональная консультация, помощь в подборе комплектующих, исходя из ваших задач.
-                                                                <br/> Создавайте будущее - не огрпничивайте свой выбор.
+                                                                <br/> Создавайте будущее - не ограничивайте свой выбор.
                                                             </p>
+                                                            <a href={'#'} className='trylink'><i className='trylink-bird'>✓</i> Зарегистрироваться</a>
                                                         </Col>
                                                         <Col
                                                             md={24}
-                                                            lg={16}
-                                                            xl={16}
+                                                            lg={14}
+                                                            xl={14}
                                                         >
 
                                                         </Col>
+                                                    </Row>
+                                                    <Row align={"bottom"}  className='content-down'>
+                                                        <Col span={24}>Проект разработан и создан компанией ООО Компания в 2023 году.</Col>
                                                     </Row>
                                                 </Content>
                                             </div>
