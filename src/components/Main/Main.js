@@ -9,7 +9,7 @@ import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
 import PopProducts from '../PopProducts/PopProducts';
 import RightMenu from '../RightMenu/RightMenu';
 import Footer from '../Footer/Footer';
-import StartPage from "../StartPage/StartPage";
+import StartPage from '../StartPage/StartPage';
 
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
