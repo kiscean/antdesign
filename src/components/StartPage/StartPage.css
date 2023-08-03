@@ -176,6 +176,62 @@
     height: 20vh;
 }
 
+.squads {
+    position: relative;
+    rotate: 70deg;
+    top: 15ch;
+    left: 30ch;
+}
+
+.squad_1 {
+    position: absolute;
+    display: flex;
+    width: 450px;
+    height: 450px;
+    rotate: 10deg;
+    opacity: 95%;
+}
+
+.squad_2 {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    rotate: 60deg;
+    opacity: 70%;
+}
+
+.squad_3 {
+    position: absolute;
+    display: flex;
+    width: 370px;
+    height: 370px;
+    rotate: 82deg;
+    opacity: 50%;
+}
+
+.squads-content {
+    position: absolute;
+    rotate: -10deg;
+    top: 4.5ch;
+    left: 19ch;
+    width: 38ch;
+}
+
+.squads-content__wrap {
+    color: #102959;
+    margin-bottom: 3ch;
+    text-align: left;
+    display: flex;
+    line-height: 15px;
+}
+
+.squads_icon {
+    font-size: 30px;
+    margin-right: 2ch;
+    color: #ec386e;
+}
+
 /* End Box Effect */
 
 
