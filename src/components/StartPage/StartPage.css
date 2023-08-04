@@ -21,7 +21,7 @@
 
 .autorization__form-registration {
   max-width: 90%;
-  max-height: 72vh;
+  max-height: 71vh;
   margin: 5ch 7ch 0 7ch;
   display: block;
   overflow-y: auto;
@@ -94,9 +94,9 @@
 .description__card-header:before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 0;
-  height: 77%;
+  height: 100%;
   width: 100%;
   background-image: url('../../assets/img/svg/russia.svg');
   background-repeat: no-repeat;
@@ -105,10 +105,10 @@
 }
 
 .description__content {
-  /*height: 100%;*/
+  padding: 17% 15% 0 15%;
   color: white;
-  padding: 10% 15%;
-  display: inline-block;
+  display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
 }
@@ -158,10 +158,11 @@
   margin-right: 5px;
 }
 
-.content-down {
-  margin-top: 90px;
-  color: #6279a6;
-  height: 20vh;
+.description__text-down {
+  text-align: center;
+  margin-top: 20ch;
+  color: #7e838c;
+  height: 5vh;
 }
 
 .description__squads {

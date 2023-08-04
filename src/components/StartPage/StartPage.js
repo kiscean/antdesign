@@ -528,7 +528,7 @@ const StartPage = () => {
                           </Row>
                         </Col>
                       </Row>
-                      <div align={'bottom'} className="content-down">
+                      <div align={'bottom'} className="description__text-down">
                         <Col span={24}>
                           Проект разработан и создан компанией ООО Компания в
                           2023 году.
