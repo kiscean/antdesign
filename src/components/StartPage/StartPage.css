@@ -30,6 +30,11 @@
   display: none;
 }
 
+.description {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
 .description__container {
   max-width: 92%;
   margin: 0 5ch 0 0;
@@ -86,8 +91,6 @@
 }
 
 .description__card-header {
-  /*height: 100vh;*/
-  /* min-height: 700px;*/
   overflow: hidden;
   position: relative;
 }
@@ -121,6 +124,8 @@
   font-size: 32px;
   line-height: 40px;
   margin-bottom: 2ch;
+  z-index: 12;
+  transform: translateZ(60px);
 }
 
 .content-logo {
@@ -130,6 +135,7 @@
 
 .description__content-text {
   margin-bottom: 20px;
+  z-index: 5;
 }
 
 .description__trylink {
@@ -138,6 +144,7 @@
   margin-top: 2ch;
   display: inline-block;
   font-size: 16px;
+  z-index: 12;
 }
 .description__trylink:hover {
   color: #ee5884;
@@ -156,41 +163,7 @@
   border-radius: 100%;
   line-height: 25px;
   margin-right: 5px;
-}
-
-.description__svg-1 {
-  position: absolute;
-  top: 3%;
-  left: 48%;
-  rotate: -10deg;
-}
-
-.description__svg-2 {
-  position: absolute;
-  top: 30%;
-  left: 85%;
-  rotate: -5deg;
-}
-
-.description__svg-3 {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  rotate: 70deg;
-}
-
-.description__svg-4 {
-  position: absolute;
-  top: 75%;
-  left: 75%;
-  rotate: 10deg;
-}
-
-.description__text-down {
-  text-align: center;
-  margin-top: 20ch;
-  color: #7e838c;
-  height: 5vh;
+  z-index: 12;
 }
 
 .description__rightblock-content {
@@ -202,20 +175,36 @@
   padding: 60px;
   border: 2px solid #b3c7de;
   border-radius: 10%;
+  transform: rotateX(10deg) rotateY(-20deg) rotateZ(3deg);
+  box-shadow: 2px 10px 10px #ee5884;
+  background-color: #ffffff;
+}
+.description__rightblock-content:hover {
+  transform: rotate(0);
 }
 
 .description__rightblock-wrap {
-  color: #b3c7de;
+  color: #05112c;
   margin-bottom: 3ch;
   text-align: left;
   display: flex;
   line-height: 15px;
+  z-index: 8;
+
 }
 
 .description__rightblock-icon {
   font-size: 30px;
   margin-right: 4ch;
   color: #ec386e;
+  z-index: 12;
+}
+
+.description__text-down {
+  text-align: center;
+  margin-top: 20ch;
+  color: #7e838c;
+  height: 5vh;
 }
 
 /* End Box Effect */
@@ -269,10 +258,6 @@
 }
 
 @media screen and (max-width: 1199px) {
-
-  .description__svg-wrap {
-    display: none;
-  }
 
   .description-rightblock {
     display: none;
