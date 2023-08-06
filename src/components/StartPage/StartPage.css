@@ -105,7 +105,7 @@
 }
 
 .description__content {
-  padding: 17% 15% 0 15%;
+  padding: 15% 15% 0 15%;
   color: white;
   display: flex;
   position: relative;
@@ -158,6 +158,34 @@
   margin-right: 5px;
 }
 
+.description__svg-1 {
+  position: absolute;
+  top: 3%;
+  left: 48%;
+  rotate: -10deg;
+}
+
+.description__svg-2 {
+  position: absolute;
+  top: 30%;
+  left: 85%;
+  rotate: -5deg;
+}
+
+.description__svg-3 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  rotate: 70deg;
+}
+
+.description__svg-4 {
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  rotate: 10deg;
+}
+
 .description__text-down {
   text-align: center;
   margin-top: 20ch;
@@ -165,68 +193,34 @@
   height: 5vh;
 }
 
-.description__squads {
-  position: relative;
-  rotate: 70deg;
-  top: 15ch;
-  left: 30ch;
-}
-
-.description__squad-1 {
+.description__rightblock-content {
   position: absolute;
-  display: flex;
-  width: 450px;
-  height: 450px;
-  rotate: 10deg;
-  opacity: 95%;
+  top: -5ch;
+  left: 15ch;
+  width: 50ch;
+  height: 310px;
+  padding: 60px;
+  border: 2px solid #b3c7de;
+  border-radius: 10%;
 }
 
-.description__squad-2 {
-  position: absolute;
-  display: flex;
-  width: 400px;
-  height: 400px;
-  rotate: 60deg;
-  opacity: 70%;
-}
-
-.description__squad-3 {
-  position: absolute;
-  display: flex;
-  width: 370px;
-  height: 370px;
-  rotate: 82deg;
-  opacity: 50%;
-}
-
-.description__squads-content {
-  position: absolute;
-  rotate: -10deg;
-  top: 4.5ch;
-  left: 18ch;
-  width: 38ch;
-}
-
-.description__squads-wrap {
-  color: #102959;
+.description__rightblock-wrap {
+  color: #b3c7de;
   margin-bottom: 3ch;
   text-align: left;
   display: flex;
   line-height: 15px;
 }
 
-.description__squads-icon {
+.description__rightblock-icon {
   font-size: 30px;
-  margin-right: 2ch;
+  margin-right: 4ch;
   color: #ec386e;
 }
 
 /* End Box Effect */
 
 @media screen and (max-width: 768px) {
-  .description {
-    display: none;
-  }
 
   .autorization__form-selector {
     margin: 0 5ch;
@@ -245,9 +239,88 @@
     justify-content: center;
     display: flex;
     margin: 5ch 5ch;
-    overflow: visible;
   }
   .autorization__form-registration_active {
     display: none;
   }
+
+  .description {
+    display: none;
+  }
+
 }
+
+@media screen and (max-width: 900px) {
+
+  .description__slogan {
+    display: none;
+  }
+
+  .description__content {
+    padding: 12% 10% 0 10%;
+    margin-bottom: 5ch;
+    height: 600px;
+  }
+
+  .description__text-down {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+
+  .description__svg-wrap {
+    display: none;
+  }
+
+  .description-rightblock {
+    display: none;
+  }
+
+  .description__content {
+    padding: 33% 10% 0 10%;
+  }
+
+  .description__text-down {
+    margin-top: 20%;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .description__content {
+    padding: 12% 10% 0 10%;
+  }
+
+  .description__rightblock-content {
+    top: 3ch;
+    left: 5ch;
+    height: 330px;
+  }
+
+  .description__text-down {
+    margin-top: 10%;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+  .description__content {
+    padding: 15% 10% 0 10%;
+  }
+
+  .description__rightblock-content {
+    top: -5ch;
+    left: 10ch;
+    height: 340px;
+  }
+
+  .description__text-down {
+    margin-top: 13%;
+  }
+
+}
+
