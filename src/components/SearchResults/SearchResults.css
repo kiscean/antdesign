@@ -1,7 +1,35 @@
 .container {
-
+    padding: 0 10ch;
+    justify-content: center;
+    display: inherit;
 }
 
 .routing-path {
-    padding-left: 1%;
+
+}
+
+.category-nestedlist {
+    margin: 5ch 0;
+}
+
+.component__image {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.component__rate {
+    font-size: 15px;
+}
+
+.component__tag {
+    margin-bottom: 1ch;
+}
+
+.component__backet-active {
+    color: #78de80;
+}
+
+.component__heart-active {
+    color: #ec386e;
 }
