@@ -10,18 +10,7 @@ import {DownloadOutlined, HomeOutlined} from '@ant-design/icons';
 import { Breadcrumb, Pagination, Radio, Space, Table, Tag } from "antd";
 
 const ComponentSearchResults = () => {
-    const topOptions = [
-        {
-            label: 'topRight',
-            value: 'topRight',
-        }
-    ];
-    const bottomOptions = [
-        {
-            label: 'bottomRight',
-            value: 'bottomRight',
-        },
-    ];
+
     const columns = [
         {
             title: 'Компонент',
