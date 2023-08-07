@@ -19,14 +19,18 @@
 }
 
 .component__rate {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .component__tag {
     margin-bottom: 1ch;
+    font-size: 10px;
 }
 
 .component__backet-active {
+    color: #2ab234;
+}
+.component__backet-active:hover {
     color: #78de80;
 }
 
