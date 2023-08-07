@@ -1,6 +1,5 @@
 import React  from 'react';
 import './StartPage.css';
-import {gsap} from "gsap";
 
 import Footer from '../Footer/Footer';
 import {
