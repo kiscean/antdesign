@@ -14,7 +14,7 @@ import {
     HomeOutlined,
     PlusOutlined
 } from '@ant-design/icons';
-import {Breadcrumb, Button, Col, Divider, Rate, Row, Space, Table, Tag, message, Drawer, Radio,} from "antd";
+import {Breadcrumb, Button, Col, Divider, Rate, Row, Space, Table, Tag, message, Drawer, Radio, Statistic,} from "antd";
 
 const ComponentSearchResults = () => {
 
@@ -38,7 +38,7 @@ const ComponentSearchResults = () => {
         });
     };
 
-    const columns = [
+    const columns_components = [
         {
             title: 'Компонент',
             dataIndex: 'name',
@@ -121,7 +121,6 @@ const ComponentSearchResults = () => {
             width: '25ch'
         },
         {
-            title: 'Избранное',
             key: 'heart',
             render: (_, record) => (
                 <Space size="middle">
@@ -134,7 +133,43 @@ const ComponentSearchResults = () => {
         },
     ];
 
-    const data = [
+    const columns_basket = [
+        {
+            title: 'Компонент',
+            dataIndex: 'name',
+            key: 'name',
+            render: (_, record) => (
+                <Space size="middle">
+                    <img src={record.image} className='component__image' />
+                    <Row>
+                        <Col span={24}>
+                            <a>{record.name}</a>
+                        </Col>
+                        <Col span={24}>
+                            <p>{record.discription}</p>
+                        </Col>
+                    </Row>
+                </Space>
+            ),
+            width: '40ch',
+        },
+        {
+            title: 'Цена',
+            dataIndex: 'price',
+            key: 'price',
+            render: (_, record) => (
+                <Space size="middle">
+                    <p>{record.price} руб.</p>
+                </Space>
+            ),
+        },
+        {
+            title: 'Ед.',
+            dataIndex: 'address',
+        },
+    ];
+
+    const data_components = [
         {
             key: '1',
             image: 'https://static.chipdip.ru/lib/211/DOC001211284.jpg',
@@ -282,12 +317,22 @@ const ComponentSearchResults = () => {
 
     ];
 
-    const [tableParams, setTableParams] = useState({
-        pagination: {
-            current: 1,
-            pageSize: 10,
+    const data_basket = [
+        {
+            key: '13',
+            image: 'https://static.chipdip.ru/lib/313/DOC005313873.jpg',
+            name: '1N4148WS-7-F',
+            discription: 'Диод 150мА 75В [SOD-323]',
+            price: '40',
         },
-    });
+        {
+            key: '14',
+            image: 'https://static.chipdip.ru/lib/464/DOC002464721.jpg',
+            name: '2А517А-2',
+            discription: 'Диод СВЧ',
+            price: '50'
+        },
+    ];
 
     return (
         <section>
@@ -322,23 +367,12 @@ const ComponentSearchResults = () => {
                 <section className='search-results'>
                     <div>
                         <Table
-                            columns={columns}
-                            dataSource={data}
+                            columns={columns_components}
+                            dataSource={data_components}
                         />
                     </div>
                 </section>
             </Content>
-            <Space>
-                <Radio.Group value={placement} onChange={onChange}>
-                    <Radio value="top">top</Radio>
-                    <Radio value="right">right</Radio>
-                    <Radio value="bottom">bottom</Radio>
-                    <Radio value="left">left</Radio>
-                </Radio.Group>
-                <Button type="primary" onClick={showDrawer}>
-                    Open
-                </Button>
-            </Space>
             <Drawer
                 title="Ваша корзина"
                 placement={placement}
@@ -354,9 +388,37 @@ const ComponentSearchResults = () => {
                     </Space>
                 }
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <Table
+                    columns={columns_basket}
+                    dataSource={data_basket}
+                    bordered
+                    size="small" />
+                <Space direction={"vertical"}>
+                    <Row justify={"start"}>
+                        <Col span={16}>
+                            <p>Кол-во</p>
+                        </Col>
+                        <Col span={8}>
+                            <p><span>46</span> шт.</p>
+                        </Col>
+                        <Col span={16}>
+                            <p>Налог НДС 20%</p>
+                        </Col>
+                        <Col span={8}>
+                            <p><span>373,330</span> руб.</p>
+                        </Col>
+                    </Row>
+                    <Statistic title="ИТОГО с учетом НДС20%" value={2240} precision={2} />
+                    <Button
+                        style={{
+                            marginTop: 16,
+                        }}
+                        type="primary"
+                    >
+                        Перейти к оформлению
+                    </Button>
+                </Space>
+
             </Drawer>
             <Footer />
         </section>
