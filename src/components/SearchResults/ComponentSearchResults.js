@@ -14,9 +14,30 @@ import {
     HomeOutlined,
     PlusOutlined
 } from '@ant-design/icons';
-import {Breadcrumb, Col, Divider, Rate, Row, Space, Table, Tag} from "antd";
+import {Breadcrumb, Button, Col, Divider, Rate, Row, Space, Table, Tag, message, Drawer, Radio,} from "antd";
 
 const ComponentSearchResults = () => {
+
+    const [open, setOpen] = useState(false);
+    const [placement, setPlacement] = useState('right');
+    const showDrawer = () => {
+        setOpen(true);
+    };
+    const onChange = (e) => {
+        setPlacement(e.target.value);
+    };
+    const onClose = () => {
+        setOpen(false);
+    };
+
+    const [messageApi, contextHolder] = message.useMessage();
+    const success = () => {
+        messageApi.open({
+            type: 'success',
+            content: 'Товар добавлен в корзину',
+        });
+    };
+
     const columns = [
         {
             title: 'Компонент',
@@ -93,7 +114,7 @@ const ComponentSearchResults = () => {
             render: (_, record) => (
                 <Space size="middle">
                     {
-                        record.action==='1' ? <a className='component__backet-active'><CheckOutlined /> В корзине</a> : <a><PlusOutlined /> Добавить в корзину</a>
+                        record.action==='1' ? <a onClick={showDrawer} className='component__backet-active'><CheckOutlined /> В корзине</a> : <Space>{contextHolder}<Button onClick={success}><PlusOutlined /> Добавить в корзину</Button></Space>
                     }
                 </Space>
             ),
@@ -307,6 +328,36 @@ const ComponentSearchResults = () => {
                     </div>
                 </section>
             </Content>
+            <Space>
+                <Radio.Group value={placement} onChange={onChange}>
+                    <Radio value="top">top</Radio>
+                    <Radio value="right">right</Radio>
+                    <Radio value="bottom">bottom</Radio>
+                    <Radio value="left">left</Radio>
+                </Radio.Group>
+                <Button type="primary" onClick={showDrawer}>
+                    Open
+                </Button>
+            </Space>
+            <Drawer
+                title="Ваша корзина"
+                placement={placement}
+                width={500}
+                onClose={onClose}
+                open={open}
+                extra={
+                    <Space>
+                        <Button onClick={onClose}>Перейти</Button>
+                        <Button type="primary" onClick={onClose}>
+                            OK
+                        </Button>
+                    </Space>
+                }
+            >
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+            </Drawer>
             <Footer />
         </section>
     );
