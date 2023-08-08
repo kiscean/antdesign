@@ -28,3 +28,8 @@
 .drawer__background_active {
   display: none;
 }
+
+.navbar__rightmenuicon {
+  background-color: #78de80;
+  color: #05112c;
+}

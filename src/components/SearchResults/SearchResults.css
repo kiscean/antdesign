@@ -4,36 +4,28 @@
     display: inherit;
 }
 
-.routing-path {
-
-}
-
 .category-nestedlist {
     margin: 5ch 0;
 }
 
-.component__image {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
+.category-nestedlist__list {
+    padding: 0 2ch;
+    margin: 5ch 0;
 }
 
-.component__rate {
-    font-size: 12px;
+.category-nestedlist__quntity {
+    margin-bottom: 1.5%;
+    text-align: right;
 }
 
-.component__tag {
-    margin-bottom: 1ch;
-    font-size: 10px;
+.category-nestedlist__name {
+    padding-left: 10px;
 }
 
-.component__backet-active {
-    color: #2ab234;
-}
-.component__backet-active:hover {
-    color: #78de80;
-}
+@media screen and (max-width: 1050px) {
 
-.component__heart-active {
-    color: #ec386e;
+    .container {
+        padding: 0 20px;
+    }
+
 }

@@ -12,6 +12,7 @@ import Footer from '../Footer/Footer';
 import StartPage from '../StartPage/StartPage';
 import RegistrationPS from "../PagesSuccess/RegistrationPS";
 import ComponentSearchResults from "../SearchResults/ComponentSearchResults";
+import MainDrawer from "../RightMenu/MainDrawer";
 
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
@@ -23,7 +24,8 @@ const Main = () => {
   return (
     <Layout className="layout">
       <ComponentSearchResults />
-      {/* <StartPage />
+      {/* <MainDrawer />
+      <StartPage />
       <RegistrationPS />
       <Header onClickBurger={onClickBurger} />
       <RightMenu active={menuActive} />
