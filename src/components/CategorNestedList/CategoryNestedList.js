@@ -3,6 +3,7 @@ import './CategoryNestedList.css';
 
 import { Col, Divider, Row } from 'antd';
 
+//!эту колбасу нужно как-то переписать!
 const CategoryNestedList = () => {
   return (
     <section className="category-nestedlist">
@@ -13,7 +14,7 @@ const CategoryNestedList = () => {
         <Col md={24} lg={12} xl={8}>
           <Row>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>238</p>
               </a>
             </Col>
@@ -21,7 +22,7 @@ const CategoryNestedList = () => {
               <p>Аналогокварцвые умножители</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>2122</p>
               </a>
             </Col>
@@ -29,7 +30,7 @@ const CategoryNestedList = () => {
               <p>Электроэлемент</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>27888</p>
               </a>
             </Col>
@@ -37,7 +38,7 @@ const CategoryNestedList = () => {
               <p>Кварцевый резонатор</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>2578</p>
               </a>
             </Col>
@@ -45,7 +46,7 @@ const CategoryNestedList = () => {
               <p>Конденсатор ниобиевый оксидно-полупроводниковый</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>7378</p>
               </a>
             </Col>
@@ -57,7 +58,7 @@ const CategoryNestedList = () => {
         <Col md={24} lg={12} xl={8}>
           <Row>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>1548</p>
               </a>
             </Col>
@@ -65,7 +66,7 @@ const CategoryNestedList = () => {
               <p>Стабилизатор напряжения</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>7775</p>
               </a>
             </Col>
@@ -73,7 +74,7 @@ const CategoryNestedList = () => {
               <p>Конденсатор керамический дисковый</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>11</p>
               </a>
             </Col>
@@ -81,7 +82,7 @@ const CategoryNestedList = () => {
               <p>Чип резисторы (SMD, для поверхностного монтажа)</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>2754</p>
               </a>
             </Col>
@@ -89,7 +90,7 @@ const CategoryNestedList = () => {
               <p>Конденсатор ниобиевый оксидно-полупроводниковый</p>
             </Col>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>9447</p>
               </a>
             </Col>
@@ -101,7 +102,7 @@ const CategoryNestedList = () => {
         <Col md={24} lg={12} xl={8}>
           <Row>
             <Col span={3} className="category-nestedlist__quntity">
-              <a>
+              <a href="#" target="_blank">
                 <p>12358</p>
               </a>
             </Col>
