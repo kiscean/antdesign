@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from 'antd';
 
 import './Main.css';
@@ -19,10 +19,21 @@ import RoutingRoad from "../RoutingRoad/RoutingRoad";
 
 const Main = () => {
 
+    const [open, setOpen] = useState(false);
+    const showDrawer = () => {
+        setOpen(true);
+    };
+    const onClose = () => {
+        setOpen(false);
+    };
+
   return (
     <Layout className="layout">
-        <Header />
-        <MainDrawer />
+        <Header showDrawer={showDrawer}/>
+        <MainDrawer
+            open={open}
+            onClose={onClose}
+        />
         <SearchEKB />
         <Content className='container'>
             <RoutingRoad />
