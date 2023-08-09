@@ -17,18 +17,18 @@ import { Content } from 'antd/es/layout/layout';
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
 
 const Main = () => {
-  const [open, setOpen] = useState(false);
-  const showDrawer = () => {
-    setOpen(true);
+  const [menuActive, setMenuActive] = useState(false);
+  const onOpenBurgerMenu = () => {
+    setMenuActive(true);
   };
-  const onClose = () => {
-    setOpen(false);
+  const onCloseBurgerMenu = () => {
+    setMenuActive(false);
   };
 
   return (
     <Layout className="layout">
-      <Header showDrawer={showDrawer} />
-      <MainDrawer open={open} onClose={onClose} />
+      <Header onOpen={onOpenBurgerMenu} />
+      <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
       <SearchEKB />
       <Content className="container">
         <RoutingRoad />
