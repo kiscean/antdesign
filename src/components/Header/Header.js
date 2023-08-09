@@ -5,7 +5,7 @@ import { Dropdown, Space, Col, Layout, Menu, Avatar } from 'antd';
 import { DownOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 
-const Header = ({ onClickBurger }) => {
+const Header = () => {
   const { Header } = Layout;
 
   return (
@@ -55,7 +55,7 @@ const Header = ({ onClickBurger }) => {
             </Dropdown>
           </Space>
 
-          <div className="header__burger-menu" onClick={onClickBurger}>
+          <div className="header__burger-menu" >
             <Avatar className="header__user-icon">MC</Avatar>
             <DownOutlined className="header__down-arrow" />
           </div>

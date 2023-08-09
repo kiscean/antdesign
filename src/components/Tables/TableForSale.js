@@ -13,6 +13,7 @@ import {
 
 import {data_components} from "../../assets/componentsArray";
 import {data_basket} from "../../assets/basketArray";
+import {Content} from "antd/es/layout/layout";
 
 const TablesForSale = () => {
 
@@ -185,65 +186,67 @@ const TablesForSale = () => {
     ];
 
     return (
-        <component>
-            <section className='search-results'>
-                <div>
+
+            <component>
+                <section className='search-results'>
+                    <div>
+                        <Table
+                            columns={columns_components}
+                            dataSource={data_components}
+                            scroll={{
+                                x: 1000,
+                            }}
+                        />
+                    </div>
+                </section>
+                <Drawer
+                    title="Ваша корзина"
+                    placement={placement}
+                    width={500}
+                    onClose={onClose}
+                    open={open}
+                    extra={
+                        <Space>
+                            <Button onClick={onClose}>Перейти</Button>
+                            <Button type="primary" onClick={onClose}>
+                                OK
+                            </Button>
+                        </Space>
+                    }
+                >
                     <Table
-                        columns={columns_components}
-                        dataSource={data_components}
-                        scroll={{
-                            x: 1000,
-                        }}
-                    />
-                </div>
-            </section>
-            <Drawer
-                title="Ваша корзина"
-                placement={placement}
-                width={500}
-                onClose={onClose}
-                open={open}
-                extra={
-                    <Space>
-                        <Button onClick={onClose}>Перейти</Button>
-                        <Button type="primary" onClick={onClose}>
-                            OK
+                        columns={columns_basket}
+                        dataSource={data_basket}
+                        bordered
+                        size="small" />
+                    <Space direction={"vertical"}>
+                        <Row justify={"start"}>
+                            <Col span={16}>
+                                <p>Кол-во</p>
+                            </Col>
+                            <Col span={8}>
+                                <p><span>46</span> шт.</p>
+                            </Col>
+                            <Col span={16}>
+                                <p>Налог НДС 20%</p>
+                            </Col>
+                            <Col span={8}>
+                                <p><span>345</span> руб.</p>
+                            </Col>
+                        </Row>
+                        <Statistic className='basket-right__total' title="ИТОГО (включая НДС 20%)" value={2070} precision={2} />
+                        <Button
+                            style={{
+                                marginTop: 16,
+                            }}
+                            type="primary"
+                        >
+                            Перейти к оформлению
                         </Button>
                     </Space>
-                }
-            >
-                <Table
-                    columns={columns_basket}
-                    dataSource={data_basket}
-                    bordered
-                    size="small" />
-                <Space direction={"vertical"}>
-                    <Row justify={"start"}>
-                        <Col span={16}>
-                            <p>Кол-во</p>
-                        </Col>
-                        <Col span={8}>
-                            <p><span>46</span> шт.</p>
-                        </Col>
-                        <Col span={16}>
-                            <p>Налог НДС 20%</p>
-                        </Col>
-                        <Col span={8}>
-                            <p><span>345</span> руб.</p>
-                        </Col>
-                    </Row>
-                    <Statistic className='basket-right__total' title="ИТОГО (включая НДС 20%)" value={2070} precision={2} />
-                    <Button
-                        style={{
-                            marginTop: 16,
-                        }}
-                        type="primary"
-                    >
-                        Перейти к оформлению
-                    </Button>
-                </Space>
-            </Drawer>
-        </component>
+                </Drawer>
+            </component>
+
     );
 };
 

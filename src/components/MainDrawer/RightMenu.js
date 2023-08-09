@@ -6,7 +6,7 @@ import {
   ImportOutlined,
   IssuesCloseOutlined,
 } from '@ant-design/icons';
-import './RightMenu.css';
+import './MainDrawer.css';
 
 const RightMenu = ({ active }) => {
   function getItem(label, key, icon, children) {

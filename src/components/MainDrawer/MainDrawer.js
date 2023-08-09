@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RightMenu.css';
+import './MainDrawer.css';
 
 import {Avatar, Button, Drawer, Menu} from 'antd';
 import {AppstoreOutlined, HeartOutlined, ImportOutlined, IssuesCloseOutlined} from "@ant-design/icons";
