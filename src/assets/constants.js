@@ -1,4 +1,9 @@
-import {AuditOutlined, ExportOutlined, HeartOutlined} from '@ant-design/icons';
+import {
+  AuditOutlined,
+  ExportOutlined,
+  HeartOutlined,
+  HomeOutlined,
+} from '@ant-design/icons';
 
 export const items = [
   {
@@ -41,4 +46,22 @@ export const menuItems = [
   { icon: '<FireOutlined />', name: 'Популярное', link: '#' },
   { icon: '<BarsOutlined />', name: 'Категории', link: '#' },
   { icon: '<ToolOutlined />', name: 'Помощь', link: '#' },
+];
+
+export const routingRoadMenu = [
+  {
+    href: '',
+    title: <HomeOutlined />,
+  },
+  {
+    href: '',
+    title: (
+      <>
+        <span>Все категории</span>
+      </>
+    ),
+  },
+  {
+    title: 'Оптоэлектроника',
+  },
 ];
