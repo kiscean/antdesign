@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MainDrawer.css';
 
 import {Avatar, Button, Drawer, Menu} from 'antd';
 import {AppstoreOutlined, HeartOutlined, ImportOutlined, IssuesCloseOutlined} from "@ant-design/icons";
 
-const MainDrawer = () => {
+const MainDrawer = ({open, onClose}) => {
 
     function getItem(label, key, icon, children) {
         return {
@@ -38,19 +38,8 @@ const MainDrawer = () => {
         getItem('Выйти', '12', <ImportOutlined />),
     ];
 
-    const [open, setOpen] = useState(false);
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
-
     return (
         <>
-            <Button type="primary" onClick={showDrawer}>
-                Open
-            </Button>
             <Drawer title="Навигация" placement="right" onClose={onClose} open={open}>
                 <Menu
                     defaultOpenKeys={['sub1']}
