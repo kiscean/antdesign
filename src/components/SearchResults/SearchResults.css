@@ -1,0 +1,31 @@
+.container {
+    padding: 0 10ch;
+    justify-content: center;
+    display: inherit;
+}
+
+.category-nestedlist {
+    margin: 5ch 0;
+}
+
+.category-nestedlist__list {
+    padding: 0 2ch;
+    margin: 5ch 0;
+}
+
+.category-nestedlist__quntity {
+    margin-bottom: 1.5%;
+    text-align: right;
+}
+
+.category-nestedlist__name {
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+}

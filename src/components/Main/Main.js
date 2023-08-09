@@ -10,6 +10,9 @@ import PopProducts from '../PopProducts/PopProducts';
 import RightMenu from '../RightMenu/RightMenu';
 import Footer from '../Footer/Footer';
 import StartPage from '../StartPage/StartPage';
+import RegistrationPS from "../PagesSuccess/RegistrationPS";
+import ComponentSearchResults from "../SearchResults/ComponentSearchResults";
+import MainDrawer from "../RightMenu/MainDrawer";
 
 const Main = () => {
   const [menuActive, setMenuActive] = React.useState(false);
@@ -20,8 +23,11 @@ const Main = () => {
 
   return (
     <Layout className="layout">
+      <ComponentSearchResults />
+      {/* <MainDrawer />
       <StartPage />
-      {/* <Header onClickBurger={onClickBurger} />
+      <RegistrationPS />
+      <Header onClickBurger={onClickBurger} />
       <RightMenu active={menuActive} />
       <SearchEKB />
       <PopProducts />
