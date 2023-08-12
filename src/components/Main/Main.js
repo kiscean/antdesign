@@ -11,7 +11,7 @@ import Footer from '../Footer/Footer';
 //import StartPage from '../StartPage/StartPage';
 //import RegistrationPS from '../PagesSuccess/RegistrationPS';
 import MainDrawer from '../MainDrawer/MainDrawer';
-import TableForSale from '../Tables/TableForSale';
+import TableForSale from '../TableForSale/TableForSale';
 import CategoryNestedList from '../CategorNestedList/CategoryNestedList';
 import { Content } from 'antd/es/layout/layout';
 import RoutingRoad from '../RoutingRoad/RoutingRoad';

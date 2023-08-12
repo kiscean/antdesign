@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Tables.css';
+import React from 'react';
+import './TableForSale.css';
 
 import {
   Button,
@@ -24,21 +24,23 @@ import {
   PlusOutlined,
 } from '@ant-design/icons';
 
-import { data_components } from '../../assets/componentsArray';
+import { tableForSaleComponents } from '../../assets/constants';
 import { data_basket } from '../../assets/basketArray';
 
 const TablesForSale = () => {
-  const [open, setOpen] = useState(false);
-  const [placement] = useState('right');
+  const [open, setOpen] = React.useState(false);
 
   const onClose = () => {
     setOpen(false);
   };
-  const showDrawer = () => {
+
+  const onOpen = () => {
     setOpen(true);
   };
 
+  /* Этот кусочек - попап с конфирмом */
   const [messageApi, contextHolder] = message.useMessage();
+
   const success = () => {
     messageApi.open({
       type: 'success',
@@ -46,11 +48,13 @@ const TablesForSale = () => {
     });
   };
 
+  //видимо нужно для корзины
   const onChange = (value) => {
     console.log('changed', value);
   };
 
-  const columns_components = [
+  /* Шапка таблицы */
+  const tableHeader = [
     {
       title: 'Компонент',
       dataIndex: 'name',
@@ -134,7 +138,7 @@ const TablesForSale = () => {
       render: (_, record) => (
         <Space size="middle">
           {record.action === '1' ? (
-            <a onClick={showDrawer} className="component__backet-active">
+            <a onClick={onOpen} className="component__backet-active">
               <CheckOutlined /> В корзине
             </a>
           ) : (
@@ -168,6 +172,7 @@ const TablesForSale = () => {
     },
   ];
 
+  //видимо что-то для корзины.
   const columns_basket = [
     {
       title: 'Компонент',
@@ -229,20 +234,26 @@ const TablesForSale = () => {
 
   return (
     <>
-      <section className="search-results">
-        <div>
-          <Table
-            columns={columns_components}
-            dataSource={data_components}
-            scroll={{
-              x: 1000,
-            }}
-          />
-        </div>
+      <section className="table-selling">
+        <Table
+          columns={tableHeader}
+          dataSource={tableForSaleComponents}
+          scroll={{
+            x: 1000,
+          }}
+        />
       </section>
+
+      {/* ТУТ ПОКА НИЧЕГО НЕ МЕНЯЮ, НО 
+КОРЗИНА ДОЛЖНА БЫТЬ ОТДЕЛЬНЫМ КОМПОНЕНТОМ 
+
+!я предлагаю создать компонент Cart и вынести туда 
+всю логику связанную с корзиной, а потом прокинуть туда пропсы, 
+если это будет нужно вообще
+*/}
       <Drawer
         title="Ваша корзина"
-        placement={placement}
+        placement={'right'}
         width={500}
         onClose={onClose}
         open={open}
