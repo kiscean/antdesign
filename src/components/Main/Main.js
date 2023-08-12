@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
+import { Content } from 'antd/es/layout/layout';
 
 import './Main.css';
 
@@ -13,11 +14,13 @@ import Footer from '../Footer/Footer';
 import MainDrawer from '../MainDrawer/MainDrawer';
 import TableForSale from '../TableForSale/TableForSale';
 import CategoryNestedList from '../CategorNestedList/CategoryNestedList';
-import { Content } from 'antd/es/layout/layout';
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
+import Cart from '../Cart/Cart';
 
 const Main = () => {
   const [menuActive, setMenuActive] = useState(false);
+  const [openCart, setOpenCart] = React.useState(false);
+
   const onOpenBurgerMenu = () => {
     setMenuActive(true);
   };
@@ -25,15 +28,24 @@ const Main = () => {
     setMenuActive(false);
   };
 
+  const onCloseCart = () => {
+    setOpenCart(false);
+  };
+
+  const onOpenCart = () => {
+    setOpenCart(true);
+  };
+
   return (
     <Layout className="layout">
-      <Header onOpen={onOpenBurgerMenu} />
+      <Header onOpen={onOpenBurgerMenu} onOpenCart={onOpenCart} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
       <SearchEKB />
       <Content className="container">
         <RoutingRoad />
         <CategoryNestedList />
-        <TableForSale />
+        <TableForSale onOpenCart={onOpenCart} />
+        <Cart onCloseCart={onCloseCart} open={openCart} />
         {/* <PopProducts />
             <CategoriesEСB />
             <RegistrationPS />
