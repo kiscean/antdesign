@@ -5,7 +5,7 @@ import './Main.css';
 
 import Header from '../Header/Header';
 import SearchEKB from '../SearchEKB/SearchEKB';
-//import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
+//import CategoriesEСB from '../CategoriesEKB/CategoriesEKB';
 //import PopProducts from '../PopProducts/PopProducts';
 import Footer from '../Footer/Footer';
 //import StartPage from '../StartPage/StartPage';
@@ -35,7 +35,7 @@ const Main = () => {
         <CategoryNestedList />
         <TableForSale />
         {/* <PopProducts />
-            <CategoriesEKB />
+            <CategoriesEСB />
             <RegistrationPS />
             <StartPage /> */}
       </Content>
