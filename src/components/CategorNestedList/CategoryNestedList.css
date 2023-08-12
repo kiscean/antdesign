@@ -1,17 +1,24 @@
 .category-nestedlist {
-    margin: 5ch 0;
+  margin: 5ch 0;
 }
 
-.category-nestedlist__list {
-    padding: 0 2ch;
-    margin: 5ch 0;
+.category-nestedlist__box {
+  margin: 5ch 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px 15px;
 }
 
-.category-nestedlist__quntity {
-    margin-bottom: 1.5%;
-    text-align: right;
+@media screen and (max-width: 1400px) {
+  .category-nestedlist__box {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 }
 
-.category-nestedlist__name {
-    padding-left: 10px;
+@media screen and (max-width: 865px) {
+  .category-nestedlist__box {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 }

@@ -1,16 +1,42 @@
 import React from 'react';
 import './CategoryNestedList.css';
 
-import { Col, Divider, Row } from 'antd';
+import { Divider } from 'antd';
+import CategoryNestedRow from '../CategoryNestedRow/CategoryNestedRow';
 
 //!эту колбасу нужно как-то переписать!
 const CategoryNestedList = () => {
+  const categoryNestedArr = [
+    { quantity: 238, name: 'Аналогокварцвые умножители' },
+    { quantity: 2122, name: 'Электроэлемент' },
+    { quantity: 27888, name: 'Кварцевый резонатор' },
+    { quantity: 2578, name: 'Конденсатор ниобиевый оксидно-полупроводниковый' },
+    { quantity: 7378, name: 'Конденсаторы керамические выводные многослойные' },
+    { quantity: 1548, name: 'Стабилизатор напряжения' },
+    { quantity: 7775, name: 'Конденсатор керамический дисковый' },
+    { quantity: 11, name: 'Чип резисторы (SMD, для поверхностного монтажа)' },
+    { quantity: 2754, name: 'Конденсатор ниобиевый оксидно-полупроводниковый' },
+    { quantity: 9447, name: 'Диоды защиты от электростатики (ESD)' },
+    { quantity: 12358, name: 'Диоды' },
+  ];
+
   return (
     <section className="category-nestedlist">
       <Divider orientation="left">
         <h4>Оптоэлектроника</h4>
       </Divider>
-      <Row className="category-nestedlist__list">
+      <div className="category-nestedlist__box">
+        {categoryNestedArr.map((row, i) => {
+          return (
+            <CategoryNestedRow
+              key={i}
+              quantity={row.quantity}
+              name={row.name}
+            />
+          );
+        })}
+      </div>
+      {/* <Row className="category-nestedlist__list">
         <Col md={24} lg={12} xl={8}>
           <Row>
             <Col span={3} className="category-nestedlist__quntity">
@@ -111,7 +137,7 @@ const CategoryNestedList = () => {
             </Col>
           </Row>
         </Col>
-      </Row>
+      </Row> */}
     </section>
   );
 };
