@@ -1,5 +1,5 @@
-import React  from 'react';
-import './StartPage.css';
+import React from 'react';
+import './SignForms.css';
 
 import Footer from '../Footer/Footer';
 import {
@@ -33,7 +33,7 @@ const StartPage = () => {
 
   const translateToCentre = {
     x: window.innerWidth / 2,
-    y: window.innerHeight / 2
+    y: window.innerHeight / 2,
   };
 
   const { Option } = Select;
@@ -437,7 +437,11 @@ const StartPage = () => {
                             Зарегистрироваться
                           </a>
                         </Col>
-                        <Col md={24} lg={24} xl={14} className='description-rightblock'>
+                        <Col
+                          md={24}
+                          lg={24}
+                          xl={14}
+                          className="description-rightblock">
                           <Row className="description__rightblock-content">
                             <Col span={24}>
                               <Row

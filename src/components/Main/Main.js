@@ -9,7 +9,7 @@ import SearchEKB from '../SearchEKB/SearchEKB';
 import CategoriesEСB from '../CategoriesEСB/CategoriesEСB';
 import PopProducts from '../PopProducts/PopProducts';
 import Footer from '../Footer/Footer';
-import StartPage from '../StartPage/StartPage';
+import SignForms from '../SignForms/SignForms';
 import MainDrawer from '../MainDrawer/MainDrawer';
 import TableForSale from '../TableForSale/TableForSale';
 import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
@@ -47,9 +47,9 @@ const Main = () => {
       <Cart onCloseCart={onCloseCart} open={openCart} />
       <PopProducts />
       <CategoriesEСB />
-      <SuccessPage />
-      <StartPage />
-      <Footer />
+      {/* <SuccessPage /> */}
+      <SignForms />
+      {/* <Footer /> */}
     </Layout>
   );
 };
