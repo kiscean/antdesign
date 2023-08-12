@@ -8,7 +8,7 @@ import { categoryNestedArr } from '../../assets/constants';
 const CategoryNestedList = () => {
   return (
     <section className="category-nestedlist">
-      <Divider orientation="left">
+      <Divider className="category-nestedlist__divider" orientation="left">
         <h4>Оптоэлектроника</h4>
       </Divider>
 

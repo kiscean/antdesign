@@ -6,16 +6,16 @@ import './Main.css';
 
 import Header from '../Header/Header';
 import SearchEKB from '../SearchEKB/SearchEKB';
-//import CategoriesEСB from '../CategoriesEKB/CategoriesEKB';
-//import PopProducts from '../PopProducts/PopProducts';
+import CategoriesEСB from '../CategoriesEСB/CategoriesEСB';
+import PopProducts from '../PopProducts/PopProducts';
 import Footer from '../Footer/Footer';
-//import StartPage from '../StartPage/StartPage';
-//import RegistrationPS from '../PagesSuccess/RegistrationPS';
+import StartPage from '../StartPage/StartPage';
 import MainDrawer from '../MainDrawer/MainDrawer';
 import TableForSale from '../TableForSale/TableForSale';
-import CategoryNestedList from '../CategorNestedList/CategoryNestedList';
+import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
 import Cart from '../Cart/Cart';
+import SuccessPage from '../SuccessPage/SuccessPage';
 
 const Main = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -40,17 +40,15 @@ const Main = () => {
     <Layout className="layout">
       <Header onOpen={onOpenBurgerMenu} onOpenCart={onOpenCart} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-      <SearchEKB />
-      <Content className="container">
-        <RoutingRoad />
-        <CategoryNestedList />
-        <TableForSale onOpenCart={onOpenCart} />
-        <Cart onCloseCart={onCloseCart} open={openCart} />
-        {/* <PopProducts />
-            <CategoriesEСB />
-            <RegistrationPS />
-            <StartPage /> */}
-      </Content>
+      {/* <SearchEKB />
+      <RoutingRoad />
+      <CategoryNestedList />
+      <TableForSale onOpenCart={onOpenCart} /> */}
+      <Cart onCloseCart={onCloseCart} open={openCart} />
+      <PopProducts />
+      <CategoriesEСB />
+      <SuccessPage />
+      <StartPage />
       <Footer />
     </Layout>
   );

@@ -2,7 +2,12 @@
   margin: 5ch 0;
 }
 
+.category-nestedlist__divider {
+  padding: 0 10ch;
+}
+
 .category-nestedlist__box {
+  padding: 0 10ch;
   margin: 5ch 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
