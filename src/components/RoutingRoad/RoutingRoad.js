@@ -1,35 +1,15 @@
-import React from "react";
+import React from 'react';
 import './RoutingRoad.css';
 
-import {Breadcrumb} from "antd";
-import {HomeOutlined} from "@ant-design/icons";
-import MainDrawer from "../MainDrawer/MainDrawer";
+import { Breadcrumb } from 'antd';
+import { routingRoadMenu } from '../../assets/constants';
 
 const RoutingRoad = () => {
-    return (
-        <section>
-            <Breadcrumb
-                className='routing-path'
-                items={[
-                    {
-                        href: '',
-                        title: <HomeOutlined />,
-                    },
-                    {
-                        href: '',
-                        title: (
-                            <>
-                                <span>Все категории</span>
-                            </>
-                        ),
-                    },
-                    {
-                        title: 'Оптоэлектроника',
-                    },
-                ]}
-            />
-        </section>
-    );
+  return (
+    <section className="routing-road">
+      <Breadcrumb items={routingRoadMenu} />
+    </section>
+  );
 };
 
 export default RoutingRoad;

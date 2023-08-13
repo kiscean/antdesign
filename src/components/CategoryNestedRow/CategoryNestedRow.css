@@ -1,0 +1,9 @@
+.category-nestedlist__container {
+  display: flex;
+  gap: 4px;
+}
+
+.category-nestedlist__quantity {
+  text-align: right;
+  width: 39.34px;
+}
