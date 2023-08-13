@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css';
 
 import {
   Button,
@@ -13,7 +14,7 @@ import {
 
 import { DeleteOutlined } from '@ant-design/icons';
 
-import { data_basket } from '../../assets/basketArray';
+import { dataCart } from '../../assets/drawerCartArray';
 
 function Cart({ onCloseCart, open }) {
   //видимо нужно для корзины
@@ -22,20 +23,20 @@ function Cart({ onCloseCart, open }) {
   };
 
   //видимо что-то для корзины.
-  const columns_basket = [
+  const columnsCart = [
     {
       title: 'Компонент',
       dataIndex: 'name',
       key: 'name',
       render: (_, record) => (
         <Space size="middle">
-          <img src={record.image} alt={'#'} className="component__image" />
+          <img src={record.image} alt={'#'} className="cart__image" />
           <Row>
             <Col span={24}>
               <a>{record.name}</a>
             </Col>
             <Col span={24}>
-              <p>{record.discription}</p>
+              <p>{record.description}</p>
             </Col>
           </Row>
         </Space>
@@ -83,6 +84,7 @@ function Cart({ onCloseCart, open }) {
 
   return (
     <Drawer
+      className="cart"
       title="Ваша корзина"
       placement={'right'}
       width={500}
@@ -97,8 +99,8 @@ function Cart({ onCloseCart, open }) {
         </Space>
       }>
       <Table
-        columns={columns_basket}
-        dataSource={data_basket}
+        columns={columnsCart}
+        dataSource={dataCart}
         bordered
         size="small"
       />
@@ -122,7 +124,7 @@ function Cart({ onCloseCart, open }) {
           </Col>
         </Row>
         <Statistic
-          className="basket-right__total"
+          className="cart__total"
           title="ИТОГО (включая НДС 20%)"
           value={2070}
           precision={2}

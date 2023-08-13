@@ -29,18 +29,12 @@ import {
 } from '@ant-design/icons';
 
 const StartPage = () => {
-  const [triggerForms, setTriggerAction] = React.useState(false);
-
-  const translateToCentre = {
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
-  };
+  const [triggerForms, setTriggerForms] = React.useState(false);
+  const [autoCompleteResult, setAutoCompleteResult] = React.useState([]);
 
   const { Option } = Select;
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-  };
+
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
       <Select
@@ -58,7 +52,29 @@ const StartPage = () => {
       </Select>
     </Form.Item>
   );
-  const [autoCompleteResult, setAutoCompleteResult] = React.useState([]);
+
+  const websiteOptions = autoCompleteResult.map((website) => ({
+    label: website,
+    value: website,
+  }));
+
+  const signOptionArr = [
+    {
+      label: 'Вход',
+      value: 'Enter',
+      icon: <ImportOutlined />,
+    },
+    {
+      label: 'Регистрация',
+      value: 'Registration',
+      icon: <UserAddOutlined />,
+    },
+  ];
+
+  const onFinish = (values) => {
+    console.log('Received values of form: ', values);
+  };
+
   const onWebsiteChange = (value) => {
     if (!value) {
       setAutoCompleteResult([]);
@@ -70,14 +86,14 @@ const StartPage = () => {
       );
     }
   };
-  const websiteOptions = autoCompleteResult.map((website) => ({
-    label: website,
-    value: website,
-  }));
+
+  const onChangeCheckbox = () => {
+    setTriggerForms(!triggerForms);
+  };
 
   return (
-    <section className="autorization">
-      <Header className="header">
+    <section className="authorization">
+      {/* <Header className="header">
         <Space direction="horizontal" className="header__container">
           <Space direction="horizontal">
             <div className="header__logo">
@@ -92,31 +108,21 @@ const StartPage = () => {
             </span>
           </Space>
         </Space>
-      </Header>
+      </Header> */}
 
-      <Content className="autorization__container">
+      <Content className="authorization__container">
         <Row justify="center">
           <Col xs={24} sm={24} md={12} lg={10} xl={6}>
             <Segmented
               block
-              options={[
-                {
-                  label: 'Вход',
-                  value: 'Enter',
-                  icon: <ImportOutlined />,
-                },
-                {
-                  label: 'Регистрация',
-                  value: 'Registration',
-                  icon: <UserAddOutlined />,
-                },
-              ]}
-              onChange={() => setTriggerAction(!triggerForms)}
-              className="autorization__form-selector"
+              options={signOptionArr}
+              onChange={onChangeCheckbox}
+              className="authorization__form-selector"
             />
+
             <Space
-              className={`autorization__form-enter ${
-                triggerForms ? '' : 'autorization__form-enter_active'
+              className={`authorization__form-enter ${
+                triggerForms ? '' : 'authorization__form-enter_active'
               }`}>
               <Form
                 size="large"
@@ -141,6 +147,7 @@ const StartPage = () => {
                   ]}>
                   <Input prefix={<UserOutlined />} placeholder="E-mail" />
                 </Form.Item>
+
                 <Form.Item
                   name="password"
                   rules={[
@@ -170,8 +177,8 @@ const StartPage = () => {
               </Form>
             </Space>
             <div
-              className={`autorization__form-registration ${
-                triggerForms ? '' : 'autorization__form-registration_active'
+              className={`authorization__form-registration ${
+                triggerForms ? '' : 'authorization__form-registration_active'
               }`}>
               <Form
                 layout="vertical"
@@ -262,7 +269,7 @@ const StartPage = () => {
                   rules={[
                     {
                       required: true,
-                      message: 'ваше имя',
+                      message: 'Введите свое имя',
                     },
                   ]}>
                   <Input />
@@ -384,6 +391,7 @@ const StartPage = () => {
               </Form>
             </div>
           </Col>
+
           <Col className="description" xs={24} sm={24} md={12} lg={14} xl={18}>
             <Content className="description__container">
               <div className="description__wrap">
@@ -502,12 +510,14 @@ const StartPage = () => {
                           </Row>
                         </Col>
                       </Row>
-                      <div align={'bottom'} className="description__text-down">
-                        <Col span={24}>
-                          Проект разработан и создан компанией ООО Компания в
-                          2023 году.
-                        </Col>
-                      </div>
+
+                      <Col
+                        span={24}
+                        align={'bottom'}
+                        className="description__text-down">
+                        Проект разработан и создан компанией ООО Компания в 2023
+                        году.
+                      </Col>
                     </Content>
                   </div>
                 </div>

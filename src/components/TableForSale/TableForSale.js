@@ -14,16 +14,6 @@ import {
 import { tableForSaleComponents } from '../../assets/constants';
 
 const TablesForSale = ({ onOpenCart }) => {
-  // const [openCart, setOpenCart] = React.useState(false);
-
-  // const onClose = () => {
-  //   setOpenCart(false);
-  // };
-
-  // const onOpen = () => {
-  //   setOpenCart(true);
-  // };
-
   /* Этот кусочек - попап с конфирмом */
   const [messageApi, contextHolder] = message.useMessage();
 
@@ -42,13 +32,13 @@ const TablesForSale = ({ onOpenCart }) => {
       key: 'name',
       render: (_, record) => (
         <Space size="middle">
-          <img src={record.image} alt={'#'} className="component__image" />
+          <img src={record.image} alt={''} className="component__image" />
           <Row>
             <Col span={24}>
               <a>{record.name}</a>
             </Col>
             <Col span={24}>
-              <p>{record.discription}</p>
+              <p>{record.description}</p>
             </Col>
           </Row>
         </Space>

@@ -1,32 +1,32 @@
-.autorization__container {
+.authorization__container {
   margin-top: 100px;
   height: 100%;
 }
 
-.autorization__form-selector {
+.authorization__form-selector {
   margin: 0 5ch;
   max-width: 100%;
   background-color: #1676fe;
   color: #ffffff;
 }
 
-.autorization__form-enter {
+.authorization__form-enter {
   max-width: 80%;
   margin: 5ch 7ch 0 7ch;
   display: none;
 }
-.autorization__form-enter_active {
+.authorization__form-enter_active {
   display: block;
 }
 
-.autorization__form-registration {
+.authorization__form-registration {
   max-width: 90%;
   max-height: 71vh;
   margin: 5ch 7ch 0 7ch;
   display: block;
   overflow-y: auto;
 }
-.autorization__form-registration_active {
+.authorization__form-registration_active {
   display: none;
 }
 
@@ -210,25 +210,25 @@
 /* End Box Effect */
 
 @media screen and (max-width: 768px) {
-  .autorization__form-selector {
+  .authorization__form-selector {
     margin: 0 5ch;
   }
 
-  .autorization__form-enter {
+  .authorization__form-enter {
     justify-content: center;
     display: none;
     margin: 5ch 5ch;
   }
-  .autorization__form-enter_active {
+  .authorization__form-enter_active {
     display: flex;
   }
 
-  .autorization__form-registration {
+  .authorization__form-registration {
     justify-content: center;
     display: flex;
     margin: 5ch 5ch;
   }
-  .autorization__form-registration_active {
+  .authorization__form-registration_active {
     display: none;
   }
 

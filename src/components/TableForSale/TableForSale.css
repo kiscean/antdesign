@@ -1,3 +1,14 @@
+/* новое */
+.table-selling {
+  padding: 0 10ch;
+}
+
+@media screen and (max-width: 1050px) {
+  .table-selling {
+    padding: 0 20px;
+  }
+}
+
 .component__image {
   width: 50px;
   height: 50px;
@@ -26,9 +37,4 @@
 
 .basket-right__total {
   margin-top: 10%;
-}
-
-/* новое */
-.table-selling {
-  padding: 0 10ch;
 }

@@ -5,7 +5,7 @@ import { Dropdown, Space, Col, Layout, Menu, Avatar } from 'antd';
 import { DownOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 
-const Header = ({ onOpen, onOpenCart }) => {
+const Header = ({ onOpen }) => {
   const { Header } = Layout;
 
   return (
@@ -40,10 +40,7 @@ const Header = ({ onOpen, onOpenCart }) => {
           />
         </Col>
         <Space direction="horizontal" size={20}>
-          <ShoppingCartOutlined
-            className="header__basket-logo"
-            onClick={onOpenCart}
-          />
+          <ShoppingCartOutlined className="header__basket-logo" />
 
           <Space className="header__user-info">
             <Avatar className="header__user-icon">MC</Avatar>

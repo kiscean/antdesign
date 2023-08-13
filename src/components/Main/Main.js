@@ -38,18 +38,18 @@ const Main = () => {
 
   return (
     <Layout className="layout">
-      <Header onOpen={onOpenBurgerMenu} onOpenCart={onOpenCart} />
+      <Header onOpen={onOpenBurgerMenu} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-      {/* <SearchEKB />
+      <SearchEKB />
       <RoutingRoad />
       <CategoryNestedList />
-      <TableForSale onOpenCart={onOpenCart} /> */}
+      <TableForSale onOpenCart={onOpenCart} />
       <Cart onCloseCart={onCloseCart} open={openCart} />
-      <PopProducts />
+      {/* <PopProducts />
       <CategoriesEСB />
-      {/* <SuccessPage /> */}
-      <SignForms />
-      {/* <Footer /> */}
+      <SuccessPage />
+      <SignForms /> */}
+      <Footer />
     </Layout>
   );
 };

@@ -21,6 +21,12 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .category-nestedlist__box {
+    padding: 0 20px;
+  }
+}
+
 @media screen and (max-width: 865px) {
   .category-nestedlist__box {
     grid-template-columns: 1fr;
