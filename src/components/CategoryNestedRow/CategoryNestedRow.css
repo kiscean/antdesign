@@ -1,0 +1,12 @@
+.category-nestedlist__container {
+  display: flex;
+  gap: 4px;
+  padding: 0 6ch 0 6ch;
+}
+
+.category-nestedlist__quantity {
+  text-align: right;
+  width: 60px;
+  margin-bottom: 1ch;
+  padding-right: 2ch;
+}

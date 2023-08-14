@@ -1,50 +1,55 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
+import { Content } from 'antd/es/layout/layout';
 
 import './Main.css';
 
 import Header from '../Header/Header';
 import SearchEKB from '../SearchEKB/SearchEKB';
-import CategoriesEKB from '../CategoriesEKB/CategoriesEKB';
+import CategoriesEСB from '../CategoriesEСB/CategoriesEСB';
 import PopProducts from '../PopProducts/PopProducts';
-import RightMenu from '../MainDrawer/RightMenu';
 import Footer from '../Footer/Footer';
-import StartPage from '../StartPage/StartPage';
-import RegistrationPS from "../PagesSuccess/RegistrationPS";
-import MainDrawer from "../MainDrawer/MainDrawer";
-import TableForSale from "../Tables/TableForSale";
-import CategoryNestedList from "../CategorNestedList/CategoryNestedList";
-import {Content} from "antd/es/layout/layout";
-import RoutingRoad from "../RoutingRoad/RoutingRoad";
+import SignForms from '../SignForms/SignForms';
+import MainDrawer from '../MainDrawer/MainDrawer';
+import TableForSale from '../TableForSale/TableForSale';
+import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
+import RoutingRoad from '../RoutingRoad/RoutingRoad';
+import Cart from '../Cart/Cart';
+import SuccessPage from '../SuccessPage/SuccessPage';
 
 const Main = () => {
+  const [menuActive, setMenuActive] = useState(false);
+  const [openCart, setOpenCart] = React.useState(false);
 
-    const [open, setOpen] = useState(false);
-    const showDrawer = () => {
-        setOpen(true);
-    };
-    const onClose = () => {
-        setOpen(false);
-    };
+  const onOpenBurgerMenu = () => {
+    setMenuActive(true);
+  };
+  const onCloseBurgerMenu = () => {
+    setMenuActive(false);
+  };
+
+  const onCloseCart = () => {
+    setOpenCart(false);
+  };
+
+  const onOpenCart = () => {
+    setOpenCart(true);
+  };
 
   return (
     <Layout className="layout">
-        <Header showDrawer={showDrawer}/>
-        <MainDrawer
-            open={open}
-            onClose={onClose}
-        />
-        <SearchEKB />
-        <Content className='container'>
-            <RoutingRoad />
-            <CategoryNestedList />
-            <TableForSale />
-            {/* <PopProducts />
-            <CategoriesEKB />
-            <RegistrationPS />
-            <StartPage /> */}
-        </Content>
-        <Footer />
+      <Header onOpen={onOpenBurgerMenu} />
+      <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
+      <SearchEKB />
+      <RoutingRoad />
+      <CategoryNestedList />
+      <TableForSale onOpenCart={onOpenCart} />
+      <Cart onCloseCart={onCloseCart} open={openCart} />
+      {/* <PopProducts />
+      <CategoriesEСB />
+      <SuccessPage />
+      <SignForms /> */}
+      <Footer />
     </Layout>
   );
 };

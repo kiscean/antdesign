@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, Space } from 'antd';
 import { Col, Divider, Row } from 'antd';
 import { popularCards } from '../../assets/popularCardsArray';
-import './CategoriesEKB.css';
+import './CategoriesEСB.css';
 
-const CategoriesEKB = () => {
+const CategoriesEСB = () => {
   return (
     <section className="cards">
       <Row>
@@ -43,4 +43,4 @@ const CategoriesEKB = () => {
   );
 };
 
-export default CategoriesEKB;
+export default CategoriesEСB;
