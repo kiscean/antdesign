@@ -16,6 +16,7 @@ import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
 import Cart from '../Cart/Cart';
 import SuccessPage from '../SuccessPage/SuccessPage';
+import SearchResultsTitle from "../SearchResultsTitle/SearchResultsTitle";
 
 const Main = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -41,8 +42,9 @@ const Main = () => {
       <Header onOpen={onOpenBurgerMenu} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
       <SearchEKB />
-      <RoutingRoad />
-      <CategoryNestedList />
+      <SearchResultsTitle />
+      {/* <RoutingRoad />
+      <CategoryNestedList /> *
       <TableForSale onOpenCart={onOpenCart} />
       <Cart onCloseCart={onCloseCart} open={openCart} />
       {/* <PopProducts />
