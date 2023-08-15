@@ -44,11 +44,11 @@ const Main = () => {
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
       <SearchEKB />
       <SearchResultsTitle />
-      <TableComponentSearch />
+      <TableComponentSearch onOpenCart={onOpenCart} />
+      <Cart onCloseCart={onCloseCart} open={openCart} />
       {/* <RoutingRoad />
       <CategoryNestedList /> *
       <TableForSale onOpenCart={onOpenCart} />
-      <Cart onCloseCart={onCloseCart} open={openCart} />
       {/* <PopProducts />
       <CategoriesEСB />
       <SuccessPage />

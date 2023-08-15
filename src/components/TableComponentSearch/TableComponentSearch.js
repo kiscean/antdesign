@@ -1,8 +1,8 @@
 import React from 'react';
 import './TableComponentSearch.css';
 
-import {Button, Col, message, Row, Space, Table} from 'antd';
-import {CheckOutlined, PlusOutlined, ShoppingCartOutlined} from "@ant-design/icons";
+import {Button, Col, message, Pagination, Row, Space, Table} from 'antd';
+import {CheckOutlined, ShoppingCartOutlined} from "@ant-design/icons";
 
 const TableComponentSearch = ({ onOpenCart }) => {
 
@@ -12,6 +12,10 @@ const TableComponentSearch = ({ onOpenCart }) => {
             type: 'success',
             content: 'Товар добавлен в корзину',
         });
+    };
+
+    const onChange = (pageNumber) => {
+        console.log('Page: ', pageNumber);
     };
 
     const columns = [
@@ -160,8 +164,8 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 title={() =>
                     (
                         <Space size="middle">
-                            <img src={'#'} alt={''} className="component__image" />
-                            <Row>
+                            <img src={'https://static.chipdip.ru/lib/294/DOC005294472.jpg'} alt={''} className="component__image" />
+                            <Row className='component__text'>
                                 <Col span={24}>
                                     <a>DIODESKITFS</a>
                                 </Col>
@@ -169,7 +173,7 @@ const TableComponentSearch = ({ onOpenCart }) => {
                                     <p>Kit Diode 10EA Of 10 Values</p>
                                 </Col>
                                 <Col span={24} className='component__manufacturer'>
-                                    <p>Производитель: <span className='component__manufacturer-name'>onsemi</span></p>
+                                    <p>Производитель: <a>onsemi</a></p>
                                 </Col>
                             </Row>
                         </Space>
@@ -179,6 +183,116 @@ const TableComponentSearch = ({ onOpenCart }) => {
                     x: 1000,
                 }}
             />
+            {/* Эти таблицы для тестирования и визуальной составляющей - далее их можно просто удалить */}
+            <Table
+                columns={columns}
+                dataSource={data}
+                bordered
+                title={() =>
+                    (
+                        <Space size="middle">
+                            <img src={'https://static.chipdip.ru/lib/211/DOC001211284.jpg'} alt={''} className="component__image" />
+                            <Row className='component__text'>
+                                <Col span={24}>
+                                    <a>DIODESKITFS</a>
+                                </Col>
+                                <Col span={24}>
+                                    <p>Kit Diode 10EA Of 10 Values</p>
+                                </Col>
+                                <Col span={24} className='component__manufacturer'>
+                                    <p>Производитель: <a>onsemi</a></p>
+                                </Col>
+                            </Row>
+                        </Space>
+                    )
+                }
+                scroll={{
+                    x: 1000,
+                }}
+            />
+            <Table
+                columns={columns}
+                dataSource={data}
+                bordered
+                title={() =>
+                    (
+                        <Space size="middle">
+                            <img src={'https://static.chipdip.ru/lib/313/DOC005313873.jpg'} alt={''} className="component__image" />
+                            <Row className='component__text'>
+                                <Col span={24}>
+                                    <a>DIODESKITFS</a>
+                                </Col>
+                                <Col span={24}>
+                                    <p>Kit Diode 10EA Of 10 Values</p>
+                                </Col>
+                                <Col span={24} className='component__manufacturer'>
+                                    <p>Производитель: <a>onsemi</a></p>
+                                </Col>
+                            </Row>
+                        </Space>
+                    )
+                }
+                scroll={{
+                    x: 1000,
+                }}
+            />
+            <Table
+                columns={columns}
+                dataSource={data}
+                bordered
+                title={() =>
+                    (
+                        <Space size="middle">
+                            <img src={'https://static.chipdip.ru/lib/464/DOC002464721.jpg'} alt={''} className="component__image" />
+                            <Row className='component__text'>
+                                <Col span={24}>
+                                    <a>DIODESKITFS</a>
+                                </Col>
+                                <Col span={24}>
+                                    <p>Kit Diode 10EA Of 10 Values</p>
+                                </Col>
+                                <Col span={24} className='component__manufacturer'>
+                                    <p>Производитель: <a>onsemi</a></p>
+                                </Col>
+                            </Row>
+                        </Space>
+                    )
+                }
+                scroll={{
+                    x: 1000,
+                }}
+            />
+            <Table
+                columns={columns}
+                dataSource={data}
+                bordered
+                title={() =>
+                    (
+                        <Space size="middle">
+                            <img src={'https://static.chipdip.ru/lib/243/DOC004243462.jpg'} alt={''} className="component__image" />
+                            <Row className='component__text'>
+                                <Col span={24}>
+                                    <a>DIODESKITFS</a>
+                                </Col>
+                                <Col span={24}>
+                                    <p>Kit Diode 10EA Of 10 Values</p>
+                                </Col>
+                                <Col span={24} className='component__manufacturer'>
+                                    <p>Производитель: <a>onsemi</a></p>
+                                </Col>
+                            </Row>
+                        </Space>
+                    )
+                }
+                scroll={{
+                    x: 1000,
+                }}
+            />
+            {/* Конец таблиц для тестирования */}
+
+            <Space className='pagination-block'>
+                <Pagination className='pagination' showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
+            </Space>
         </section>
     );
 };
