@@ -28,7 +28,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 
-const StartPage = () => {
+const SignForms = () => {
   const [triggerForms, setTriggerForms] = React.useState(false);
   const [autoCompleteResult, setAutoCompleteResult] = React.useState([]);
 
@@ -531,4 +531,4 @@ const StartPage = () => {
   );
 };
 
-export default StartPage;
+export default SignForms;

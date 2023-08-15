@@ -45,6 +45,7 @@ const Main = () => {
       <CategoryNestedList />
       <TableForSale onOpenCart={onOpenCart} />
       <Cart onCloseCart={onCloseCart} open={openCart} />
+      <SignForms />
       {/* <PopProducts />
       <CategoriesEСB />
       <SuccessPage />
