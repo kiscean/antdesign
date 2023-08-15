@@ -1,12 +1,22 @@
 .category-nestedlist__container {
   display: flex;
-  gap: 4px;
-  padding: 0 6ch 0 6ch;
+  gap: 2ch;
+}
+
+@media screen and (max-width: 473px) {
+  .category-nestedlist__container {
+    gap: 1ch;
+  }
 }
 
 .category-nestedlist__quantity {
   text-align: right;
   width: 60px;
   margin-bottom: 1ch;
-  padding-right: 2ch;
+}
+
+@media screen and (max-width: 473px) {
+  .category-nestedlist__quantity {
+    width: 40px;
+  }
 }

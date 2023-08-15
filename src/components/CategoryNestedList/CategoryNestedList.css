@@ -33,3 +33,9 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .category-nestedlist__box {
+    padding: 0 10px;
+  }
+}
