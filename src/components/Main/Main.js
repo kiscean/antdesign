@@ -17,6 +17,7 @@ import RoutingRoad from '../RoutingRoad/RoutingRoad';
 import Cart from '../Cart/Cart';
 import SuccessPage from '../SuccessPage/SuccessPage';
 import SearchResultsTitle from "../SearchResultsTitle/SearchResultsTitle";
+import TableComponentSearch from "../TableComponentSearch/TableComponentSearch";
 
 const Main = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -43,6 +44,7 @@ const Main = () => {
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
       <SearchEKB />
       <SearchResultsTitle />
+      <TableComponentSearch />
       {/* <RoutingRoad />
       <CategoryNestedList /> *
       <TableForSale onOpenCart={onOpenCart} />

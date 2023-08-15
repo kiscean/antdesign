@@ -1,9 +1,6 @@
 import React from 'react';
 import './SearchResultsTitle.css';
 
-import { Breadcrumb } from 'antd';
-import { routingRoadMenu } from '../../assets/constants';
-
 const SearchResultsTitle = () => {
     return (
         <section className="search-title">
