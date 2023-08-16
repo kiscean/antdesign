@@ -2,6 +2,10 @@
     padding: 0 10ch;
 }
 
+.table {
+    margin-bottom: 5ch;
+}
+
 .component__image {
     width: 60px;
     height: 60px;

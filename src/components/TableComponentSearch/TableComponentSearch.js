@@ -25,6 +25,8 @@ const TableComponentSearch = ({ onOpenCart }) => {
             className: 'table__column-provider',
             align: 'left',
             render: (text) => <a>{text}</a>,
+            fixed: 'left',
+            width: '140px',
         },
         {
             title: '',
@@ -46,61 +48,74 @@ const TableComponentSearch = ({ onOpenCart }) => {
                     )}
                 </Space>
             ),
+            fixed: 'left',
+            width: '80px',
         },
         {
             title: 'Страна',
             dataIndex: 'country',
             align: 'center',
+            width: '80px',
         },
         {
             title: 'Время поставки',
             dataIndex: 'time_delivery',
             align: 'left',
+            width: '150px',
         },
         {
             title: 'На складе',
             dataIndex: 'in_stock',
             align: 'center',
+            width: '100px',
         },
         {
             title: 'MOQ',
             dataIndex: 'moq',
             align: 'center',
+            width: '80px',
         },
         {
             title: 'Тип упаковки',
             dataIndex: 'type_box',
             align: 'center',
+            width: '150px',
         },
         {
             title: 'Цена',
             dataIndex: 'price',
             align: 'center',
+            width: '80px',
         },
         {
             title: '1',
             dataIndex: 'price_for_1',
             align: 'center',
+            width: '80px',
         },
         {
             title: '10',
             dataIndex: 'price_for_10',
             align: 'center',
+            width: '80px',
         },
         {
             title: '100',
             dataIndex: 'price_for_100',
             align: 'center',
+            width: '80px',
         },
         {
             title: '1000',
             dataIndex: 'price_for_1000',
             align: 'center',
+            width: '80px',
         },
         {
             title: '10000',
             dataIndex: 'price_for_10000',
             align: 'center',
+            width: '80px',
         },
     ];
     const data = [
@@ -161,6 +176,7 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 columns={columns}
                 dataSource={data}
                 bordered
+                className='table'
                 title={() =>
                     (
                         <Space size="middle">
@@ -182,12 +198,14 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 scroll={{
                     x: 1000,
                 }}
+                pagination={false}
             />
             {/* Эти таблицы для тестирования и визуальной составляющей - далее их можно просто удалить */}
             <Table
                 columns={columns}
                 dataSource={data}
                 bordered
+                className='table'
                 title={() =>
                     (
                         <Space size="middle">
@@ -209,11 +227,13 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 scroll={{
                     x: 1000,
                 }}
+                pagination={false}
             />
             <Table
                 columns={columns}
                 dataSource={data}
                 bordered
+                className='table'
                 title={() =>
                     (
                         <Space size="middle">
@@ -235,11 +255,13 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 scroll={{
                     x: 1000,
                 }}
+                pagination={false}
             />
             <Table
                 columns={columns}
                 dataSource={data}
                 bordered
+                className='table'
                 title={() =>
                     (
                         <Space size="middle">
@@ -261,11 +283,13 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 scroll={{
                     x: 1000,
                 }}
+                pagination={false}
             />
             <Table
                 columns={columns}
                 dataSource={data}
                 bordered
+                className='table'
                 title={() =>
                     (
                         <Space size="middle">
@@ -287,6 +311,7 @@ const TableComponentSearch = ({ onOpenCart }) => {
                 scroll={{
                     x: 1000,
                 }}
+                pagination={false}
             />
             {/* Конец таблиц для тестирования */}
 
