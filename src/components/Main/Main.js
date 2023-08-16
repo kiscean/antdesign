@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
-import { Content } from 'antd/es/layout/layout';
 
 import './Main.css';
 
@@ -18,6 +17,8 @@ import Cart from '../Cart/Cart';
 import SuccessPage from '../SuccessPage/SuccessPage';
 import SearchResultsTitle from "../SearchResultsTitle/SearchResultsTitle";
 import TableComponentSearch from "../TableComponentSearch/TableComponentSearch";
+import BascketPage from "../BascketPage/BascketPage";
+import {Content} from "antd/es/layout/layout";
 
 const Main = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -42,14 +43,17 @@ const Main = () => {
     <Layout className="layout">
       <Header onOpen={onOpenBurgerMenu} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-      <SearchEKB />
+        <Content className='container'>
+            <RoutingRoad />
+            <BascketPage />
+        </Content>
+      {/* <SearchEKB />
       <SearchResultsTitle />
       <TableComponentSearch onOpenCart={onOpenCart} />
       <Cart onCloseCart={onCloseCart} open={openCart} />
-      {/* <RoutingRoad />
       <CategoryNestedList /> *
       <TableForSale onOpenCart={onOpenCart} />
-      {/* <PopProducts />
+      <PopProducts />
       <CategoriesEСB />
       <SuccessPage />
       <SignForms /> */}

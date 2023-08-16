@@ -1,0 +1,10 @@
+.bascket {
+    padding: 0 10ch;
+    margin-bottom: 5ch;
+}
+
+@media screen and (max-width: 1050px) {
+    .bascket {
+        padding: 0 20px;
+    }
+}
