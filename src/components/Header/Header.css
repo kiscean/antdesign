@@ -47,11 +47,15 @@
   display: flex;
 }
 
+.header__backet-badge {
+  margin: 20px 15px 0 0 ;
+}
+
 .header__basket-logo {
   color: darkgrey;
   cursor: pointer;
   font-size: 20px;
-  margin: 1.7ch 1.5ch 0 1.5ch;
+
 }
 
 .header__basket-logo:hover {
@@ -105,10 +109,13 @@
     display: none;
   }
 
+  .header__backet-badge {
+    margin-top: 20px;
+  }
+
   .header__basket-logo {
     font-size: 25px;
     color: white;
-    margin: 1.2ch -1ch 0 1.5ch;
   }
 
   .header__user-info {

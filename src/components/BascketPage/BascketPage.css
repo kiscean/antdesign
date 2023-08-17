@@ -3,6 +3,17 @@
     margin-bottom: 5ch;
 }
 
+.bascket__top-buttons {
+    margin-bottom: 2ch;
+    width: 100%;
+    justify-content: right;
+}
+
+.bascket-totalblock {
+    text-align: right;
+    display: flex;
+}
+
 @media screen and (max-width: 1050px) {
     .bascket {
         padding: 0 20px;
