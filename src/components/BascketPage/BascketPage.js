@@ -10,7 +10,7 @@ const BascketPage = () => {
         {
             title: 'п/п',
             dataIndex: 'key',
-            width: '56px',
+            width: '4%',
             align: 'center',
         },
         {
@@ -30,7 +30,7 @@ const BascketPage = () => {
                     </Row>
                 </Space>
             ),
-
+            width: '30%',
         },
         {
             title: 'Время поставки',
@@ -89,84 +89,59 @@ const BascketPage = () => {
     const data = [
         {
             key: '1',
+            image: 'https://www.mouser.fi/images/vishay/lrg/TEMD5010_SPL.jpg',
+            name: 'TEMD5120X01',
+            description: 'Photodiodes Top view 790-1050nm +/-65 deg',
             provider: 'DigiKey',
-            bascket: '0',
             country: 'US',
             time_delivery: '14 недель',
-            in_stock: '3',
             moq: '1',
-            type_box: '-',
-            price: 'USD',
-            price_for_1: '63.48',
-            price_for_10: '55.10',
-            price_for_100: '55.10',
-            price_for_1000: '55.10',
-            price_for_10000: '55.10',
+            price: 151.95,
 
         },
         {
             key: '2',
+            image: 'https://vakits.com/sites/default/files/imagecache/product_full/DO-41%20Case_2.JPG',
+            name: 'DIODESKITFS',
+            description: 'Kit Diode 10EA Of 10 Values',
             provider: 'Fly-Wing Technology',
-            bascket: '1',
             country: 'HK',
             time_delivery: '8 недель',
-            in_stock: '3958',
             moq: '',
-            type_box: '-',
-            price: 'USD',
-            price_for_1: '42.75',
-            price_for_10: '39.34',
-            price_for_100: '37.35',
-            price_for_1000: '33.09',
-            price_for_10000: '33.09',
+            price: 42.75,
         },
         {
             key: '3',
+            image: 'https://www.wago.com/medias/1024-020000010001bf97000100b6-DE.jpg?context=bWFzdGVyfGltYWdlc3w4NDA3M3xpbWFnZS9qcGVnfGg5Mi9oZTgvMTM4MDM1NzE5MzczMTAvMTAyNF8wMjAwMDAwMTAwMDFiZjk3MDAwMTAwYjZfREUuanBnfDA3ZDg0NTU1OTAwMDI0MjFiYmNhZDUyZjNiYjEwM2ZmMzY2MzcwYWZjYzhmNmIwZmJmOGJjMGEyNjZhOTcwNGI',
+            name: 'YR2.DIODE',
+            description: 'DIN Rail Diode Module for use with Y Series',
             provider: 'Allchips',
-            bascket: '0',
             country: 'CN',
             time_delivery: '8 недель',
-            in_stock: '38260',
             moq: '100',
-            type_box: '-',
-            price: '-',
-            price_for_1: '-',
-            price_for_10: '-',
-            price_for_100: '-',
-            price_for_1000: '-',
-            price_for_10000: '-',
+            price: 25.11,
         },
         {
             key: '4',
-            provider: 'Allchips',
-            bascket: '0',
+            image: 'https://www.mouser.com/images/marketingid/2019/img/117150561.png?v=070223.0416',
+            name: 'REFAUDIODMA12070PTOBO1',
+            description: 'Evaluation Board for MA12040P Series',
+            provider: 'Chip One Stop',
             country: 'CN',
             time_delivery: '8 недель',
-            in_stock: '38260',
             moq: '100',
-            type_box: '-',
-            price: '-',
-            price_for_1: '-',
-            price_for_10: '-',
-            price_for_100: '-',
-            price_for_1000: '-',
-            price_for_10000: '-',
+            price: 101.20,
         },
         {
             key: '5',
-            provider: 'Allchips',
-            bascket: '0',
-            country: 'CN',
+            image: 'https://www.heliosps.com.au/wp-content/uploads/sites/2/2017/06/HPS-PS-DIN-DLP-PU.png',
+            name: 'YRM2.DIODE',
+            description: 'DIN Rail Diode Module for use with Y Series',
+            provider: 'Mouser',
+            country: 'US',
             time_delivery: '8 недель',
-            in_stock: '38260',
             moq: '100',
-            type_box: '-',
-            price: '-',
-            price_for_1: '-',
-            price_for_10: '-',
-            price_for_100: '-',
-            price_for_1000: '-',
-            price_for_10000: '-',
+            price: 40.3,
         },
     ];
 
@@ -177,6 +152,7 @@ const BascketPage = () => {
             </Divider>
             <Space size="middle" className='bascket__top-buttons'>
                 <Button type="link">Скачать корзину</Button>
+                <Button type="primary" size={"middle"}>Сохранить</Button>
                 <Popconfirm
                     title="Удаление"
                     description="Все товары из корзины пропадут. Вы точно хотите очистить корзину?"
