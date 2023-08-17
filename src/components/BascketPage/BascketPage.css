@@ -12,11 +12,27 @@
 .bascket__totalblock {
     text-align: right;
     display: flex;
+    height: 120px;
 }
 
 .alternative-component__title {
     color: #ec386e;
     background-color: #ec386e;
+}
+
+.backet__down-statistic {
+    width: 300px;
+    margin-top: 4ch;
+}
+
+.backet__down-text {
+    text-align: left;
+    margin-bottom: 1ch;
+}
+
+.backet__down-amount {
+    font-weight: bold;
+    text-align: left;
 }
 
 .component__info {

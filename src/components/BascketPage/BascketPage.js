@@ -284,45 +284,41 @@ const BascketPage = () => {
             />
             <Space direction={'vertical'} className='bascket__totalblock'>
                 <Row justify={"start"}>
-                    <Col span={6}>
-                        <Row justify={'start'}>
+                    <Col span={12}>
+                        <Row justify={'start'} gutter={10} className='backet__down-statistic'>
                             <Col
-                                xs={19}
-                                sm={19}
-                                lg={22}
+                                span={12}
+                                className='backet__down-text'
                             >
                                 <p>Кол-во</p>
                             </Col>
                             <Col
-                                xs={5}
-                                sm={5}
-                                lg={2}
+                                span={12}
+                                className='backet__down-amount'
                             >
                                 <p>
-                                    <span>46</span> шт.
+                                    <span>15</span> ед.
                                 </p>
                             </Col>
                             <Col
-                                xs={19}
-                                sm={19}
-                                lg={22}
+                                span={12}
+                                className='backet__down-text'
                             >
                                 <p>Налог НДС 20%</p>
                             </Col>
                             <Col
-                                xs={5}
-                                sm={5}
-                                lg={2}
+                                span={12}
+                                className='backet__down-amount'
                             >
                                 <p>
-                                    <span>345</span> руб.
+                                    <span>60.24</span> руб.
                                 </p>
                             </Col>
                         </Row>
                     </Col>
-                    <Col span={18}>
+                    <Col span={12}>
                         <Statistic
-                            className="cart__total"
+                            className="bascket__total"
                             title="ИТОГО (включая НДС 20%)"
                             value={1083.93}
                             precision={2}
