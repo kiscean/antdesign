@@ -1,11 +1,83 @@
 import React from 'react';
 import './BascketPage.css';
 
-import {Button, Col, Divider, Popconfirm, Row, Space, Statistic, Table, message} from "antd";
-import {CloseOutlined} from "@ant-design/icons";
+import {Button, Col, Divider, Popconfirm, Row, Space, Statistic, Table, Badge, Dropdown} from "antd";
+import {CloseOutlined, DownOutlined} from "@ant-design/icons";
 
 const BascketPage = () => {
 
+    const items = [
+        {
+            key: '1',
+            label: 'Action 1',
+        },
+        {
+            key: '2',
+            label: 'Action 2',
+        },
+    ];
+    const expandedRowRender = () => {
+        const columns = [
+            {
+                title: 'Найдены дополнительные результаты, соответствующие данному компоненту',
+                align: 'left',
+                className: 'alternative-component__title',
+                children: [
+                    {
+                        title: 'Компонент',
+                        dataIndex: 'name',
+                        key: 'name',
+                        render: (_, record) => (
+                            <Space size="middle">
+                                <Row>
+                                    <Col span={24}>
+                                        <a>{record.name}</a>
+                                    </Col>
+                                    <Col span={24}>
+                                        <p>{record.description}</p>
+                                    </Col>
+                                    <Col span={24}>
+                                        <p className='component__info'>Производитель: <a>{record.provider}</a></p>
+                                    </Col>
+                                </Row>
+                            </Space>
+                        ),
+                        width: '30%',
+                    },
+                    {
+                        title: 'Время поставки',
+                        dataIndex: 'time_delivery',
+                        align: 'left',
+                    },
+                    {
+                        title: 'Поставщик',
+                        dataIndex: 'provider',
+                        className: 'table__column-provider',
+                        align: 'left',
+                        render: (text) => <a>{text}</a>,
+                    },
+                    {
+                        title: 'Цена (за ед.)',
+                        dataIndex: 'price',
+                        align: 'center',
+                    },
+                    {
+                        title: 'Action',
+                        dataIndex: 'operation',
+                        key: 'operation',
+                        render: () => (
+                            <Space size="middle">
+                                <Button type="primary">Заменить</Button>
+                                <Button>Добавить</Button>
+                            </Space>
+                        ),
+                    },
+                ],
+            },
+
+        ];
+        return <Table columns={columns} dataSource={data} pagination={false} />;
+    };
     const columns = [
         {
             title: 'п/п',
@@ -27,11 +99,18 @@ const BascketPage = () => {
                         <Col span={24}>
                             <p>{record.description}</p>
                         </Col>
+                        <Col span={24}>
+                            <p className='component__info'>Производитель: <a>{record.provider}</a></p>
+                        </Col>
+                        <Col span={24}>
+                            <p className='component__info'>MOQ: {record.moq}</p>
+                        </Col>
                     </Row>
                 </Space>
             ),
             width: '30%',
         },
+        Table.EXPAND_COLUMN,
         {
             title: 'Время поставки',
             dataIndex: 'time_delivery',
@@ -118,7 +197,7 @@ const BascketPage = () => {
             provider: 'Allchips',
             country: 'CN',
             time_delivery: '8 недель',
-            moq: '100',
+            moq: '10',
             price: 25.11,
         },
         {
@@ -140,7 +219,7 @@ const BascketPage = () => {
             provider: 'Mouser',
             country: 'US',
             time_delivery: '8 недель',
-            moq: '100',
+            moq: '1',
             price: 40.3,
         },
     ];
@@ -164,6 +243,10 @@ const BascketPage = () => {
             </Space>
             <Table
                 columns={columns}
+                expandable={{
+                    expandedRowRender,
+                    defaultExpandedRowKeys: ['0'],
+                }}
                 dataSource={data}
                 bordered
                 className='table'
@@ -172,7 +255,7 @@ const BascketPage = () => {
                 }}
                 pagination={false}
             />
-            <Space direction={'vertical'} className='bascket-totalblock'>
+            <Space direction={'vertical'} className='bascket__totalblock'>
                 <Row justify={'start'}>
                     <Col
                         xs={19}

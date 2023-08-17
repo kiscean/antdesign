@@ -9,9 +9,19 @@
     justify-content: right;
 }
 
-.bascket-totalblock {
+.bascket__totalblock {
     text-align: right;
     display: flex;
+}
+
+.alternative-component__title {
+    color: #ec386e;
+    background-color: #ec386e;
+}
+
+.component__info {
+    color: #7e838c;
+    font-size: 10px;
 }
 
 @media screen and (max-width: 1050px) {
