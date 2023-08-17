@@ -1,7 +1,7 @@
 import React from 'react';
 import './BascketPage.css';
 
-import {Button, Col, Divider, Popconfirm, Row, Space, Statistic, Table, message} from "antd";
+import {Button, Col, Divider, Popconfirm, Row, Space, Statistic, Table, message, InputNumber} from "antd";
 import {CloseOutlined} from "@ant-design/icons";
 
 const BascketPage = () => {
@@ -15,16 +15,10 @@ const BascketPage = () => {
         });
     };
 
-    const items = [
-        {
-            key: '1',
-            label: 'Action 1',
-        },
-        {
-            key: '2',
-            label: 'Action 2',
-        },
-    ];
+    const onChange = (value) => {
+        console.log('changed', value);
+    };
+
     const expandedRowRender = () => {
         const columns = [
             {
@@ -63,7 +57,12 @@ const BascketPage = () => {
                         dataIndex: 'provider',
                         className: 'table__column-provider',
                         align: 'left',
-                        render: (text) => <a>{text}</a>,
+                        render: (_, record) => (
+                            <Space size="middle">
+                                <a>{record.provider} ({record.country})</a>
+                            </Space>
+                        ),
+                        width: '140px',
                     },
                     {
                         title: 'Цена (за ед.)',
@@ -132,14 +131,12 @@ const BascketPage = () => {
             dataIndex: 'provider',
             className: 'table__column-provider',
             align: 'left',
-            render: (text) => <a>{text}</a>,
+            render: (_, record) => (
+                <Space size="middle">
+                    <a>{record.provider} ({record.country})</a>
+                </Space>
+            ),
             width: '140px',
-        },
-        {
-            title: 'Включая НДС20%',
-            dataIndex: 'tax',
-            align: 'center',
-            width: '80px',
         },
         {
             title: 'Цена (за ед.)',
@@ -148,9 +145,19 @@ const BascketPage = () => {
             width: '80px',
         },
         {
+            title: 'Включая НДС20%',
+            dataIndex: 'tax',
+            align: 'center',
+            width: '80px',
+        },
+        {
             title: 'Количество',
             align: 'center',
             width: '80px',
+            render: () => (
+                <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
+            ),
+
         },
         {
             title: 'Цена (итоговая)',
@@ -186,6 +193,8 @@ const BascketPage = () => {
             time_delivery: '14 недель',
             moq: '1',
             price: 151.95,
+            tax: 25.32,
+            sum: 455.85,
 
         },
         {
@@ -198,6 +207,8 @@ const BascketPage = () => {
             time_delivery: '8 недель',
             moq: '',
             price: 42.75,
+            tax: 7.12,
+            sum: 128.25,
         },
         {
             key: '3',
@@ -209,6 +220,8 @@ const BascketPage = () => {
             time_delivery: '8 недель',
             moq: '10',
             price: 25.11,
+            tax: 4.19,
+            sum: 75.33,
         },
         {
             key: '4',
@@ -220,6 +233,8 @@ const BascketPage = () => {
             time_delivery: '8 недель',
             moq: '100',
             price: 101.20,
+            tax: 16.90,
+            sum: 303.60,
         },
         {
             key: '5',
@@ -230,7 +245,9 @@ const BascketPage = () => {
             country: 'US',
             time_delivery: '8 недель',
             moq: '1',
-            price: 40.3,
+            price: 40.30,
+            tax: 6.71,
+            sum: 120.90
         },
     ];
 
@@ -266,46 +283,52 @@ const BascketPage = () => {
                 pagination={false}
             />
             <Space direction={'vertical'} className='bascket__totalblock'>
-                <Row justify={'start'}>
-                    <Col
-                        xs={19}
-                        sm={19}
-                        lg={22}
-                    >
-                        <p>Кол-во</p>
+                <Row justify={"start"}>
+                    <Col span={6}>
+                        <Row justify={'start'}>
+                            <Col
+                                xs={19}
+                                sm={19}
+                                lg={22}
+                            >
+                                <p>Кол-во</p>
+                            </Col>
+                            <Col
+                                xs={5}
+                                sm={5}
+                                lg={2}
+                            >
+                                <p>
+                                    <span>46</span> шт.
+                                </p>
+                            </Col>
+                            <Col
+                                xs={19}
+                                sm={19}
+                                lg={22}
+                            >
+                                <p>Налог НДС 20%</p>
+                            </Col>
+                            <Col
+                                xs={5}
+                                sm={5}
+                                lg={2}
+                            >
+                                <p>
+                                    <span>345</span> руб.
+                                </p>
+                            </Col>
+                        </Row>
                     </Col>
-                    <Col
-                        xs={5}
-                        sm={5}
-                        lg={2}
-                    >
-                        <p>
-                            <span>46</span> шт.
-                        </p>
-                    </Col>
-                    <Col
-                        xs={19}
-                        sm={19}
-                        lg={22}
-                    >
-                        <p>Налог НДС 20%</p>
-                    </Col>
-                    <Col
-                        xs={5}
-                        sm={5}
-                        lg={2}
-                    >
-                        <p>
-                            <span>345</span> руб.
-                        </p>
+                    <Col span={18}>
+                        <Statistic
+                            className="cart__total"
+                            title="ИТОГО (включая НДС 20%)"
+                            value={1083.93}
+                            precision={2}
+                        />
                     </Col>
                 </Row>
-                <Statistic
-                    className="cart__total"
-                    title="ИТОГО (включая НДС 20%)"
-                    value={2070}
-                    precision={2}
-                />
                 <Button
                     style={{
                         marginTop: 16,
