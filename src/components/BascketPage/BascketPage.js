@@ -1,10 +1,19 @@
 import React from 'react';
 import './BascketPage.css';
 
-import {Button, Col, Divider, Popconfirm, Row, Space, Statistic, Table, Badge, Dropdown} from "antd";
-import {CloseOutlined, DownOutlined} from "@ant-design/icons";
+import {Button, Col, Divider, Popconfirm, Row, Space, Statistic, Table, message} from "antd";
+import {CloseOutlined} from "@ant-design/icons";
 
 const BascketPage = () => {
+
+    const [messageApi, contextHolder] = message.useMessage();
+
+    const success = () => {
+        messageApi.open({
+            type: 'success',
+            content: 'Товар добавлен в корзину',
+        });
+    };
 
     const items = [
         {
@@ -68,7 +77,8 @@ const BascketPage = () => {
                         render: () => (
                             <Space size="middle">
                                 <Button type="primary">Заменить</Button>
-                                <Button>Добавить</Button>
+                                {contextHolder}
+                                <Button onClick={success}>Добавить</Button>
                             </Space>
                         ),
                     },
