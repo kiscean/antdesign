@@ -51,8 +51,10 @@ const Main = () => {
       <SearchResultsTitle />
       <TableComponentSearch onOpenCart={onOpenCart} />
       <Cart onCloseCart={onCloseCart} open={openCart} />
-      <CategoryNestedList /> *
+      <CategoryNestedList />
       <TableForSale onOpenCart={onOpenCart} />
+      <PopProducts />
+      <SignForms />
       <PopProducts />
       <CategoriesEСB />
       <SuccessPage />

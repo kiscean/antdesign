@@ -28,7 +28,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 
-const StartPage = () => {
+const SignForms = () => {
   const [triggerForms, setTriggerForms] = React.useState(false);
   const [autoCompleteResult, setAutoCompleteResult] = React.useState([]);
 
@@ -397,27 +397,25 @@ const StartPage = () => {
               <div className="description__wrap">
                 <div className="description__card-header">
                   <div className="description__top-line">
-                    <div className="description__container-fluid">
-                      <Row>
-                        <Col md={24} lg={12} xl={12}>
-                          <h2 className="description__logo">
-                            ЭКБ{' '}
-                            <span className="description__span-mark">
-                              маркетплейс
-                            </span>
-                          </h2>
-                        </Col>
-                        <Col
-                          md={24}
-                          lg={12}
-                          xl={12}
-                          className="description__text-right">
-                          <h3 className="description__slogan">
-                            Со всего мира - инженерам нашей страны.
-                          </h3>
-                        </Col>
-                      </Row>
-                    </div>
+                    <Row className="description__container-header">
+                      <Col md={24} lg={12} xl={12}>
+                        <h2 className="description__logo">
+                          ЭКБ{' '}
+                          <span className="description__span-mark">
+                            маркетплейс
+                          </span>
+                        </h2>
+                      </Col>
+                      <Col
+                        md={24}
+                        lg={12}
+                        xl={12}
+                        className="description__text-right">
+                        <h3 className="description__slogan">
+                          Со всего мира - инженерам нашей страны.
+                        </h3>
+                      </Col>
+                    </Row>
                   </div>
                   <div className="description__content">
                     <Content>
@@ -531,4 +529,4 @@ const StartPage = () => {
   );
 };
 
-export default StartPage;
+export default SignForms;
