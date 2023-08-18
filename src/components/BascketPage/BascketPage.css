@@ -1,0 +1,47 @@
+.bascket {
+    padding: 0 10ch;
+    margin-bottom: 5ch;
+}
+
+.bascket__top-buttons {
+    margin-bottom: 2ch;
+    width: 100%;
+    justify-content: right;
+}
+
+.bascket__totalblock {
+    text-align: right;
+    display: flex;
+    height: 120px;
+}
+
+.alternative-component__title {
+    color: #ec386e;
+    background-color: #ec386e;
+}
+
+.backet__down-statistic {
+    width: 300px;
+    margin-top: 4ch;
+}
+
+.backet__down-text {
+    text-align: left;
+    margin-bottom: 1ch;
+}
+
+.backet__down-amount {
+    font-weight: bold;
+    text-align: left;
+}
+
+.component__info {
+    color: #7e838c;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .bascket {
+        padding: 0 20px;
+    }
+}

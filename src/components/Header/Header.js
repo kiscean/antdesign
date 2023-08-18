@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-import { Dropdown, Space, Col, Layout, Menu, Avatar } from 'antd';
+import {Dropdown, Space, Col, Layout, Menu, Avatar, Badge} from 'antd';
 import { DownOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 
@@ -40,8 +40,9 @@ const Header = ({ onOpen }) => {
           />
         </Col>
         <Space direction="horizontal" size={20}>
-          <ShoppingCartOutlined className="header__basket-logo" />
-
+          <Badge color="#ec386e" size="small" count={5} className='header__backet-badge'>
+            <ShoppingCartOutlined className="header__basket-logo" />
+          </Badge>
           <Space className="header__user-info">
             <Avatar className="header__user-icon">MC</Avatar>
             <Dropdown
