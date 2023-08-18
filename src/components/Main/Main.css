@@ -1,7 +1,6 @@
-/* .container {
-  padding: 0 10ch;
-  justify-content: center;
-} */
+.container {
+  margin-top: 60px;
+}
 
 .burger {
   display: flex;
@@ -9,10 +8,4 @@
   margin-left: 0.5ch;
   margin-right: 1ch;
   font-size: 25px;
-}
-
-@media screen and (max-width: 1050px) {
-  .container {
-    padding: 0 20px;
-  }
 }

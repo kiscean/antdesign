@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
-import { Content } from 'antd/es/layout/layout';
 
 import './Main.css';
 
@@ -16,6 +15,10 @@ import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
 import Cart from '../Cart/Cart';
 import SuccessPage from '../SuccessPage/SuccessPage';
+import SearchResultsTitle from "../SearchResultsTitle/SearchResultsTitle";
+import TableComponentSearch from "../TableComponentSearch/TableComponentSearch";
+import BascketPage from "../BascketPage/BascketPage";
+import {Content} from "antd/es/layout/layout";
 
 const Main = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -40,12 +43,19 @@ const Main = () => {
     <Layout className="layout">
       <Header onOpen={onOpenBurgerMenu} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-      <SearchEKB />
-      <RoutingRoad />
+        <Content className='container'>
+            <RoutingRoad />
+            <BascketPage />
+        </Content>
+      {/* <SearchEKB />
+      <SearchResultsTitle />
+      <TableComponentSearch onOpenCart={onOpenCart} />
+      <Cart onCloseCart={onCloseCart} open={openCart} />
       <CategoryNestedList />
       <TableForSale onOpenCart={onOpenCart} />
-      <Cart onCloseCart={onCloseCart} open={openCart} />
-      {/* <PopProducts />
+      <PopProducts />
+      <SignForms />
+      <PopProducts />
       <CategoriesEСB />
       <SuccessPage />
       <SignForms /> */}

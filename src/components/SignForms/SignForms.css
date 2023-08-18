@@ -41,8 +41,6 @@
 }
 
 .description__wrap {
-  perspective: 1000px;
-  height: 79vh;
   background-color: #2c436e;
 }
 
@@ -53,11 +51,11 @@
   width: 100%;
   z-index: 100;
   text-align: start;
-  padding: 2ch 0;
 }
 
-.description__container-fluid {
+.description__container-header {
   max-width: 1600px;
+  padding: 2ch 0;
 }
 
 .description__text-right {
@@ -94,6 +92,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .description__card-header:before {
   content: '';
   position: absolute;

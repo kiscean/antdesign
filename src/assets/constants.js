@@ -57,12 +57,12 @@ export const routingRoadMenu = [
     href: '',
     title: (
       <>
-        <span>Все категории</span>
+        <span>МояКомпания</span>
       </>
     ),
   },
   {
-    title: 'Оптоэлектроника',
+    title: 'Корзина',
   },
 ];
 
