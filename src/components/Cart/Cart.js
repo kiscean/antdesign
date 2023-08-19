@@ -4,33 +4,120 @@ import './Cart.css';
 import {
   Button,
   Col,
-  Drawer,
+  Divider,
+  Popconfirm,
   Row,
   Space,
   Statistic,
   Table,
+  message,
   InputNumber,
 } from 'antd';
+import { Content } from 'antd/es/layout/layout';
+import { CloseOutlined } from '@ant-design/icons';
 
-import { DeleteOutlined } from '@ant-design/icons';
+import RoutingRoad from '../RoutingRoad/RoutingRoad';
 
-import { dataCart } from '../../assets/drawerCartArray';
+const cartPage = () => {
+  const [messageApi, contextHolder] = message.useMessage();
 
-function Cart({ onCloseCart, open }) {
-  //видимо нужно для корзины
-  const onChange = (value) => {
-    console.log('changed', value);
+  const success = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'Товар добавлен в корзину',
+    });
   };
 
-  //видимо что-то для корзины.
-  const columnsCart = [
+  // const onChange = (value) => {
+  //   console.log('changed', value);
+  // };
+
+  const expandedRowRender = () => {
+    const columns = [
+      {
+        title:
+          'Найдены дополнительные результаты, соответствующие данному компоненту',
+        align: 'left',
+        className: 'alternative-component__title',
+        children: [
+          {
+            title: 'Компонент',
+            dataIndex: 'name',
+            key: 'name',
+            render: (_, record) => (
+              <Space size="middle">
+                <Row>
+                  <Col span={24}>
+                    <a>{record.name}</a>
+                  </Col>
+                  <Col span={24}>
+                    <p>{record.description}</p>
+                  </Col>
+                  <Col span={24}>
+                    <p className="component__info">
+                      Производитель: <a>{record.provider}</a>
+                    </p>
+                  </Col>
+                </Row>
+              </Space>
+            ),
+            width: '30%',
+          },
+          {
+            title: 'Время поставки',
+            dataIndex: 'time_delivery',
+            align: 'left',
+          },
+          {
+            title: 'Поставщик',
+            dataIndex: 'provider',
+            className: 'table__column-provider',
+            align: 'left',
+            render: (_, record) => (
+              <Space size="middle">
+                <a>
+                  {record.provider} ({record.country})
+                </a>
+              </Space>
+            ),
+            width: '140px',
+          },
+          {
+            title: 'Цена (за ед.)',
+            dataIndex: 'price',
+            align: 'center',
+          },
+          {
+            title: 'Action',
+            dataIndex: 'operation',
+            key: 'operation',
+            render: () => (
+              <Space size="middle">
+                <Button type="primary">Заменить</Button>
+                {contextHolder}
+                <Button onClick={success}>Добавить</Button>
+              </Space>
+            ),
+          },
+        ],
+      },
+    ];
+    return <Table columns={columns} dataSource={data} pagination={false} />;
+  };
+  const columns = [
+    {
+      title: 'п/п',
+      dataIndex: 'key',
+      width: '6%',
+      align: 'center',
+    },
     {
       title: 'Компонент',
       dataIndex: 'name',
       key: 'name',
       render: (_, record) => (
         <Space size="middle">
-          <img src={record.image} alt={'#'} className="cart__image" />
+          <img src={record.image} alt={''} className="component__image" />
           <Row>
             <Col span={24}>
               <a>{record.name}</a>
@@ -38,107 +125,239 @@ function Cart({ onCloseCart, open }) {
             <Col span={24}>
               <p>{record.description}</p>
             </Col>
+            <Col span={24}>
+              <p className="component__info">
+                Производитель: <a>{record.provider}</a>
+              </p>
+            </Col>
+            <Col span={24}>
+              <p className="component__info">MOQ: {record.moq}</p>
+            </Col>
           </Row>
         </Space>
       ),
-      width: '58%',
+      width: '30%',
+    },
+    Table.EXPAND_COLUMN,
+    {
+      title: 'Время поставки',
+      dataIndex: 'time_delivery',
+      align: 'left',
+      width: '150px',
     },
     {
-      title: 'Цена',
-      dataIndex: 'price',
-      key: 'price',
+      title: 'Поставщик',
+      dataIndex: 'provider',
+      className: 'table__column-provider',
+      align: 'left',
       render: (_, record) => (
         <Space size="middle">
-          <p>{record.price} руб.</p>
+          <a>
+            {record.provider} ({record.country})
+          </a>
+        </Space>
+      ),
+      width: '140px',
+    },
+    {
+      title: 'Цена (за ед.)',
+      dataIndex: 'price',
+      align: 'center',
+      width: '80px',
+    },
+    {
+      title: 'Включая НДС20%',
+      dataIndex: 'tax',
+      align: 'center',
+      width: '80px',
+    },
+    {
+      title: 'Количество',
+      align: 'center',
+      width: '80px',
+      render: () => <InputNumber min={1} max={10} defaultValue={3} />,
+    },
+    {
+      title: 'Цена (итоговая)',
+      dataIndex: 'sum',
+      align: 'center',
+      width: '80px',
+    },
+    {
+      align: 'center',
+      render: () => (
+        <Space size="middle">
+          <Popconfirm
+            title="Удаление"
+            description="Вы точно хотите удалить компонент?"
+            okText="Да"
+            cancelText="Нет">
+            <Button type="primary" danger size={'small'}>
+              <CloseOutlined />
+            </Button>
+          </Popconfirm>
         </Space>
       ),
       width: '80px',
     },
+  ];
+  const data = [
     {
-      title: 'Ед.',
-      render: (_) => (
-        <Space size="middle">
-          <InputNumber
-            size="small"
-            min={1}
-            max={1000}
-            defaultValue={23}
-            onChange={onChange}
-            style={{ width: 60 }}
-          />
-        </Space>
-      ),
-      width: '60px',
+      key: '1',
+      image: 'https://www.mouser.fi/images/vishay/lrg/TEMD5010_SPL.jpg',
+      name: 'TEMD5120X01',
+      description: 'Photodiodes Top view 790-1050nm +/-65 deg',
+      provider: 'DigiKey',
+      country: 'US',
+      time_delivery: '14 недель',
+      moq: '1',
+      price: 151.95,
+      tax: 25.32,
+      sum: 455.85,
     },
     {
-      render: (_) => (
-        <Space>
-          <a>
-            <DeleteOutlined />
-          </a>
-        </Space>
-      ),
-      width: 10,
+      key: '2',
+      image:
+        'https://vakits.com/sites/default/files/imagecache/product_full/DO-41%20Case_2.JPG',
+      name: 'DIODESKITFS',
+      description: 'Kit Diode 10EA Of 10 Values',
+      provider: 'Fly-Wing Technology',
+      country: 'HK',
+      time_delivery: '8 недель',
+      moq: '',
+      price: 42.75,
+      tax: 7.12,
+      sum: 128.25,
+    },
+    {
+      key: '3',
+      image:
+        'https://www.wago.com/medias/1024-020000010001bf97000100b6-DE.jpg?context=bWFzdGVyfGltYWdlc3w4NDA3M3xpbWFnZS9qcGVnfGg5Mi9oZTgvMTM4MDM1NzE5MzczMTAvMTAyNF8wMjAwMDAwMTAwMDFiZjk3MDAwMTAwYjZfREUuanBnfDA3ZDg0NTU1OTAwMDI0MjFiYmNhZDUyZjNiYjEwM2ZmMzY2MzcwYWZjYzhmNmIwZmJmOGJjMGEyNjZhOTcwNGI',
+      name: 'YR2.DIODE',
+      description: 'DIN Rail Diode Module for use with Y Series',
+      provider: 'Allchips',
+      country: 'CN',
+      time_delivery: '8 недель',
+      moq: '10',
+      price: 25.11,
+      tax: 4.19,
+      sum: 75.33,
+    },
+    {
+      key: '4',
+      image:
+        'https://www.mouser.com/images/marketingid/2019/img/117150561.png?v=070223.0416',
+      name: 'REFAUDIODMA12070PTOBO1',
+      description: 'Evaluation Board for MA12040P Series',
+      provider: 'Chip One Stop',
+      country: 'CN',
+      time_delivery: '8 недель',
+      moq: '100',
+      price: 101.2,
+      tax: 16.9,
+      sum: 303.6,
+    },
+    {
+      key: '5',
+      image:
+        'https://www.heliosps.com.au/wp-content/uploads/sites/2/2017/06/HPS-PS-DIN-DLP-PU.png',
+      name: 'YRM2.DIODE',
+      description: 'DIN Rail Diode Module for use with Y Series',
+      provider: 'Mouser',
+      country: 'US',
+      time_delivery: '8 недель',
+      moq: '1',
+      price: 40.3,
+      tax: 6.71,
+      sum: 120.9,
     },
   ];
 
+  const value = 1083.933535;
+
   return (
-    <Drawer
-      className="cart"
-      title="Ваша корзина"
-      placement={'right'}
-      width={500}
-      onClose={onCloseCart}
-      open={open}
-      extra={
-        <Space>
-          <Button onClick={onCloseCart}>Перейти</Button>
-          <Button type="primary" onClick={onCloseCart}>
-            OK
+    <section className="cart">
+      <RoutingRoad />
+
+      <Content>
+        <Divider orientation="left">
+          <h4>Ваша корзина</h4>
+        </Divider>
+
+        <Space size="middle" className="cart__top-buttons">
+          <Button type="link">Скачать корзину</Button>
+          <Button type="primary" size={'middle'}>
+            Сохранить
+          </Button>
+          <Popconfirm
+            title="Удаление"
+            description="Все товары из корзины пропадут. Вы точно хотите очистить корзину?"
+            okText="Да"
+            cancelText="Отмена">
+            <Button type="primary" danger size={'middle'}>
+              Очистить корзину
+            </Button>
+          </Popconfirm>
+        </Space>
+
+        <Table
+          columns={columns}
+          expandable={{
+            expandedRowRender,
+            defaultExpandedRowKeys: ['0'],
+          }}
+          dataSource={data}
+          bordered
+          className="table"
+          scroll={{
+            x: 1000,
+          }}
+          pagination={false}
+        />
+
+        <Space direction={'vertical'} className="cart__total-block">
+          <Row justify={'start'}>
+            <Col span={12}>
+              <Row
+                justify={'start'}
+                gutter={10}
+                className="cart__down-container">
+                <Col span={12} className="cart__span-container">
+                  <span>Кол-во:</span>
+                </Col>
+                <Col span={12} className="cart__sum-container">
+                  <p>15 ед.</p>
+                </Col>
+                <Col span={12} className="cart__span-container">
+                  <span>Налог НДС 20%:</span>
+                </Col>
+                <Col span={12} className="cart__sum-container">
+                  <p>60.24 руб.</p>
+                </Col>
+              </Row>
+            </Col>
+
+            <Col span={12}>
+              <Statistic
+                className="cart__total"
+                title="ИТОГО (включая НДС 20%)"
+                value={value}
+                precision={2}
+              />
+            </Col>
+          </Row>
+
+          <Button
+            style={{
+              marginTop: 16,
+            }}
+            type="primary">
+            Перейти к оформлению
           </Button>
         </Space>
-      }>
-      <Table
-        columns={columnsCart}
-        dataSource={dataCart}
-        bordered
-        size="small"
-      />
-      <Space direction={'vertical'}>
-        <Row justify={'start'}>
-          <Col span={16}>
-            <p>Кол-во</p>
-          </Col>
-          <Col span={8}>
-            <p>
-              <span>46</span> шт.
-            </p>
-          </Col>
-          <Col span={16}>
-            <p>Налог НДС 20%</p>
-          </Col>
-          <Col span={8}>
-            <p>
-              <span>345</span> руб.
-            </p>
-          </Col>
-        </Row>
-        <Statistic
-          className="cart__total"
-          title="ИТОГО (включая НДС 20%)"
-          value={2070}
-          precision={2}
-        />
-        <Button
-          style={{
-            marginTop: 16,
-          }}
-          type="primary">
-          Перейти к оформлению
-        </Button>
-      </Space>
-    </Drawer>
+      </Content>
+    </section>
   );
-}
+};
 
-export default Cart;
+export default cartPage;
