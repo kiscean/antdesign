@@ -8,6 +8,9 @@ import Header from '../Header/Header';
 import MainDrawer from '../MainDrawer/MainDrawer';
 import Main from '../Main/Main';
 import Cart from '../Cart/Cart';
+import CartDrawer from '../CartDrawer/CartDrawer';
+import SuccessPage from '../SuccessPage/SuccessPage';
+import SignForms from '../SignForms/SignForms';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -26,9 +29,11 @@ function App() {
       <Header onOpen={onOpenBurgerMenu} />
 
       <Content className="main">
-        <Main />
+        {/* <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-        {/* <Cart /> */}
+        <Cart />
+        <SuccessPage />
+        <SignForms /> */}
       </Content>
 
       <Footer />
