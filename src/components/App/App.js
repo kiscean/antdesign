@@ -11,17 +11,28 @@ import Cart from '../Cart/Cart';
 import CartDrawer from '../CartDrawer/CartDrawer';
 import SuccessPage from '../SuccessPage/SuccessPage';
 import SignForms from '../SignForms/SignForms';
+import TableForSale from '../TableForSale/TableForSale';
+import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
 import Footer from '../Footer/Footer';
 
 function App() {
   // const { pathname } = useLocation();
   const [menuActive, setMenuActive] = React.useState(false);
+  const [openCart, setOpenCart] = React.useState(false);
 
   const onOpenBurgerMenu = () => {
     setMenuActive(true);
   };
   const onCloseBurgerMenu = () => {
     setMenuActive(false);
+  };
+
+  const onCloseCart = () => {
+    setOpenCart(false);
+  };
+
+  const onOpenCart = () => {
+    setOpenCart(true);
   };
 
   return (
@@ -31,9 +42,13 @@ function App() {
       <Content className="main">
         {/* <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
+        <SuccessPage />
+        <SignForms /> 
         <Cart />
         <SuccessPage />
-        <SignForms /> */}
+        <TableForSale onOpenCart={onOpenCart} />
+        <CartDrawer onCloseCart={onCloseCart} open={openCart} />
+        <CategoryNestedList />*/}
       </Content>
 
       <Footer />

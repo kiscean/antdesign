@@ -1,6 +1,7 @@
 /* новое */
 .table-selling {
   padding: 0 10ch;
+  margin-top: 51px;
 }
 
 @media screen and (max-width: 1050px) {

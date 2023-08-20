@@ -1,13 +1,13 @@
 import React from 'react';
 import './CategoryNestedList.css';
 
-import { Divider } from 'antd';
+import { Divider, Layout } from 'antd';
 import CategoryNestedRow from '../CategoryNestedRow/CategoryNestedRow';
 import { categoryNestedArr } from '../../assets/constants';
 
 const CategoryNestedList = () => {
   return (
-    <section className="category-nestedlist">
+    <Layout className="category-nestedlist">
       <Divider className="category-nestedlist__divider" orientation="left">
         <h4>Оптоэлектроника</h4>
       </Divider>
@@ -23,7 +23,7 @@ const CategoryNestedList = () => {
           );
         })}
       </div>
-    </section>
+    </Layout>
   );
 };
 

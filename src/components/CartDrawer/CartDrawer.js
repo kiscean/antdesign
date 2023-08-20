@@ -16,7 +16,7 @@ import { DeleteOutlined } from '@ant-design/icons';
 
 import { dataCart } from '../../assets/drawerCartArray';
 
-function Cart({ onCloseCart, open }) {
+function CartDrawer({ onCloseCart, open }) {
   //видимо нужно для корзины
   const onChange = (value) => {
     console.log('changed', value);
@@ -30,7 +30,7 @@ function Cart({ onCloseCart, open }) {
       key: 'name',
       render: (_, record) => (
         <Space size="middle">
-          <img src={record.image} alt={'#'} className="cart__image" />
+          <img src={record.image} alt={'#'} className="cart-drawer__image" />
           <Row>
             <Col span={24}>
               <a>{record.name}</a>
@@ -84,7 +84,7 @@ function Cart({ onCloseCart, open }) {
 
   return (
     <Drawer
-      className="cart"
+      className="cart-drawer"
       title="Ваша корзина"
       placement={'right'}
       width={500}
@@ -124,7 +124,7 @@ function Cart({ onCloseCart, open }) {
           </Col>
         </Row>
         <Statistic
-          className="cart__total"
+          className="cart-drawer__total"
           title="ИТОГО (включая НДС 20%)"
           value={2070}
           precision={2}
@@ -141,4 +141,4 @@ function Cart({ onCloseCart, open }) {
   );
 }
 
-export default Cart;
+export default CartDrawer;
