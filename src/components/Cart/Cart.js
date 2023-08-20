@@ -28,17 +28,14 @@ const cartPage = () => {
     });
   };
 
-  // const onChange = (value) => {
-  //   console.log('changed', value);
-  // };
-
+  //это скрытая часть таблицы, которая открывается при клике
   const expandedRowRender = () => {
     const columns = [
       {
         title:
           'Найдены дополнительные результаты, соответствующие данному компоненту',
         align: 'left',
-        className: 'alternative-component__title',
+        className: 'cart__alternative-component',
         children: [
           {
             title: 'Компонент',
@@ -54,7 +51,7 @@ const cartPage = () => {
                     <p>{record.description}</p>
                   </Col>
                   <Col span={24}>
-                    <p className="component__info">
+                    <p className="cart__component-info">
                       Производитель: <a>{record.provider}</a>
                     </p>
                   </Col>
@@ -65,7 +62,7 @@ const cartPage = () => {
           },
           {
             title: 'Время поставки',
-            dataIndex: 'time_delivery',
+            dataIndex: 'timeDelivery',
             align: 'left',
           },
           {
@@ -104,6 +101,8 @@ const cartPage = () => {
     ];
     return <Table columns={columns} dataSource={data} pagination={false} />;
   };
+
+  //шапка таблицы
   const columns = [
     {
       title: 'п/п',
@@ -141,7 +140,7 @@ const cartPage = () => {
     Table.EXPAND_COLUMN,
     {
       title: 'Время поставки',
-      dataIndex: 'time_delivery',
+      dataIndex: 'timeDelivery',
       align: 'left',
       width: '150px',
     },
@@ -201,6 +200,10 @@ const cartPage = () => {
       width: '80px',
     },
   ];
+
+  //массив с данными для таблицы,
+  //потом будет притягиваться
+  //с бека
   const data = [
     {
       key: '1',
@@ -209,7 +212,7 @@ const cartPage = () => {
       description: 'Photodiodes Top view 790-1050nm +/-65 deg',
       provider: 'DigiKey',
       country: 'US',
-      time_delivery: '14 недель',
+      timeDelivery: '14 недель',
       moq: '1',
       price: 151.95,
       tax: 25.32,
@@ -223,7 +226,7 @@ const cartPage = () => {
       description: 'Kit Diode 10EA Of 10 Values',
       provider: 'Fly-Wing Technology',
       country: 'HK',
-      time_delivery: '8 недель',
+      timeDelivery: '8 недель',
       moq: '',
       price: 42.75,
       tax: 7.12,
@@ -237,7 +240,7 @@ const cartPage = () => {
       description: 'DIN Rail Diode Module for use with Y Series',
       provider: 'Allchips',
       country: 'CN',
-      time_delivery: '8 недель',
+      timeDelivery: '8 недель',
       moq: '10',
       price: 25.11,
       tax: 4.19,
@@ -251,7 +254,7 @@ const cartPage = () => {
       description: 'Evaluation Board for MA12040P Series',
       provider: 'Chip One Stop',
       country: 'CN',
-      time_delivery: '8 недель',
+      timeDelivery: '8 недель',
       moq: '100',
       price: 101.2,
       tax: 16.9,
@@ -265,7 +268,7 @@ const cartPage = () => {
       description: 'DIN Rail Diode Module for use with Y Series',
       provider: 'Mouser',
       country: 'US',
-      time_delivery: '8 недель',
+      timeDelivery: '8 недель',
       moq: '1',
       price: 40.3,
       tax: 6.71,

@@ -43,8 +43,10 @@ const Main = () => {
     <Layout className="layout">
       <Header onOpen={onOpenBurgerMenu} />
       <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-      <Cart />
+
+      <TableComponentSearch onOpenCart={onOpenCart} />
       {/* <SearchECB />
+      <Cart />
       <SearchResultsTitle />
       <TableComponentSearch onOpenCart={onOpenCart} />
       <CartDrawer onCloseCart={onCloseCart} open={openCart} />
