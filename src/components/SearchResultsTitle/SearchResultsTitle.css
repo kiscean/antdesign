@@ -1,22 +1,23 @@
 .search-title {
-    color: #001529;
-    padding: 0 10ch;
-    margin-bottom: 5ch;
-    display: flex;
-    align-items: end;
+  color: #001529;
+  padding: 0 10ch;
+  margin-top: 50px;
+  margin-bottom: 5ch;
+  display: flex;
+  align-items: end;
 }
 
 .search-title__text {
-    margin: 0 0 1px 1ch;
+  margin: 0 0 1px 1ch;
 }
 
 .search-title__result {
-    color: #ec386e;
-    font-weight: bold;
+  color: #ec386e;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1050px) {
-    .search-title {
-        padding: 0 20px;
-    }
+  .search-title {
+    padding: 0 20px;
+  }
 }

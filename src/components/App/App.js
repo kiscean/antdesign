@@ -13,6 +13,8 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
+import SearchResultsTitle from '../SearchResultsTitle/SearchResultsTitle';
+import TableComponentSearch from '../TableComponentSearch/TableComponentSearch';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -49,6 +51,8 @@ function App() {
         <TableForSale onOpenCart={onOpenCart} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
         <CategoryNestedList />*/}
+        <SearchResultsTitle />
+        <TableComponentSearch />
       </Content>
 
       <Footer />
