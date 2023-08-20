@@ -12,8 +12,9 @@ import {
   Table,
   message,
   InputNumber,
+  Layout,
 } from 'antd';
-import { Content } from 'antd/es/layout/layout';
+
 import { CloseOutlined } from '@ant-design/icons';
 
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
@@ -279,15 +280,15 @@ const cartPage = () => {
   const value = 1083.933535;
 
   return (
-    <section className="cart">
+    <Layout className="cart">
       <RoutingRoad />
 
-      <Content>
+      <div>
         <Divider orientation="left">
           <h4>Ваша корзина</h4>
         </Divider>
 
-        <Space size="middle" className="cart__top-buttons">
+        <div size="middle" className="cart__top-buttons">
           <Button type="link">Скачать корзину</Button>
           <Button type="primary" size={'middle'}>
             Сохранить
@@ -301,7 +302,7 @@ const cartPage = () => {
               Очистить корзину
             </Button>
           </Popconfirm>
-        </Space>
+        </div>
 
         <Table
           columns={columns}
@@ -358,8 +359,8 @@ const cartPage = () => {
             Перейти к оформлению
           </Button>
         </Space>
-      </Content>
-    </section>
+      </div>
+    </Layout>
   );
 };
 

@@ -6,9 +6,9 @@ import { routingRoadMenu } from '../../assets/constants';
 
 const RoutingRoad = () => {
   return (
-    <section className="routing-road">
+    <div className="routing-road">
       <Breadcrumb items={routingRoadMenu} />
-    </section>
+    </div>
   );
 };
 

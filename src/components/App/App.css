@@ -1,9 +1,17 @@
-* {
+html {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'InterTightEKB', Arial, SansSerif;
+  font-family: 'InterTightEKB', 'Arial', 'sans-serif';
   font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
 }
