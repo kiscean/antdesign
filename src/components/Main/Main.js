@@ -34,7 +34,6 @@ const Main = () => {
       <PopProducts />
       <CategoriesEСB />
       {/*
-      <Cart />
       <SearchResultsTitle />
       <TableComponentSearch onOpenCart={onOpenCart} />
       <CartDrawer onCloseCart={onCloseCart} open={openCart} />

@@ -330,13 +330,13 @@ const cartPage = () => {
                   <span>Кол-во:</span>
                 </Col>
                 <Col span={12} className="cart__sum-container">
-                  <p>15 ед.</p>
+                  <p className="cart__paragraph">15 ед.</p>
                 </Col>
                 <Col span={12} className="cart__span-container">
                   <span>Налог НДС 20%:</span>
                 </Col>
                 <Col span={12} className="cart__sum-container">
-                  <p>60.24 руб.</p>
+                  <p className="cart__paragraph">60.24 руб.</p>
                 </Col>
               </Row>
             </Col>

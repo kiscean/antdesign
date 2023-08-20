@@ -1,7 +1,5 @@
 .cart {
-  margin-top: 60px;
-  padding: 0 10ch;
-  padding-bottom: 5ch;
+  padding: 60px 10ch 0 10ch;
 }
 
 .cart__top-buttons {
@@ -13,7 +11,6 @@
 .cart__total-block {
   text-align: right;
   display: flex;
-  height: 120px;
 }
 
 .cart__total-line {
@@ -39,6 +36,10 @@
 .cart__sum-container {
   font-weight: bold;
   text-align: left;
+}
+
+.cart__paragraph {
+  margin: 0;
 }
 
 .cart__component-info {

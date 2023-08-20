@@ -28,7 +28,7 @@ function App() {
       <Content className="main">
         <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-        <Cart />
+        {/* <Cart /> */}
       </Content>
 
       <Footer />
