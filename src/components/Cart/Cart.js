@@ -228,7 +228,7 @@ const cartPage = () => {
       provider: 'Fly-Wing Technology',
       country: 'HK',
       timeDelivery: '8 недель',
-      moq: '',
+      moq: '2',
       price: 42.75,
       tax: 7.12,
       sum: 128.25,

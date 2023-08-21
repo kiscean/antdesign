@@ -13,8 +13,7 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
-import SearchResultsTitle from '../SearchResultsTitle/SearchResultsTitle';
-import TableComponentSearch from '../TableComponentSearch/TableComponentSearch';
+import SearchResults from '../SearchResults/SearchResults';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -42,17 +41,16 @@ function App() {
       <Header onOpen={onOpenBurgerMenu} />
 
       <Content className="main">
-        {/* <Main />
+        <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <SuccessPage />
-        <SignForms /> 
+        <SignForms />
         <Cart />
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
-        <CategoryNestedList />*/}
-        <SearchResultsTitle />
-        <TableComponentSearch />
+        <CategoryNestedList />*
+        <SearchResults />
       </Content>
 
       <Footer />

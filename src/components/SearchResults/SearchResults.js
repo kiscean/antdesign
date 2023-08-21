@@ -1,11 +1,21 @@
 import React from 'react';
-import './TableComponentSearch.css';
+import './SearchResults.css';
 
-import { Button, Col, message, Pagination, Row, Space, Table } from 'antd';
+import {
+  Button,
+  Col,
+  message,
+  Pagination,
+  Row,
+  Space,
+  Table,
+  Layout,
+} from 'antd';
 import { CheckOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
-const TableComponentSearch = ({ onOpenCart }) => {
+const TableComponentSearch = () => {
   const [messageApi, contextHolder] = message.useMessage();
+
   const success = () => {
     messageApi.open({
       type: 'success',
@@ -13,15 +23,10 @@ const TableComponentSearch = ({ onOpenCart }) => {
     });
   };
 
-  const onChange = (pageNumber) => {
-    console.log('Page: ', pageNumber);
-  };
-
   const columns = [
     {
       title: 'Поставщик',
       dataIndex: 'provider',
-      className: 'table__column-provider',
       align: 'left',
       render: (text) => <a>{text}</a>,
       fixed: 'left',
@@ -29,12 +34,12 @@ const TableComponentSearch = ({ onOpenCart }) => {
     },
     {
       title: '',
-      dataIndex: 'basket',
+      dataIndex: 'cart',
       align: 'center',
       render: (_, record) => (
         <Space size="middle">
-          {record.basket === '1' ? (
-            <a onClick={onOpenCart} className="component__backet-active">
+          {record.cart === '1' ? (
+            <a className="component__backet-active">
               <CheckOutlined />
             </a>
           ) : (
@@ -64,7 +69,7 @@ const TableComponentSearch = ({ onOpenCart }) => {
     },
     {
       title: 'На складе',
-      dataIndex: 'in_stock',
+      dataIndex: 'inStock',
       align: 'center',
       width: '100px',
     },
@@ -76,7 +81,7 @@ const TableComponentSearch = ({ onOpenCart }) => {
     },
     {
       title: 'Тип упаковки',
-      dataIndex: 'type_box',
+      dataIndex: 'typeBox',
       align: 'center',
       width: '150px',
     },
@@ -121,12 +126,12 @@ const TableComponentSearch = ({ onOpenCart }) => {
     {
       key: '1',
       provider: 'DigiKey',
-      basket: '0',
+      cart: '0',
       country: 'US',
       timeDelivery: '14 недель',
-      in_stock: '3',
+      inStock: '3',
       moq: '1',
-      type_box: '-',
+      typeBox: '-',
       price: 'USD',
       price_for_1: '63.48',
       price_for_10: '55.10',
@@ -137,12 +142,12 @@ const TableComponentSearch = ({ onOpenCart }) => {
     {
       key: '2',
       provider: 'Fly-Wing Technology',
-      basket: '1',
+      cart: '1',
       country: 'HK',
       timeDelivery: '8 недель',
-      in_stock: '3958',
+      inStock: '3958',
       moq: '',
-      type_box: '-',
+      typeBox: '-',
       price: 'USD',
       price_for_1: '42.75',
       price_for_10: '39.34',
@@ -153,12 +158,12 @@ const TableComponentSearch = ({ onOpenCart }) => {
     {
       key: '3',
       provider: 'Allchips',
-      basket: '0',
+      cart: '0',
       country: 'CN',
       timeDelivery: '8 недель',
-      in_stock: '38260',
+      inStock: '38260',
       moq: '100',
-      type_box: '-',
+      typeBox: '-',
       price: '-',
       price_for_1: '-',
       price_for_10: '-',
@@ -169,27 +174,35 @@ const TableComponentSearch = ({ onOpenCart }) => {
   ];
 
   return (
-    <section className="table-selling">
+    <Layout className="search-results">
+      <h2 className="search-results__title">
+        Результаты поиска:
+        <span className="search-results__text">
+          по запросу "<span className="search-results__result">diod</span>"
+          найдено: <span className="search-title__result">10</span>
+        </span>
+      </h2>
+
       <Table
         columns={columns}
         dataSource={data}
         bordered
-        className="table"
+        className="search-results__table"
         title={() => (
           <Space size="middle">
             <img
-              src={'https://static.chipdip.ru/lib/294/DOC005294472.jpg'}
+              src="https://static.chipdip.ru/lib/294/DOC005294472.jpg"
               alt={''}
-              className="component__image"
+              className="search-results__image"
             />
-            <Row className="component__text">
+            <Row className="search-results__text">
               <Col span={24}>
                 <a>DIODESKITFS</a>
               </Col>
               <Col span={24}>
                 <p>Kit Diode 10EA Of 10 Values</p>
               </Col>
-              <Col span={24} className="component__manufacturer">
+              <Col span={24} className="search-results__manufacturer">
                 <p>
                   Производитель: <a>onsemi</a>
                 </p>
@@ -203,7 +216,7 @@ const TableComponentSearch = ({ onOpenCart }) => {
         pagination={false}
       />
       {/* Эти таблицы для тестирования и визуальной составляющей - далее их можно просто удалить */}
-      <Table
+      {/* <Table
         columns={columns}
         dataSource={data}
         bordered
@@ -330,19 +343,17 @@ const TableComponentSearch = ({ onOpenCart }) => {
           x: 1000,
         }}
         pagination={false}
-      />
+      /> */}
       {/* Конец таблиц для тестирования */}
-
-      <Space className="pagination-block">
+      <Space className="search-results__pagination-block">
         <Pagination
-          className="pagination"
+          className="search-results__pagination"
           showQuickJumper
           defaultCurrent={2}
           total={500}
-          onChange={onChange}
         />
       </Space>
-    </section>
+    </Layout>
   );
 };
 
