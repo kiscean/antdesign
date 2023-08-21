@@ -43,13 +43,12 @@ function App() {
       <Content className="main">
         <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-        <SuccessPage />
         <SignForms />
         <Cart />
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
-        <CategoryNestedList />*
+        <CategoryNestedList />
         <SearchResults />
       </Content>
 

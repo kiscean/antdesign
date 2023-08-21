@@ -3,6 +3,10 @@
   gap: 2ch;
 }
 
+.category-nestedlist__paragraph {
+  margin: 0;
+}
+
 @media screen and (max-width: 473px) {
   .category-nestedlist__container {
     gap: 1ch;

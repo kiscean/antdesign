@@ -7,7 +7,7 @@ function CategoryNestedRow({ quantity, name }) {
       <a href="#" target="_blank" className="category-nestedlist__quantity">
         {quantity}
       </a>
-      <p>{name}</p>
+      <p className="category-nestedlist__paragraph">{name}</p>
     </div>
   );
 }
