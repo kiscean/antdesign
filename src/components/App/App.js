@@ -49,7 +49,7 @@ function App() {
         <TableForSale onOpenCart={onOpenCart} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
         <CategoryNestedList />
-        <SearchResults /> */}
+        <SearchResults />  */}
       </Content>
 
       <Footer />
