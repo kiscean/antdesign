@@ -9,7 +9,7 @@ import popprod3 from '../../assets/img/pop_prod_3.jpg';
 const PopProducts = () => {
   return (
     <section className="slider">
-      <Row>
+      <Row className="slider__dividers">
         <Col span={12}>
           <Divider orientation="left">Чаще всего ищут</Divider>
         </Col>

@@ -12,7 +12,6 @@ import CartDrawer from '../CartDrawer/CartDrawer';
 import SuccessPage from '../SuccessPage/SuccessPage';
 import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
-import CategoryNestedList from '../CategoryNestedList/CategoryNestedList';
 import SearchResults from '../SearchResults/SearchResults';
 import Footer from '../Footer/Footer';
 
@@ -41,15 +40,14 @@ function App() {
       <Header onOpen={onOpenBurgerMenu} />
 
       <Content className="main">
-        {/* <Main />
-        <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} /> */}
+        <Main />
+        <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <SignForms />
-        {/* <Cart />
+        <Cart />
+        <CartDrawer onCloseCart={onCloseCart} open={openCart} />
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
-        <CartDrawer onCloseCart={onCloseCart} open={openCart} />
-        <CategoryNestedList />
-        <SearchResults />  */}
+        <SearchResults />
       </Content>
 
       <Footer />
