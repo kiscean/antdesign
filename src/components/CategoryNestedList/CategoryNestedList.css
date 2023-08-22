@@ -1,5 +1,5 @@
 .category-nestedlist {
-  margin: 5ch 0;
+  margin: 6ch 0 0 0;
 }
 
 .category-nestedlist__divider {
@@ -8,7 +8,7 @@
 
 .category-nestedlist__box {
   padding: 0 10ch;
-  margin: 5ch 0;
+  margin: 5ch 0 35.7ch 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px 15px;

@@ -1,6 +1,7 @@
 .cards {
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .cards__box {

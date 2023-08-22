@@ -1,7 +1,17 @@
 import React from 'react';
 import './TableForSale.css';
 
-import { Button, Col, message, Rate, Row, Space, Table, Tag } from 'antd';
+import {
+  Button,
+  Col,
+  Layout,
+  message,
+  Rate,
+  Row,
+  Space,
+  Table,
+  Tag,
+} from 'antd';
 
 import {
   CheckOutlined,
@@ -144,7 +154,7 @@ const TablesForSale = ({ onOpenCart }) => {
   ];
 
   return (
-    <section className="table-selling">
+    <Layout className="table-selling">
       <Table
         columns={tableHeader}
         dataSource={tableForSaleComponents}
@@ -152,7 +162,7 @@ const TablesForSale = ({ onOpenCart }) => {
           x: 1000,
         }}
       />
-    </section>
+    </Layout>
   );
 };
 

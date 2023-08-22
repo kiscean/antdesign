@@ -1,7 +1,6 @@
 import React from 'react';
 import './SignForms.css';
 
-import Footer from '../Footer/Footer';
 import {
   Space,
   Button,
@@ -15,8 +14,9 @@ import {
   Segmented,
   Divider,
   DatePicker,
+  Layout,
 } from 'antd';
-import { Content, Header } from 'antd/es/layout/layout';
+
 import {
   CommentOutlined,
   FileProtectOutlined,
@@ -92,25 +92,8 @@ const SignForms = () => {
   };
 
   return (
-    <section className="authorization">
-      {/* <Header className="header">
-        <Space direction="horizontal" className="header__container">
-          <Space direction="horizontal">
-            <div className="header__logo">
-              <h1>
-                <a href="#" className="header__logo-link">
-                  ЭКБ
-                </a>
-              </h1>
-            </div>
-            <span className="header__logo-description">
-              Маркетплейс <br /> для инженеров
-            </span>
-          </Space>
-        </Space>
-      </Header> */}
-
-      <Content className="authorization__container">
+    <Layout className="authorization">
+      <div className="authorization__container">
         <Row justify="center">
           <Col xs={24} sm={24} md={12} lg={10} xl={6}>
             <Segmented
@@ -393,7 +376,7 @@ const SignForms = () => {
           </Col>
 
           <Col className="description" xs={24} sm={24} md={12} lg={14} xl={18}>
-            <Content className="description__container">
+            <div className="description__container">
               <div className="description__wrap">
                 <div className="description__card-header">
                   <div className="description__top-line">
@@ -418,7 +401,7 @@ const SignForms = () => {
                     </Row>
                   </div>
                   <div className="description__content">
-                    <Content>
+                    <div>
                       <Row justify="center">
                         <Col
                           className="description__text-wrapper"
@@ -516,16 +499,15 @@ const SignForms = () => {
                         Проект разработан и создан компанией ООО Компания в 2023
                         году.
                       </Col>
-                    </Content>
+                    </div>
                   </div>
                 </div>
               </div>
-            </Content>
+            </div>
           </Col>
         </Row>
-      </Content>
-      <Footer />
-    </section>
+      </div>
+    </Layout>
   );
 };
 

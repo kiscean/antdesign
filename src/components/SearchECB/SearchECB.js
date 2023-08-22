@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, Space, Button, Select, Radio, Divider } from 'antd';
 import { FileAddFilled } from '@ant-design/icons';
-import './SearchEKB.css';
+import './SearchECB.css';
 import useResize from '../../hooks/useResize';
 
 const SearchEKB = () => {
