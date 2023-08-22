@@ -41,15 +41,15 @@ function App() {
       <Header onOpen={onOpenBurgerMenu} />
 
       <Content className="main">
-        <Main />
-        <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
+        {/* <Main />
+        <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} /> */}
         <SignForms />
-        <Cart />
+        {/* <Cart />
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
         <CategoryNestedList />
-        <SearchResults />
+        <SearchResults /> */}
       </Content>
 
       <Footer />
