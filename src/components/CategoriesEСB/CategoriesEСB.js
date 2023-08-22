@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, Space } from 'antd';
-import { Col, Divider, Row, Layout } from 'antd';
+import { Col, Divider, Row } from 'antd';
 import { popularCards } from '../../assets/popularCardsArray';
 import './CategoriesEСB.css';
 
 const CategoriesEСB = () => {
   return (
-    <Layout className="cards">
+    <section className="cards">
       <Row className="cards__dividers">
         <Col span={12}>
           <Divider orientation="left">Популярные категории</Divider>
@@ -39,7 +39,7 @@ const CategoriesEСB = () => {
           </div>
         ))}
       </Space>
-    </Layout>
+    </section>
   );
 };
 
