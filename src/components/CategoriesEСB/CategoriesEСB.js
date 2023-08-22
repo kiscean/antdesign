@@ -18,7 +18,7 @@ const CategoriesEСB = () => {
         </Col>
       </Row>
 
-      <Space size={[30, 30]} wrap className="cards__box">
+      <Space size={[10, 20]} wrap className="cards__box">
         {popularCards.map((card, i) => (
           <div key={i} className="cards__card-container">
             <Card
