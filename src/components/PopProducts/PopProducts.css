@@ -8,13 +8,14 @@
   overflow-x: auto;
 }
 
-/*
-.pop-products::-webkit-scrollbar {
-    display: none;
+.slider__dividers {
+  padding: 0 10ch;
 }
- */
 
-.pop-products__card {
+@media screen and (max-width: 1050px) {
+  .slider__dividers {
+    padding: 0 20px;
+  }
 }
 
 .slider__next-btn {

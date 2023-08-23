@@ -8,7 +8,7 @@
 
 .category-nestedlist__box {
   padding: 0 10ch;
-  margin: 5ch 0 35.7ch 0;
+  margin: 5ch 0 20ch 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px 15px;
@@ -23,6 +23,10 @@
 
 @media screen and (max-width: 1050px) {
   .category-nestedlist__box {
+    padding: 0 20px;
+  }
+
+  .category-nestedlist__divider {
     padding: 0 20px;
   }
 }

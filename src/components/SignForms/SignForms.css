@@ -1,6 +1,12 @@
 .authorization__container {
-  margin-top: 100px;
+  margin-top: 60px;
   height: 100%;
+}
+
+@media screen and (max-width: 1051px) {
+  .authorization__container {
+    margin-bottom: 150px;
+  }
 }
 
 .authorization__form-selector {
@@ -201,9 +207,8 @@
 
 .description__text-down {
   text-align: center;
-  margin-top: 20ch;
+  margin: 9ch 0 2ch 0;
   color: #7e838c;
-  height: 5vh;
 }
 
 /* End Box Effect */
@@ -261,9 +266,9 @@
     padding: 33% 10% 0 10%;
   }
 
-  .description__text-down {
+  /* .description__text-down {
     margin-top: 20%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -277,9 +282,9 @@
     height: 330px;
   }
 
-  .description__text-down {
+  /* .description__text-down {
     margin-top: 10%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1440px) {
@@ -293,7 +298,7 @@
     height: 340px;
   }
 
-  .description__text-down {
+  /* .description__text-down {
     margin-top: 13%;
-  }
+  } */
 }

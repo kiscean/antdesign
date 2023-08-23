@@ -2,6 +2,21 @@
   text-align: center;
   margin: 0 auto;
   margin-bottom: 30px;
+  padding: 0 10ch 0 10ch;
+}
+
+.cards__dividers {
+  padding: 0 10ch 30px 10ch;
+}
+
+@media screen and (max-width: 1050px) {
+  .cards {
+    padding: 0 20px;
+  }
+
+  .cards__dividers {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 .cards__box {

@@ -5,8 +5,12 @@ import { Dropdown, Space, Col, Layout, Menu, Avatar, Badge } from 'antd';
 import { DownOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { items, menuItems } from '../../assets/constants';
 
+import useResize from '../../hooks/useResize';
+
 const Header = ({ onOpen }) => {
   const { Header } = Layout;
+
+  let size = useResize();
 
   return (
     <Header className="header">
@@ -25,26 +29,29 @@ const Header = ({ onOpen }) => {
           </span>
         </Space>
 
-        <Col span={24} className="header__menu">
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={['4']}
-            items={menuItems.map((item) => {
-              const key = item.name;
-              return {
-                key,
-                label: `${key}`,
-              };
-            })}
-          />
-        </Col>
+        {size.width > 1050 && (
+          <Col span={24} className="header__menu">
+            <Menu
+              theme="dark"
+              mode="horizontal"
+              defaultSelectedKeys={['4']}
+              items={menuItems.map((item) => {
+                const key = item.name;
+                return {
+                  key,
+                  label: `${key}`,
+                };
+              })}
+            />
+          </Col>
+        )}
+
         <Space direction="horizontal" size={20}>
           <Badge
             color="#ec386e"
             size="small"
             count={5}
-            className="header__backet-badge">
+            className="header__basket-badge">
             <ShoppingCartOutlined className="header__basket-logo" />
           </Badge>
           <Space className="header__user-info">
