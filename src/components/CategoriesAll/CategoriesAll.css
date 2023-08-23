@@ -4,3 +4,22 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px 15px;
 }
+
+@media screen and (max-width: 1050px) {
+    .category-list {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .category-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .category-list {
+        padding: 0 10px;
+    }
+}
