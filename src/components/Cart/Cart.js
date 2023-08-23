@@ -13,9 +13,15 @@ import {
   message,
   InputNumber,
   Layout,
+  Dropdown,
 } from 'antd';
 
-import { CloseOutlined } from '@ant-design/icons';
+import {
+  CloseOutlined,
+  FilePdfTwoTone,
+  DownOutlined,
+  FileExcelTwoTone,
+} from '@ant-design/icons';
 
 import RoutingRoad from '../RoutingRoad/RoutingRoad';
 
@@ -279,6 +285,27 @@ const cartPage = () => {
 
   const value = 1083.933535;
 
+  const items = [
+    {
+      key: '1',
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          .pdf
+        </a>
+      ),
+      icon: <FilePdfTwoTone />,
+    },
+    {
+      key: '2',
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          .xls
+        </a>
+      ),
+      icon: <FileExcelTwoTone />,
+    },
+  ];
+
   return (
     <Layout className="cart">
       <RoutingRoad />
@@ -289,10 +316,19 @@ const cartPage = () => {
         </Divider>
 
         <div size="middle" className="cart__top-buttons">
-          <Button type="link">Скачать корзину</Button>
+          <Dropdown menu={{ items }}>
+            <div className="cart__hover">
+              <Space className="cart__safe-btn">
+                Скачать корзину
+                <DownOutlined />
+              </Space>
+            </div>
+          </Dropdown>
+
           <Button type="primary" size={'middle'}>
             Сохранить
           </Button>
+
           <Popconfirm
             title="Удаление"
             description="Все товары из корзины пропадут. Вы точно хотите очистить корзину?"
