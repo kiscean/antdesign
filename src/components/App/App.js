@@ -13,6 +13,7 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import SearchResults from '../SearchResults/SearchResults';
+import ComponentCard from '../ComponentCard/ComponentCard';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -40,7 +41,6 @@ function App() {
       <Header onOpen={onOpenBurgerMenu} />
 
       <Content className="main">
-        <Cart />
         {/* <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <SignForms />
@@ -49,6 +49,8 @@ function App() {
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults /> */}
+        <ComponentCard />
+        <Cart />
       </Content>
 
       <Footer />

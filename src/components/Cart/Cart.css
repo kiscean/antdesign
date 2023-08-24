@@ -25,6 +25,10 @@
   position: relative;
 }
 
+.cart__total {
+  margin-top: 150px;
+}
+
 .cart__alternative-component {
   color: #ec386e;
   background-color: #ec386e;
