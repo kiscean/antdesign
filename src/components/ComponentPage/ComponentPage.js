@@ -2,6 +2,7 @@ import React from 'react';
 import './ComponentPage.css';
 
 import ComponentCard from '../ComponentCard/ComponentCard';
+import ComponentTables from '../ComponentTables/ComponentTables';
 import { Breadcrumb, Layout } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
 
@@ -32,6 +33,7 @@ function ComponentPage() {
     <Layout className="component-page">
       <Breadcrumb items={breadcrumbArr} />
       <ComponentCard />
+      <ComponentTables />
     </Layout>
   );
 }
