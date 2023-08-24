@@ -8,8 +8,12 @@ import popprod2 from '../../assets/img/pop_prod_2.jpg';
 const ComponentCard = () => {
   const [isLiked, setIsLiked] = React.useState(false);
 
-  const toggleLike = () => {
-    setIsLiked(!isLiked);
+  const onLike = () => {
+    setIsLiked(true);
+  };
+
+  const onDislike = () => {
+    setIsLiked(false);
   };
 
   return (
@@ -40,10 +44,15 @@ const ComponentCard = () => {
               Добавить в корзину
             </Button>
 
-            <HeartTwoTone
-              onClick={toggleLike}
-              className="component-card__like"
-            />
+            {isLiked ? (
+              <HeartFilled
+                onClick={onDislike}
+                style={{ color: '#ec386e', fontSize: '18px' }}
+                className="component-card__like"
+              />
+            ) : (
+              <HeartTwoTone onClick={onLike} className="component-card__like" />
+            )}
           </div>
         </div>
       </div>
