@@ -1,6 +1,5 @@
 .component-card {
   display: flex;
-  padding: 60px 10ch 0 10ch;
   flex-direction: column;
 }
 
@@ -10,10 +9,6 @@
 }
 
 @media screen and (max-width: 769px) {
-  .component-card {
-    padding: 60px 20px 0 20px;
-  }
-
   .component-card__container {
     flex-direction: column;
     align-items: center;

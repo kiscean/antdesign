@@ -50,7 +50,8 @@ function App() {
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults /> */}
         <ComponentPage />
-        <Cart />
+        <TableForSale onOpenCart={onOpenCart} />
+        <SearchResults />
       </Content>
 
       <Footer />
