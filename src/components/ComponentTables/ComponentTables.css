@@ -1,0 +1,21 @@
+.component-tables {
+  margin-top: 30px;
+}
+
+.component-tables__supplier {
+  margin-bottom: 50px;
+}
+
+.component-tables__params {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.component-tables__header {
+  margin: 0;
+}
+
+.component-tables__another {
+  margin: 0;
+  text-align: center;
+}
