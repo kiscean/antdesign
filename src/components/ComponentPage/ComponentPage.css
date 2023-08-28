@@ -1,0 +1,9 @@
+.component-page {
+  padding: 60px 10ch 0 10ch;
+}
+
+@media screen and (max-width: 769px) {
+  .component-page {
+    padding: 60px 20px 0 20px;
+  }
+}

@@ -5,7 +5,14 @@
 .cart__top-buttons {
   margin-bottom: 2ch;
   width: 100%;
-  justify-content: right;
+  display: flex;
+}
+
+.cart__hover {
+  color: #1677ff;
+  margin-right: 20px;
+  display: flex;
+  cursor: pointer;
 }
 
 .cart__total-block {
@@ -16,6 +23,10 @@
 .cart__total-line {
   border-bottom: 1px dashed #dfdfdf;
   position: relative;
+}
+
+.cart__total {
+  margin-top: 150px;
 }
 
 .cart__alternative-component {

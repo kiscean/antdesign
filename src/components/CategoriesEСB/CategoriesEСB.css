@@ -22,6 +22,7 @@
 .cards__box {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .cards__card-container:hover {
