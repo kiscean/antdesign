@@ -1,7 +1,13 @@
 import React from 'react';
 
-import { Table, InputNumber } from 'antd';
-import { FilePdfTwoTone } from '@ant-design/icons';
+import { Table, InputNumber, Space } from 'antd';
+import {
+  FilePdfTwoTone,
+  EnvironmentTwoTone,
+  SmileTwoTone,
+  MailTwoTone,
+  ShopTwoTone,
+} from '@ant-design/icons';
 import './ComponentTables.css';
 
 function ComponentTables() {
@@ -178,16 +184,33 @@ function ComponentTables() {
     <h2 className="component-tables__header">Технические параметры</h2>
   );
   const defaultFooter = () => (
-    <>
-      <h2>Техническая документация компонента</h2>
-      <a>
-        <FilePdfTwoTone style={{ fontSize: '40px' }} />
-        <div>
-          <p>temd5120-1767453.pdf</p>
-          <span>pdf 17 КБ</span>
+    <div className="documentation">
+      <h2 className="documentation__title">Техническая документация</h2>
+      <a
+        className="documentation__link"
+        target="_blank"
+        rel="noreferrer"
+        href="https://static.chipdip.ru/lib/057/DOC000057299.pdf">
+        <FilePdfTwoTone className="documentation__img" />
+        <div className="documentation__container">
+          <p className="documentation__paragraph">Диоды импортные</p>
+          <span className="documentation__file">pdf 17 КБ</span>
         </div>
       </a>
-    </>
+      <a
+        className="documentation__link"
+        target="_blank"
+        rel="noreferrer"
+        href="https://static.chipdip.ru/lib/251/DOC000251032.pdf">
+        <FilePdfTwoTone className="documentation__img" />
+        <div className="documentation__container">
+          <p className="documentation__paragraph">
+            Параметры универсальных и импульсных диодов
+          </p>
+          <span className="documentation__file">pdf 223 КБ</span>
+        </div>
+      </a>
+    </div>
   );
 
   const tableParamsProps = { title: defaultTitle, footer: defaultFooter };
@@ -242,20 +265,104 @@ function ComponentTables() {
     { key: 23, attribute: 'Brand', value: 'Vishay Semiconductors' },
   ];
 
+  /*----------------------- ТАБЛИЦА 3 -----------------------------*/
+
+  const dataTableSimilar = [
+    {
+      key: '1',
+      image: 'https://www.mouser.fi/images/vishay/lrg/TEMD5010_SPL.jpg',
+      name: 'TEMD5120X01',
+      description: 'Photodiodes Top view 790-1050nm +/-65 deg',
+      provider: 'DigiKey',
+      country: 'US',
+      timeDelivery: '14 недель',
+      moq: '1',
+      price: 151.95,
+      tax: 25.32,
+      sum: 455.85,
+    },
+    {
+      key: '2',
+      image:
+        'https://vakits.com/sites/default/files/imagecache/product_full/DO-41%20Case_2.JPG',
+      name: 'DIODESKITFS',
+      description: 'Kit Diode 10EA Of 10 Values',
+      provider: 'Fly-Wing Technology',
+      country: 'HK',
+      timeDelivery: '8 недель',
+      moq: '2',
+      price: 42.75,
+      tax: 7.12,
+      sum: 128.25,
+    },
+    {
+      key: '3',
+      image:
+        'https://www.wago.com/medias/1024-020000010001bf97000100b6-DE.jpg?context=bWFzdGVyfGltYWdlc3w4NDA3M3xpbWFnZS9qcGVnfGg5Mi9oZTgvMTM4MDM1NzE5MzczMTAvMTAyNF8wMjAwMDAwMTAwMDFiZjk3MDAwMTAwYjZfREUuanBnfDA3ZDg0NTU1OTAwMDI0MjFiYmNhZDUyZjNiYjEwM2ZmMzY2MzcwYWZjYzhmNmIwZmJmOGJjMGEyNjZhOTcwNGI',
+      name: 'YR2.DIODE',
+      description: 'DIN Rail Diode Module for use with Y Series',
+      provider: 'Allchips',
+      country: 'CN',
+      timeDelivery: '8 недель',
+      moq: '10',
+      price: 25.11,
+      tax: 4.19,
+      sum: 75.33,
+    },
+    {
+      key: '4',
+      image:
+        'https://www.mouser.com/images/marketingid/2019/img/117150561.png?v=070223.0416',
+      name: 'REFAUDIODMA12070PTOBO1',
+      description: 'Evaluation Board for MA12040P Series',
+      provider: 'Chip One Stop',
+      country: 'CN',
+      timeDelivery: '8 недель',
+      moq: '100',
+      price: 101.2,
+      tax: 16.9,
+      sum: 303.6,
+    },
+    {
+      key: '5',
+      image:
+        'https://www.heliosps.com.au/wp-content/uploads/sites/2/2017/06/HPS-PS-DIN-DLP-PU.png',
+      name: 'YRM2.DIODE',
+      description: 'DIN Rail Diode Module for use with Y Series',
+      provider: 'Mouser',
+      country: 'US',
+      timeDelivery: '8 недель',
+      moq: '1',
+      price: 40.3,
+      tax: 6.71,
+      sum: 120.9,
+    },
+  ];
+
   const expandedRowRender = () => {
     const columns = [
       {
         title:
           'Найдены дополнительные результаты, соответствующие данному компоненту',
         align: 'left',
-        className: 'cart__alternative-component',
+        className: 'component-tables__alternative',
         children: [
           {
             title: 'Компонент',
-            dataIndex: 'name',
+            dataIndex: 'nameComp',
             key: 'name',
-
             width: '30%',
+            render: (_, data) => (
+              <div>
+                <a>
+                  {data.name} ({data.country})
+                </a>
+                <p>{data.description}</p>
+                <p>
+                  Производитель: <a>{data.provider}</a>
+                </p>
+              </div>
+            ),
           },
           {
             title: 'Время поставки',
@@ -269,6 +376,13 @@ function ComponentTables() {
             className: 'table__column-provider',
             align: 'left',
             width: '240px',
+            render: (_, data) => (
+              <Space size="middle">
+                <a>
+                  {data.provider} ({data.country})
+                </a>
+              </Space>
+            ),
           },
           {
             title: 'Цена (за ед.)',
@@ -280,8 +394,9 @@ function ComponentTables() {
     ];
     return (
       <Table
+        className="component-tables__similar"
         columns={columns}
-        dataSource={dataTableSupplier}
+        dataSource={dataTableSimilar}
         pagination={false}
       />
     );
@@ -297,23 +412,70 @@ function ComponentTables() {
         columns={columnsSupplier}
         dataSource={dataTableSupplier}
       />
-
-      <Table
-        className="component-tables__params"
-        {...tableParamsProps}
-        columns={columnsParams}
-        expandable={{
-          expandedRowRender,
-          defaultExpandedRowKeys: ['0'],
-          columnTitle: () => (
-            <p className="component-tables__another">Похожее</p>
-          ),
-        }}
-        dataSource={dataTableParams}
-        scroll={{
-          x: 1000,
-        }}
-      />
+      <div className="component-tables__zone">
+        <Table
+          className="component-tables__params"
+          {...tableParamsProps}
+          columns={columnsParams}
+          expandable={{
+            expandedRowRender,
+            columnTitle: () => (
+              <p className="component-tables__another">Похожее</p>
+            ),
+          }}
+          dataSource={dataTableParams}
+          scroll={{
+            x: 850,
+          }}
+        />
+        <div className="delivery">
+          <h2 className="delivery__title">Информация о доставке товаров</h2>
+          <ul className="delivery__list">
+            <li className="delivery__point">
+              <EnvironmentTwoTone className="delivery__img" />
+              <div className="delivery__container">
+                <a className="delivery__link">Санкт-Петербург</a>
+                <p className="delivery__date">Со склада продавца</p>
+              </div>
+            </li>
+            <li className="delivery__point">
+              <SmileTwoTone className="delivery__img" />
+              <div className="delivery__container">
+                <a className="delivery__link">Курьер</a>
+                <p className="delivery__date">28 августа - 350 ₽</p>
+              </div>
+            </li>
+            <li className="delivery__point">
+              <EnvironmentTwoTone className="delivery__img" />
+              <div className="delivery__container">
+                <a className="delivery__link">ТК DPD</a>
+                <p className="delivery__date">28 августа - 573 ₽</p>
+              </div>
+            </li>
+            <li className="delivery__point">
+              <EnvironmentTwoTone className="delivery__img" />
+              <div className="delivery__container">
+                <a className="delivery__link">ТК "Деловые линии"</a>
+                <p className="delivery__date">28 августа - 573 ₽</p>
+              </div>
+            </li>
+            <li className="delivery__point">
+              <MailTwoTone className="delivery__img" />
+              <div className="delivery__container">
+                <a className="delivery__link">Почта России</a>
+                <p className="delivery__date">17 сентября - 348 ₽</p>
+              </div>
+            </li>
+            <li className="delivery__point">
+              <ShopTwoTone className="delivery__img" />
+              <div className="delivery__container">
+                <a className="delivery__link">Пункты выдачи партнёров</a>
+                <p className="delivery__date">17 сентября - бесплатно</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
