@@ -13,6 +13,7 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import SearchResults from '../SearchResults/SearchResults';
+import ComponentPage from '../ComponentPage/ComponentPage';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -48,6 +49,8 @@ function App() {
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults />
+
+        <ComponentPage />
       </Content>
 
       <Footer />
