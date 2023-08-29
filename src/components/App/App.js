@@ -50,8 +50,8 @@ function App() {
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults />
-        <ComponentPage />
         <CategoriesAll />
+        <ComponentPage />
       </Content>
 
       <Footer />
