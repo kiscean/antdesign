@@ -14,7 +14,6 @@ import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import SearchResults from '../SearchResults/SearchResults';
 import Footer from '../Footer/Footer';
-import CategoriesAll from '../CategoriesAll/CategoriesAll';
 
 function App() {
   // const { pathname } = useLocation();
@@ -49,7 +48,6 @@ function App() {
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults />
-        <CategoriesAll />
       </Content>
 
       <Footer />
