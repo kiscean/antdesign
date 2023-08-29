@@ -14,7 +14,7 @@ import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import SearchResults from '../SearchResults/SearchResults';
 import Footer from '../Footer/Footer';
-import CategoriesAll from "../CategoriesAll/CategoriesAll";
+import CategoriesAll from '../CategoriesAll/CategoriesAll';
 
 function App() {
   // const { pathname } = useLocation();
@@ -41,14 +41,14 @@ function App() {
       <Header onOpen={onOpenBurgerMenu} />
 
       <Content className="main">
-        <Main />
+        {/* <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <SignForms />
         <Cart />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
-        <SearchResults />
+        <SearchResults /> */}
         <CategoriesAll />
       </Content>
 
