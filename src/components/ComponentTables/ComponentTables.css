@@ -8,7 +8,7 @@
 
 .component-tables__zone {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: flex-start;
 }
 

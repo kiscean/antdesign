@@ -1,6 +1,7 @@
 .cards {
   text-align: center;
   margin: 0 auto;
+  max-width: 1470px;
   margin-bottom: 30px;
   padding: 0 10ch 0 10ch;
 }
