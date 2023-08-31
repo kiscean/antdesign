@@ -42,7 +42,7 @@ function App() {
     <div className="page">
       <Header onOpen={onOpenBurgerMenu} />
       <Content className="main">
-        <Main />
+        {/* <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <SignForms />
         <Cart />
@@ -51,7 +51,8 @@ function App() {
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults />
         <CategoriesAll />
-        <ComponentPage />
+        <ComponentPage /> */}
+
         <UserProfile />
       </Content>
 

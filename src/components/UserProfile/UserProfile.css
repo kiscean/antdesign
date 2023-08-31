@@ -1,0 +1,32 @@
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1470px;
+  padding: 60px 10ch 0 10ch;
+  gap: 8%;
+  border: 1px solid red;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.left-side__title {
+  margin: 2ch 0 3ch 0;
+}
+
+.left-side__avatar {
+  background: #87d068;
+}
+
+.right-side {
+  margin: 0;
+}
+
+.right-side__title {
+  text-align: left;
+  margin: 2ch 0 3ch 0;
+}
