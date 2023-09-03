@@ -1,5 +1,6 @@
 .success-page__container {
-  width: 100vw;
+  margin: 0 auto;
+  max-width: 1470px;
   display: flex;
   justify-content: center;
   padding: 100px 0 100px 0;

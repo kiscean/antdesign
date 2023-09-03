@@ -15,6 +15,7 @@ import TableForSale from '../TableForSale/TableForSale';
 import SearchResults from '../SearchResults/SearchResults';
 import ComponentPage from '../ComponentPage/ComponentPage';
 import CategoriesAll from '../CategoriesAll/CategoriesAll';
+import UserProfile from '../UserProfile/UserProfile';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -40,9 +41,8 @@ function App() {
   return (
     <div className="page">
       <Header onOpen={onOpenBurgerMenu} />
-
       <Content className="main">
-        <Main />
+        {/* <Main />
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <SignForms />
         <Cart />
@@ -50,8 +50,10 @@ function App() {
         <SuccessPage />
         <TableForSale onOpenCart={onOpenCart} />
         <SearchResults />
-        <ComponentPage />
         <CategoriesAll />
+        <ComponentPage /> */}
+
+        <UserProfile />
       </Content>
 
       <Footer />

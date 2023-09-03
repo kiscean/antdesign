@@ -8,12 +8,24 @@
 
 .component-tables__zone {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 1215px) {
+  .component-tables__zone {
+    flex-direction: column;
+  }
 }
 
 .component-tables__params {
   width: 60vw;
+}
+
+@media screen and (max-width: 1215px) {
+  .component-tables__params {
+    width: 100vw;
+  }
 }
 
 .component-tables__header {
@@ -68,8 +80,26 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.01), 0 2px 24px rgba(0, 0, 0, 0.05);
 }
 
+@media screen and (max-width: 1375px) {
+  .delivery {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .delivery {
+    padding: 24px;
+  }
+}
+
 .delivery__title {
   margin: 0 0 20px 0;
+}
+
+@media screen and (max-width: 1375px) {
+  .delivery__title {
+    font-size: 18px;
+  }
 }
 
 .delivery__list {

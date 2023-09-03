@@ -9,6 +9,11 @@
   top: 0;
 }
 
+.header__container {
+  margin: 0 auto;
+  max-width: 1470px;
+}
+
 .header .header__container {
   height: inherit;
   display: flex;

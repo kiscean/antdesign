@@ -1,3 +1,8 @@
+.authorization {
+  margin: 0 auto;
+  max-width: 1470px;
+}
+
 .authorization__container {
   margin-top: 60px;
   height: 100%;
@@ -265,10 +270,6 @@
   .description__content {
     padding: 33% 10% 0 10%;
   }
-
-  /* .description__text-down {
-    margin-top: 20%;
-  } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -281,10 +282,6 @@
     left: 5ch;
     height: 330px;
   }
-
-  /* .description__text-down {
-    margin-top: 10%;
-  } */
 }
 
 @media screen and (min-width: 1440px) {
@@ -297,8 +294,4 @@
     left: 10ch;
     height: 340px;
   }
-
-  /* .description__text-down {
-    margin-top: 13%;
-  } */
 }

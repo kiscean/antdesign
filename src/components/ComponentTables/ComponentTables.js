@@ -402,6 +402,40 @@ function ComponentTables() {
     );
   };
 
+  /* --------------- ДОСТАВКА ----------------- */
+  const deliveryData = [
+    {
+      icon: <EnvironmentTwoTone className="delivery__img" />,
+      title: 'Санкт-Петербург',
+      description: 'Со склада продавца',
+    },
+    {
+      icon: <SmileTwoTone className="delivery__img" />,
+      title: 'Курьер',
+      description: '28 августа - 350 ₽',
+    },
+    {
+      icon: <EnvironmentTwoTone className="delivery__img" />,
+      title: 'ТК DPD',
+      description: '28 августа - 573 ₽',
+    },
+    {
+      icon: <EnvironmentTwoTone className="delivery__img" />,
+      title: 'ТК "Деловые линии"',
+      description: '28 августа - 573 ₽',
+    },
+    {
+      icon: <MailTwoTone className="delivery__img" />,
+      title: 'Почта России',
+      description: '17 сентября - 348 ₽',
+    },
+    {
+      icon: <ShopTwoTone className="delivery__img" />,
+      title: 'Пункты выдачи партнёров',
+      description: '17 сентября - бесплатно',
+    },
+  ];
+
   return (
     <div className="component-tables">
       <Table
@@ -428,51 +462,19 @@ function ComponentTables() {
             x: 850,
           }}
         />
+
         <div className="delivery">
           <h2 className="delivery__title">Информация о доставке товаров</h2>
           <ul className="delivery__list">
-            <li className="delivery__point">
-              <EnvironmentTwoTone className="delivery__img" />
-              <div className="delivery__container">
-                <a className="delivery__link">Санкт-Петербург</a>
-                <p className="delivery__date">Со склада продавца</p>
-              </div>
-            </li>
-            <li className="delivery__point">
-              <SmileTwoTone className="delivery__img" />
-              <div className="delivery__container">
-                <a className="delivery__link">Курьер</a>
-                <p className="delivery__date">28 августа - 350 ₽</p>
-              </div>
-            </li>
-            <li className="delivery__point">
-              <EnvironmentTwoTone className="delivery__img" />
-              <div className="delivery__container">
-                <a className="delivery__link">ТК DPD</a>
-                <p className="delivery__date">28 августа - 573 ₽</p>
-              </div>
-            </li>
-            <li className="delivery__point">
-              <EnvironmentTwoTone className="delivery__img" />
-              <div className="delivery__container">
-                <a className="delivery__link">ТК "Деловые линии"</a>
-                <p className="delivery__date">28 августа - 573 ₽</p>
-              </div>
-            </li>
-            <li className="delivery__point">
-              <MailTwoTone className="delivery__img" />
-              <div className="delivery__container">
-                <a className="delivery__link">Почта России</a>
-                <p className="delivery__date">17 сентября - 348 ₽</p>
-              </div>
-            </li>
-            <li className="delivery__point">
-              <ShopTwoTone className="delivery__img" />
-              <div className="delivery__container">
-                <a className="delivery__link">Пункты выдачи партнёров</a>
-                <p className="delivery__date">17 сентября - бесплатно</p>
-              </div>
-            </li>
+            {deliveryData.map((item) => (
+              <li className="delivery__point" key={item.title}>
+                {item.icon}
+                <div className="delivery__container">
+                  <a className="delivery__link">{item.title}</a>
+                  <p className="delivery__date">{item.description}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
