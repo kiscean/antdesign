@@ -52,8 +52,8 @@ function App() {
         <SearchResults />
         <CategoriesAll />
         <ComponentPage /> */}
-
         <UserProfile />
+        <SignForms />
       </Content>
 
       <Footer />
