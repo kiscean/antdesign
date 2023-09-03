@@ -5,13 +5,11 @@
   max-width: 1470px;
   padding: 100px 10ch 0 10ch;
   gap: 8%;
-  border: 1px solid red;
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 
 .left-side__title {
@@ -88,10 +86,19 @@
 }
 
 .right-side__user-data {
-  margin-top: 2ch;
+  margin-top: 3ch;
 }
 
 .right-side__user-button {
+  width: 100%;
+  margin-top: 10ch;
+}
+
+.right-side__company-data {
+  margin-top: 3ch;
+}
+
+.right-side__requisites-button {
   width: 100%;
   margin-top: 10ch;
 }

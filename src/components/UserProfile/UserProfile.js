@@ -2,8 +2,8 @@ import React from 'react';
 import './UserProfile.css';
 
 import { Layout, Avatar } from 'antd';
-import { Button, Select, Form, Input } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { Button, Select, Form, Input, Dropdown } from 'antd';
+import { UserOutlined, DownOutlined } from '@ant-design/icons';
 
 function UserProfile() {
   const onFinish = (values) => {
@@ -33,6 +33,25 @@ function UserProfile() {
       </Select>
     </Form.Item>
   );
+
+  const items = [
+    {
+      key: '1',
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          Индивидуальный предприниматель
+        </a>
+      ),
+    },
+    {
+      key: '2',
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          Юридическое лицо
+        </a>
+      ),
+    },
+  ];
 
   return (
     <Layout className="user-profile">
@@ -76,7 +95,8 @@ function UserProfile() {
       </div>
 
       <div className="right-side">
-        <h2 className="right-side__title">Контактные данные</h2>
+        {/*-------- ЭТО ДАННЫЕ ПОЛЬЗОВАТЕЛЯ --------*/}
+        {/* <h2 className="right-side__title">Контактные данные</h2>
 
         <p className="right-side__description">
           Здесь вы можете менять данные своей учётной записи и управлять
@@ -93,7 +113,7 @@ function UserProfile() {
           }}
           autoComplete="off"
           labelCol={{
-            span: 8,
+            span: 6,
           }}
           wrapperCol={{
             span: 16,
@@ -119,6 +139,96 @@ function UserProfile() {
               type="primary"
               htmlType="submit"
               className="right-side__user-button">
+              Сохранить
+            </Button>
+          </Form.Item>
+        </Form> */}
+
+        <h2 className="right-side__title">Карточка предприятия</h2>
+
+        <p className="right-side__description">
+          Здесь вы можете редактировать данные карточки предприятия.
+        </p>
+
+        <Form
+          className="right-side__company-data"
+          name="company-data"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          initialValues={{
+            remember: true,
+          }}
+          autoComplete="off"
+          labelCol={{
+            span: 8,
+          }}
+          wrapperCol={{
+            span: 16,
+          }}>
+          <Form.Item label="Форма" name="type">
+            <Select
+              defaultValue="Индивидуальный предприниматель"
+              style={{
+                fontSize: '15px',
+              }}>
+              <Option value="add">Индивидуальный предприниматель</Option>
+              <Option value="minus">Юридическое лицо</Option>
+            </Select>
+          </Form.Item>
+
+          <Form.Item label="Название компании" name="company-name">
+            <Input defaultValue='ОАО "ТЕСТ"' />
+          </Form.Item>
+
+          <Form.Item label="ИНН" name="inn">
+            <Input defaultValue="123456789012" />
+          </Form.Item>
+
+          <Form.Item label="КПП" name="kpp">
+            <Input defaultValue="" />
+          </Form.Item>
+          <Form.Item label="ОГРН/ОГРНИП" name="ogrn">
+            <Input defaultValue="" />
+          </Form.Item>
+        </Form>
+
+        <h2 className="right-side__title">Реквизиты</h2>
+
+        <Form
+          className="right-side__requisites"
+          name="requisites"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          initialValues={{
+            remember: true,
+          }}
+          autoComplete="off"
+          labelCol={{
+            span: 10,
+          }}
+          wrapperCol={{
+            span: 16,
+          }}>
+          <Form.Item label="Название банка" name="bank-name">
+            <Input defaultValue="Сбербанк" />
+          </Form.Item>
+
+          <Form.Item label="БИК" name="bik">
+            <Input defaultValue="" />
+          </Form.Item>
+
+          <Form.Item
+            label="Корреспондентский счёт"
+            name="correspondent-account">
+            <Input defaultValue="" />
+          </Form.Item>
+
+          <Form.Item label="Расчётный счёт" name="payment-account">
+            <Input defaultValue="" />
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="right-side__requisites-button">
               Сохранить
             </Button>
           </Form.Item>
