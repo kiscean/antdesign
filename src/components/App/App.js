@@ -42,18 +42,22 @@ function App() {
     <div className="page">
       <Header onOpen={onOpenBurgerMenu} />
       <Content className="main">
-        {/* <Main />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/sign-in" element={<SignForms />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/success-page" element={<SuccessPage />} />
+          <Route
+            path="/selling-table"
+            element={<TableForSale onOpenCart={onOpenCart} />}
+          />
+          <Route path="/results" element={<SearchResults />} />
+          <Route path="/all-categories" element={<CategoriesAll />} />
+          <Route path="/product" element={<ComponentPage />} />
+          <Route path="/profile" element={<UserProfile />} />
+        </Routes>
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-        <SignForms />
-        <Cart />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
-        <SuccessPage />
-        <TableForSale onOpenCart={onOpenCart} />
-        <SearchResults />
-        <CategoriesAll />
-        <ComponentPage /> */}
-
-        <UserProfile />
       </Content>
 
       <Footer />
