@@ -10,11 +10,12 @@ import {
   DownOutlined,
   ShoppingCartOutlined,
 } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import useResize from '../../hooks/useResize';
 
 const Header = ({ onOpen }) => {
+  const { pathname } = useLocation();
   const { Header } = Layout;
 
   const menuItems = [
@@ -76,7 +77,9 @@ const Header = ({ onOpen }) => {
           </span>
         </Space>
 
-        {size.width > 1050 && (
+        {size.width > 1050 && pathname === '/sign-in' ? (
+          ''
+        ) : (
           <Col span={24} className="header__menu">
             <Menu
               theme="dark"
@@ -93,34 +96,38 @@ const Header = ({ onOpen }) => {
           </Col>
         )}
 
-        <Space direction="horizontal" size={20}>
-          <Link to="/cart">
-            <Badge
-              color="#ec386e"
-              size="small"
-              count={5}
-              className="header__basket-badge">
-              <ShoppingCartOutlined className="header__basket-logo" />
-            </Badge>
-          </Link>
-          <Space className="header__user-info">
-            <Avatar className="header__user-icon">MC</Avatar>
-            <Dropdown
-              menu={{
-                items,
-              }}>
-              <Space className="header__user-name">
-                МояКомпания
-                <DownOutlined />
-              </Space>
-            </Dropdown>
-          </Space>
+        {pathname === '/sign-in' ? (
+          ''
+        ) : (
+          <Space direction="horizontal" size={20}>
+            <Link to="/cart">
+              <Badge
+                color="#ec386e"
+                size="small"
+                count={5}
+                className="header__basket-badge">
+                <ShoppingCartOutlined className="header__basket-logo" />
+              </Badge>
+            </Link>
+            <Space className="header__user-info">
+              <Avatar className="header__user-icon">MC</Avatar>
+              <Dropdown
+                menu={{
+                  items,
+                }}>
+                <Space className="header__user-name">
+                  МояКомпания
+                  <DownOutlined />
+                </Space>
+              </Dropdown>
+            </Space>
 
-          <div className="header__burger-menu" onClick={onOpen}>
-            <Avatar className="header__user-icon">MC</Avatar>
-            <DownOutlined className="header__down-arrow" />
-          </div>
-        </Space>
+            <div className="header__burger-menu" onClick={onOpen}>
+              <Avatar className="header__user-icon">MC</Avatar>
+              <DownOutlined className="header__down-arrow" />
+            </div>
+          </Space>
+        )}
       </Space>
     </Header>
   );
