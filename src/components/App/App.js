@@ -33,7 +33,6 @@ function App() {
 
   const [menuActive, setMenuActive] = React.useState(false);
   const [openCart, setOpenCart] = React.useState(false);
-  //const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   const onOpenBurgerMenu = () => {
     setMenuActive(true);
@@ -69,6 +68,7 @@ function App() {
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/company-profile" element={<UserProfile />} />
         </Routes>
+
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
       </Content>
