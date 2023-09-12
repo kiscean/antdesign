@@ -54,7 +54,8 @@ function App() {
           <Route path="/results" element={<SearchResults />} />
           <Route path="/all-categories" element={<CategoriesAll />} />
           <Route path="/product" element={<ComponentPage />} />
-          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/company-profile" element={<UserProfile />} />
         </Routes>
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
