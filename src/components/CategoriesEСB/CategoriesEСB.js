@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Space } from 'antd';
 import { Col, Divider, Row } from 'antd';
+import { Link } from 'react-router-dom';
 import { popularCards } from '../../assets/popularCardsArray';
 import './CategoriesEСB.css';
 
@@ -13,7 +14,7 @@ const CategoriesEСB = () => {
         </Col>
         <Col span={12}>
           <Divider orientation="right">
-            <a href="#">все категории</a>
+            <Link to="/all-categories">все категории</Link>
           </Divider>
         </Col>
       </Row>

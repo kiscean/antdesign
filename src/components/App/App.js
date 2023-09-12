@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Content } from 'antd/es/layout/layout';
 
 import Header from '../Header/Header';
@@ -19,9 +19,21 @@ import UserProfile from '../UserProfile/UserProfile';
 import Footer from '../Footer/Footer';
 
 function App() {
-  // const { pathname } = useLocation();
+  const { pathname } = useLocation();
+  const footerPaths = [
+    '/',
+    '/sign-in',
+    'cart',
+    '/selling-table',
+    '/all-categories',
+    '/results',
+    '/user-profile',
+    '/company-profile',
+  ];
+
   const [menuActive, setMenuActive] = React.useState(false);
   const [openCart, setOpenCart] = React.useState(false);
+  //const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   const onOpenBurgerMenu = () => {
     setMenuActive(true);
@@ -61,7 +73,7 @@ function App() {
         <CartDrawer onCloseCart={onCloseCart} open={openCart} />
       </Content>
 
-      <Footer />
+      {footerPaths.includes(pathname) && <Footer />}
     </div>
   );
 }

@@ -2,13 +2,60 @@ import React from 'react';
 import './Header.css';
 
 import { Dropdown, Space, Col, Layout, Menu, Avatar, Badge } from 'antd';
-import { DownOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import { items, menuItems } from '../../assets/constants';
+import {
+  AuditOutlined,
+  ExportOutlined,
+  HeartOutlined,
+  HomeOutlined,
+  DownOutlined,
+  ShoppingCartOutlined,
+} from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 import useResize from '../../hooks/useResize';
 
 const Header = ({ onOpen }) => {
   const { Header } = Layout;
+
+  const menuItems = [
+    { name: 'Опыт инженеров', link: '#' },
+    { name: 'Популярное', link: '#' },
+    { name: 'Категории', link: '#' },
+    { name: 'Помощь', link: '#' },
+  ];
+
+  const items = [
+    {
+      key: '1',
+      label: <Link to="/user-profile">Профиль</Link>,
+      icon: <HomeOutlined />,
+    },
+    {
+      key: '2',
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          Избранное
+        </a>
+      ),
+      icon: <HeartOutlined />,
+      disabled: true,
+    },
+    {
+      key: '3',
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          Кабинет клиента
+        </a>
+      ),
+      icon: <AuditOutlined />,
+    },
+    {
+      key: '4',
+      danger: true,
+      label: <Link to="/sign-in">Выйти</Link>,
+      icon: <ExportOutlined />,
+    },
+  ];
 
   let size = useResize();
 
@@ -18,9 +65,9 @@ const Header = ({ onOpen }) => {
         <Space direction="horizontal">
           <div className="header__logo">
             <h1>
-              <a href="#" className="header__logo-link">
+              <Link to="/" className="header__logo-link">
                 ЭКБ
-              </a>
+              </Link>
             </h1>
           </div>
 
@@ -47,13 +94,15 @@ const Header = ({ onOpen }) => {
         )}
 
         <Space direction="horizontal" size={20}>
-          <Badge
-            color="#ec386e"
-            size="small"
-            count={5}
-            className="header__basket-badge">
-            <ShoppingCartOutlined className="header__basket-logo" />
-          </Badge>
+          <Link to="/cart">
+            <Badge
+              color="#ec386e"
+              size="small"
+              count={5}
+              className="header__basket-badge">
+              <ShoppingCartOutlined className="header__basket-logo" />
+            </Badge>
+          </Link>
           <Space className="header__user-info">
             <Avatar className="header__user-icon">MC</Avatar>
             <Dropdown
