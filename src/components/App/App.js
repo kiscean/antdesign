@@ -16,6 +16,7 @@ import SearchResults from '../SearchResults/SearchResults';
 import ComponentPage from '../ComponentPage/ComponentPage';
 import CategoriesAll from '../CategoriesAll/CategoriesAll';
 import UserProfile from '../UserProfile/UserProfile';
+import PageNotFound from '../PageNotFound/PageNotFound';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
           <Route path="/product" element={<ComponentPage />} />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/company-profile" element={<UserProfile />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
 
         <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />

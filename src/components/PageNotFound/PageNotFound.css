@@ -1,0 +1,43 @@
+.not-found {
+  padding: 10ch 10ch 0 10ch;
+  align-items: center;
+  justify-content: center;
+  max-width: 1470px;
+  display: flex;
+  gap: 25px;
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 1050px) {
+  .not-found {
+    padding: 10ch 20px 0 20px;
+  }
+}
+
+.not-found__code {
+  font-size: 190px;
+  color: #1677ff;
+  font-weight: 700;
+  border: 1px solid red;
+}
+
+.not-found__right {
+  display: flex;
+  flex-direction: column;
+  max-width: 290px;
+  border: 1px solid red;
+  line-height: 150%;
+  gap: 30px;
+}
+
+.not-found__error {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.not-found__paragraph {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
