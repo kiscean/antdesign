@@ -4,12 +4,15 @@
   justify-content: center;
   max-width: 1470px;
   display: flex;
+  margin: 0 auto;
   gap: 45px;
 }
 
 @media screen and (max-width: 1050px) {
   .not-found {
     padding: 10ch 20px 0 20px;
+    flex-direction: column;
+    gap: 25px;
   }
 }
 
@@ -19,6 +22,18 @@
   font-weight: 600;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 1050px) {
+  .not-found__code {
+    font-size: 180px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .not-found__code {
+    font-size: 120px;
+  }
 }
 
 .not-found__right {
@@ -35,7 +50,19 @@
   font-size: 18px;
 }
 
+@media screen and (max-width: 450px) {
+  .not-found__error {
+    padding: 0 15px 0 15px;
+  }
+}
+
 .not-found__paragraph {
   margin: 0;
   font-size: 18px;
+}
+
+@media screen and (max-width: 450px) {
+  .not-found__paragraph {
+    padding: 0 15px 0 15px;
+  }
 }
