@@ -77,24 +77,25 @@ const Header = ({ onOpen }) => {
           </span>
         </Space>
 
-        {size.width > 1050 && pathname === '/sign-in' ? (
-          ''
-        ) : (
-          <Col span={24} className="header__menu">
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={['4']}
-              items={menuItems.map((item) => {
-                const key = item.name;
-                return {
-                  key,
-                  label: `${key}`,
-                };
-              })}
-            />
-          </Col>
-        )}
+        {size.width > 1050 &&
+          (pathname === '/sign-in' ? (
+            ''
+          ) : (
+            <Col span={24} className="header__menu">
+              <Menu
+                theme="dark"
+                mode="horizontal"
+                defaultSelectedKeys={['4']}
+                items={menuItems.map((item) => {
+                  const key = item.name;
+                  return {
+                    key,
+                    label: `${key}`,
+                  };
+                })}
+              />
+            </Col>
+          ))}
 
         {pathname === '/sign-in' ? (
           ''
