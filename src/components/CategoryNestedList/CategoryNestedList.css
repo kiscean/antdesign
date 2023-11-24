@@ -1,5 +1,7 @@
 .category-nestedlist {
   margin: 6ch 0 0 0;
+  margin: 0 auto;
+  max-width: 1470px;
 }
 
 .category-nestedlist__divider {

@@ -1,5 +1,7 @@
 .cart {
   padding: 60px 10ch 0 10ch;
+  margin: 0 auto;
+  max-width: 1470px;
 }
 
 .cart__top-buttons {

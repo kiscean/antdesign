@@ -2,6 +2,7 @@ import React from 'react';
 import './SuccessPage.css';
 
 import { Button, Result, Layout } from 'antd';
+import { Link } from 'react-router-dom';
 
 const SuccessPage = () => {
   return (
@@ -13,9 +14,11 @@ const SuccessPage = () => {
           title="Поздравляем! Вы стали частью семьи ЭКБ Маркетплейс."
           subTitle="Теперь вы можете использовать портал ЭКБ для поиска и заказа необходимых комплектующих. Наши специалисты обязательно ответят на любые ваши вопросы. Вы также можете зарегистрировать компанию, которую представляете для более быстрого обмена документацией."
           extra={[
-            <Button type="primary" key="console">
-              Начать работу
-            </Button>,
+            <Link to="/">
+              <Button type="primary" key="console">
+                Начать работу
+              </Button>
+            </Link>,
             <Button key="buy">Добавить компанию</Button>,
           ]}
         />

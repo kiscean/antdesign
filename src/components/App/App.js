@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Content } from 'antd/es/layout/layout';
 
 import Header from '../Header/Header';
@@ -14,10 +14,24 @@ import SignForms from '../SignForms/SignForms';
 import TableForSale from '../TableForSale/TableForSale';
 import SearchResults from '../SearchResults/SearchResults';
 import ComponentPage from '../ComponentPage/ComponentPage';
+import CategoriesAll from '../CategoriesAll/CategoriesAll';
+import UserProfile from '../UserProfile/UserProfile';
+import PageNotFound from '../PageNotFound/PageNotFound';
 import Footer from '../Footer/Footer';
 
 function App() {
-  // const { pathname } = useLocation();
+  const { pathname } = useLocation();
+  const footerPaths = [
+    '/',
+    '/sign-in',
+    'cart',
+    '/selling-table',
+    '/all-categories',
+    '/results',
+    '/user-profile',
+    '/company-profile',
+  ];
+
   const [menuActive, setMenuActive] = React.useState(false);
   const [openCart, setOpenCart] = React.useState(false);
 
@@ -39,21 +53,29 @@ function App() {
   return (
     <div className="page">
       <Header onOpen={onOpenBurgerMenu} />
-
       <Content className="main">
-        <Main />
-        <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
-        <SignForms />
-        <Cart />
-        <CartDrawer onCloseCart={onCloseCart} open={openCart} />
-        <SuccessPage />
-        <TableForSale onOpenCart={onOpenCart} />
-        <SearchResults />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/sign-in" element={<SignForms />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/success-page" element={<SuccessPage />} />
+          <Route
+            path="/selling-table"
+            element={<TableForSale onOpenCart={onOpenCart} />}
+          />
+          <Route path="/results" element={<SearchResults />} />
+          <Route path="/all-categories" element={<CategoriesAll />} />
+          <Route path="/product" element={<ComponentPage />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/company-profile" element={<UserProfile />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
 
-        <ComponentPage />
+        <MainDrawer menuActive={menuActive} onClose={onCloseBurgerMenu} />
+        <CartDrawer onCloseCart={onCloseCart} open={openCart} />
       </Content>
 
-      <Footer />
+      {footerPaths.includes(pathname) && <Footer />}
     </div>
   );
 }
