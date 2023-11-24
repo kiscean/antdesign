@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <Footer className="footer">
       <Row gutter={1}>
-        <Col span={24}>Маркетплейс ЭКБ &copy; 2023 ООО Компания</Col>
+        <Col span={24}>Маркетплейс ТАБЛО &copy; 2023 ООО Компания</Col>
         <Col
           span={24}
           style={{

@@ -67,7 +67,7 @@ const Header = ({ onOpen }) => {
           <div className="header__logo">
             <h1>
               <Link to="/" className="header__logo-link">
-                ЭКБ
+                ТАБЛО
               </Link>
             </h1>
           </div>
