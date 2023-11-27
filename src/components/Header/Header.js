@@ -86,6 +86,9 @@ const Header = ({ onOpen }) => {
                 theme="dark"
                 mode="horizontal"
                 defaultSelectedKeys={['4']}
+                style={{
+                  background:'#5b12af',
+                }}
                 items={menuItems.map((item) => {
                   const key = item.name;
                   return {
